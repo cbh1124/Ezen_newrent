@@ -13,7 +13,6 @@
 
 ![Rent_11_05 요구사항 기능](https://user-images.githubusercontent.com/61840067/140478880-b6c64bdd-ea4e-45a0-ad89-d6e1c6421d12.JPG)
 
-
 ## 프로젝트 기간
 > 11_05 ~ 11_22(22일 발표)
 
@@ -49,4 +48,8 @@
   3. 메인 색상 테마 
   
   4. 페이퍼 프로토 타입 
+
+## 목업
+![asd drawio](https://user-images.githubusercontent.com/61840067/140482872-9e33d121-18b2-45b6-a30c-e6db083a6606.png)
+
       
