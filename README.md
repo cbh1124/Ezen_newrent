@@ -52,4 +52,7 @@
 ## 목업
 ![asd drawio](https://user-images.githubusercontent.com/61840067/140482872-9e33d121-18b2-45b6-a30c-e6db083a6606.png)
 
+## [DB설계]
+
       
+![DB설계](https://user-images.githubusercontent.com/37235727/140713138-1b37a48a-1627-41f1-a48a-68d0e0fb8bbe.jpg)
