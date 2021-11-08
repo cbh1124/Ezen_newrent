@@ -1,0 +1,12 @@
+[ login page ]
+
+BorderPane : mbp
+Anchorpane : loginpane
+textfield : txtid
+textfield : txtpw
+button 로그인 : btnlogin  On Action : login
+button 회원가입 : btnsignup On Action : signup
+button 아이디 찾기 : btnfindid On Action : findid
+button 비밀번호 찾기 : btnfindpw On Action : findpw
+
+
