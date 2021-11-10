@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
@@ -16,18 +17,15 @@ public class LoginController implements Initializable{
 	
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
-		lblloginfirm.setText("");
+		lblconfirm.setText("");
 		
 		}
 		
 	    @FXML
-	    private Label lblloginfirm;
-		
-	    @FXML
-	    private Button btnfindid;
+	    private Label btnfindid;
 
 	    @FXML
-	    private Button btnfindpw;
+	    private Label btnfindpassword;
 
 	    @FXML
 	    private Button btnlogin;
@@ -36,35 +34,37 @@ public class LoginController implements Initializable{
 	    private Button btnsignup;
 
 	    @FXML
+	    private Label lblconfirm;
+
+	    @FXML
 	    private AnchorPane loginpane;
 
 	    @FXML
-	    private BorderPane mbp;
+	    private BorderPane mainboardpane;
 
 	    @FXML
 	    private TextField txtid;
 
 	    @FXML
-	    private TextField txtpw;
+	    private TextField txtpassword;
 
 	    @FXML
-	    void findid(ActionEvent event) {
+	    void findid(MouseEvent event) {
 
 	    }
 
 	    @FXML
-	    void findpw(ActionEvent event) {
+	    void findpassword(MouseEvent event) {
 
 	    }
 
 	    @FXML
 	    void login(ActionEvent event) {
-	    	
+
 	    }
 
 	    @FXML
-	    void signup(ActionEvent event) {
-
+	    void signup(MouseEvent event) {
+	    	
 	    }
-
 }
