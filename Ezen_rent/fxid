@@ -57,5 +57,30 @@
 				
 				
 	mainpage
+				
+				
+				BorderPane		:	mainpageborderpane
+			
+				top AnchorPane	:	tp				
+
+				home			:	btnhome			On Action 			:	home
+				reserve			:	btnreserve		On Action 			:	reserve
+				myinfo			:	btnmyinfo		On Action 			:	myinfo
+				service			:	btnservice		On Action 			:	service
+					board1		:	btnboard1		On Action 			:	board1	
+					board2		:	btnboard2		On Action 			:	board2
+					board3		:	btnboard3		On Action 			:	board3					
+					
+				
+			
+				mid AnchorPane	:	cp
+				
 	
+				
+				
+				
+				
+				
+				
+				
 	
