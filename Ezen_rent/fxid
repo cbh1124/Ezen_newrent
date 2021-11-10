@@ -19,6 +19,7 @@
 				AnchorPane	:	signuppane
 				
 				Back		:	btnback				On Mouse Clicked	:	back
+				
 				User ID 	:	txtid
 				Password	:	txtpassword
 				Password confirm : txtpasswordconfirm
@@ -33,5 +34,27 @@
 	
 	findid
 	
+				Back		:	btnback				On Mouse Clicked	:	back
+				
+				User name	:	txtname
+				User email	:	txtemail
+				
+				findid		:	btnfindid			On Mouse Clicked	:	findid
+				
+				confirm		:	lblconfirm
+	
 	
 	findpassword
+				
+				Back		:	btnback				On Mouse Clicked	:	back
+				
+				User ID 	:	txtid
+				User email	:	txtemail
+				
+				findpassword:	btnfindpassword		On Mouse Clicked	:	findpassword	
+				
+				confirm		:	lblconfirm
+				
+	mainpage
+	
+	
