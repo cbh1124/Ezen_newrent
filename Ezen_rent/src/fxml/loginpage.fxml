@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/loginimg.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="loginpane" layoutX="340.0" layoutY="135.0" opacity="0.7" prefHeight="451.0" prefWidth="600.0" style="-fx-background-color: #111111; -fx-background-radius: 50;">
+               <children>
+                  <Label fx:id="lblconfirm" alignment="CENTER" layoutX="162.0" layoutY="197.0" prefHeight="29.0" prefWidth="277.0" text="로그인 실패 [ 동일한 정보가 없습니다 ]" textFill="RED">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="110.0" layoutY="252.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="380.0" style="-fx-background-radius: 50; -fx-background-color: #29575D;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="111.0" layoutY="318.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="380.0" style="-fx-background-radius: 50;" text="Sign up">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txtid" blendMode="SRC_ATOP" layoutX="110.0" layoutY="65.0" prefHeight="35.0" prefWidth="380.0" promptText="User ID" style="-fx-background-color: #ffffff;">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtpassword" blendMode="SRC_ATOP" layoutX="111.0" layoutY="129.0" prefHeight="35.0" prefWidth="380.0" promptText="Password" style="-fx-background-color: #ffffff;">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="btnfindpassword" alignment="CENTER" layoutX="390.0" layoutY="388.0" onMouseClicked="#findpassword" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="비밀번호 찾기">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="btnfind" alignment="CENTER" layoutX="279.0" layoutY="388.0" onMouseClicked="#findid" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="아이디찾기">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="192.0" fitWidth="283.0" layoutX="14.0" layoutY="517.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/rentcarlogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
