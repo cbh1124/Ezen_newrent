@@ -1,12 +1,37 @@
-[ login page ]
+	loginpage
+				BorderPane	:	mainboardpane
+		
+				AnchorPane	:	loginpane
 
-BorderPane : mbp
-Anchorpane : loginpane
-textfield : txtid
-textfield : txtpw
-button 로그인 : btnlogin  On Action : login
-button 회원가입 : btnsignup On Action : signup
-button 아이디 찾기 : btnfindid On Action : findid
-button 비밀번호 찾기 : btnfindpw On Action : findpw
+				User ID		:	txtid		
+				Password	:	txtpassword
+				
+				confirm		:	lblconfirm
+		
+				Loginbtn	:	btnlogin			On Action 			:	login
+				Signupbtn	:	btnsignup			On Mouse Clicked	:	signup
+		
+				findid		:	btnfindid			On Mouse Clicked	:	findid
+				findpassword:	btnfindpassword		On Mouse Clicked	:	findpassword	
 
-
+	signuppage
+				
+				AnchorPane	:	signuppane
+				
+				Back		:	btnback				On Mouse Clicked	:	back
+				User ID 	:	txtid
+				Password	:	txtpassword
+				Password confirm : txtpasswordconfirm
+				User name	:	txtname
+				User email	:	txtemail
+				
+				Signupbtn	:	btnsignup			On Mouse Clicked	:	signup
+				
+				confirm		:	lblconfirm
+				
+				
+	
+	findid
+	
+	
+	findpassword

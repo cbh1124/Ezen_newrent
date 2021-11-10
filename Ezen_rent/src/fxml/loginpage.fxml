@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="mainboardpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <AnchorPane prefHeight="720.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="loginpane" prefHeight="720.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -20,12 +20,12 @@
             </ImageView>
             <AnchorPane fx:id="loginpane" layoutX="340.0" layoutY="135.0" opacity="0.7" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #111111; -fx-background-radius: 50;">
                <children>
-                  <TextField fx:id="txtid" blendMode="SRC_ATOP" layoutX="110.0" layoutY="65.0" prefHeight="35.0" prefWidth="380.0" promptText="User ID" style="-fx-background-color: #ffffff;">
+                  <TextField fx:id="txtid" blendMode="SRC_ATOP" layoutX="110.0" layoutY="88.0" prefHeight="35.0" prefWidth="380.0" promptText="User ID" style="-fx-background-color: #ffffff;">
                      <font>
                         <Font name="Arial Black" size="15.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="txtpassword" blendMode="SRC_ATOP" layoutX="111.0" layoutY="129.0" prefHeight="35.0" prefWidth="380.0" promptText="Password" style="-fx-background-color: #ffffff;">
+                  <TextField fx:id="txtpassword" blendMode="SRC_ATOP" layoutX="111.0" layoutY="143.0" prefHeight="35.0" prefWidth="380.0" promptText="Password" style="-fx-background-color: #ffffff;">
                      <font>
                         <Font name="Arial Black" size="15.0" />
                      </font>
@@ -40,7 +40,7 @@
                         <Font name="Arial Black" size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnsignup" layoutX="111.0" layoutY="318.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="380.0" style="-fx-background-radius: 50;" text="Sign up">
+                  <Button fx:id="btnsignup" layoutX="111.0" layoutY="318.0" mnemonicParsing="false" onMouseClicked="#signup" prefHeight="30.0" prefWidth="380.0" style="-fx-background-radius: 50;" text="Sign up">
                      <font>
                         <Font name="Arial Black" size="20.0" />
                      </font>
@@ -53,6 +53,11 @@
                   <Label fx:id="btnfindpassword" alignment="CENTER" layoutX="390.0" layoutY="388.0" onMouseClicked="#findpassword" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="비밀번호 찾기">
                      <font>
                         <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="180.0" layoutY="26.0" prefHeight="35.0" prefWidth="242.0" text="EZEN RENTCAR" textFill="WHITE">
+                     <font>
+                        <Font name="Yj GABI Bold" size="30.0" />
                      </font>
                   </Label>
                </children>

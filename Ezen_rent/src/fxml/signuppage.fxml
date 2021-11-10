@@ -22,7 +22,7 @@
                   <Font name="Yj GABI Bold" size="30.0" />
                </font>
             </Label>
-            <Label fx:id="btnback" alignment="CENTER" layoutX="506.0" layoutY="40.0" onMouseClicked="#findpassword" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="Back">
+            <Label fx:id="btnback" alignment="CENTER" layoutX="506.0" layoutY="40.0" onMouseClicked="#back" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="Back">
                <font>
                   <Font name="Arial Black" size="13.0" />
                </font>
@@ -52,7 +52,7 @@
                   <Font name="Arial Black" size="15.0" />
                </font>
             </TextField>
-            <Button fx:id="btnsignup" layoutX="110.0" layoutY="362.0" mnemonicParsing="false" onAction="#signup" prefHeight="0.0" prefWidth="380.0" style="-fx-background-radius: 50; -fx-background-color: #29575D;" text="Login" textFill="WHITE">
+            <Button fx:id="btnsignup" layoutX="110.0" layoutY="361.0" mnemonicParsing="false" onAction="#signup" prefHeight="0.0" prefWidth="380.0" style="-fx-background-radius: 50; -fx-background-color: #29575D;" text="Sign Up" textFill="WHITE">
                <font>
                   <Font name="Arial Black" size="20.0" />
                </font>
