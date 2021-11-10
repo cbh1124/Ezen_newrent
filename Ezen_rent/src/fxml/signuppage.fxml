@@ -15,7 +15,7 @@
             <Image url="@img/loginimg.jpg" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="signuppane" layoutX="340.0" layoutY="135.0" opacity="0.7" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #111111; -fx-background-radius: 50;">
+      <AnchorPane fx:id="signuppane" layoutX="340.0" layoutY="135.0" opacity="0.7" prefHeight="451.0" prefWidth="600.0" style="-fx-background-color: #111111; -fx-background-radius: 50;">
          <children>
             <Label alignment="CENTER" layoutX="208.0" layoutY="35.0" prefHeight="35.0" prefWidth="185.0" text="회 원 가입" textFill="WHITE">
                <font>

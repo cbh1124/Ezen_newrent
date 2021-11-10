@@ -18,23 +18,8 @@
                   <Image url="@img/loginimg.jpg" />
                </image>
             </ImageView>
-            <AnchorPane fx:id="loginpane" layoutX="340.0" layoutY="135.0" opacity="0.7" prefHeight="451.0" prefWidth="600.0" style="-fx-background-color: #111111; -fx-background-radius: 50;">
+            <AnchorPane fx:id="loginpane" layoutX="340.0" layoutY="135.0" opacity="0.7" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #111111; -fx-background-radius: 50;">
                <children>
-                  <Label fx:id="lblconfirm" alignment="CENTER" layoutX="162.0" layoutY="197.0" prefHeight="29.0" prefWidth="277.0" text="로그인 실패 [ 동일한 정보가 없습니다 ]" textFill="RED">
-                     <font>
-                        <Font name="Arial Black" size="15.0" />
-                     </font>
-                  </Label>
-                  <Button layoutX="110.0" layoutY="252.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="380.0" style="-fx-background-radius: 50; -fx-background-color: #29575D;" text="Login" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Black" size="20.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="111.0" layoutY="318.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="380.0" style="-fx-background-radius: 50;" text="Sign up">
-                     <font>
-                        <Font name="Arial Black" size="20.0" />
-                     </font>
-                  </Button>
                   <TextField fx:id="txtid" blendMode="SRC_ATOP" layoutX="110.0" layoutY="65.0" prefHeight="35.0" prefWidth="380.0" promptText="User ID" style="-fx-background-color: #ffffff;">
                      <font>
                         <Font name="Arial Black" size="15.0" />
@@ -45,12 +30,27 @@
                         <Font name="Arial Black" size="15.0" />
                      </font>
                   </TextField>
-                  <Label fx:id="btnfindpassword" alignment="CENTER" layoutX="390.0" layoutY="388.0" onMouseClicked="#findpassword" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="비밀번호 찾기">
+                  <Label fx:id="lblconfirm" alignment="CENTER" layoutX="162.0" layoutY="197.0" prefHeight="29.0" prefWidth="277.0" text="로그인 실패 [ 동일한 정보가 없습니다 ]" textFill="RED">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnlogin" layoutX="110.0" layoutY="252.0" mnemonicParsing="false" onAction="#login" prefHeight="0.0" prefWidth="380.0" style="-fx-background-radius: 50; -fx-background-color: #29575D;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnsignup" layoutX="111.0" layoutY="318.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="380.0" style="-fx-background-radius: 50;" text="Sign up">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="btnfindid" alignment="CENTER" layoutX="279.0" layoutY="388.0" onMouseClicked="#findid" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="아이디찾기">
                      <font>
                         <Font name="Arial Black" size="13.0" />
                      </font>
                   </Label>
-                  <Label fx:id="btnfind" alignment="CENTER" layoutX="279.0" layoutY="388.0" onMouseClicked="#findid" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="아이디찾기">
+                  <Label fx:id="btnfindpassword" alignment="CENTER" layoutX="390.0" layoutY="388.0" onMouseClicked="#findpassword" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="비밀번호 찾기">
                      <font>
                         <Font name="Arial Black" size="13.0" />
                      </font>
