@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="cp" prefHeight="620.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="26.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ezen RentCar" wrappingWidth="94.0" />
+      <Text layoutX="14.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notice" wrappingWidth="155.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Line endX="100.0" layoutX="80.0" layoutY="8.0" startX="100.0" startY="585.0" />
+      <Button fx:id="btnwrite" layoutX="866.0" layoutY="126.0" mnemonicParsing="false" onAction="#write" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="REGISTER">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <TableView fx:id="boardlist" layoutX="338.0" layoutY="163.0" prefHeight="388.0" prefWidth="649.0">
+         <columns>
+            <TableColumn prefWidth="59.0" text="No." />
+            <TableColumn prefWidth="307.0" text="Ttile" />
+            <TableColumn prefWidth="122.0" text="Writer" />
+            <TableColumn prefWidth="110.0" text="Date" />
+            <TableColumn prefWidth="48.0" text="View" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnboard1" layoutX="38.0" layoutY="246.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Notice">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnboard2" layoutX="38.0" layoutY="296.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Q &amp; A">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnboard3" layoutX="38.0" layoutY="343.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Review">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
