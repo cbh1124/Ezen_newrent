@@ -56,3 +56,14 @@
 
       
 ![DB설계](https://user-images.githubusercontent.com/37235727/140713138-1b37a48a-1627-41f1-a48a-68d0e0fb8bbe.jpg)
+
+## 관계도(depth) Controller구조
+![2021_11_10_17 (관계도 당일날짜 재정리) drawio](https://user-images.githubusercontent.com/61840067/141075388-9e2518fb-fb97-452b-9356-bb09f054e52e.png)
+
+
+
+
+
+
+
+
