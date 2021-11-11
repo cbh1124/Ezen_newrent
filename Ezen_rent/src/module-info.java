@@ -11,5 +11,5 @@ module Ezen_rent {
 	opens controller.boardcontroller to javafx.graphics, javafx.fxml;
 	opens controller.membercontroller to javafx.graphics, javafx.fxml;
 //	opens dao to java.sql;
-//	opens domain to mail, activation, javafx.base;
+	opens domain to mail, activation, javafx.base;
 }

@@ -2,7 +2,13 @@ package domain;
 
 import java.util.Properties;
 
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 public class Member {
 
@@ -73,10 +79,10 @@ public class Member {
 	public void setM_phone(String m_phone) {
 		this.m_phone = m_phone;
 	}
-	public static void senmail(String tomail, String msg, int type) {
+	public static void sendmail(String tomail, String msg, int type) {
 		
-		String fromemail = "아이디"; // 실제 
-		String frompassword = "패스워드"; // 실제
+		String fromemail = "slal4952@naver.com"; // 실제 
+		String frompassword = "wlwlgns2"; // 실제
 		
 		Properties properties = new Properties();
 		properties.put("mail.smtp.starttls.enable","true");
@@ -84,7 +90,23 @@ public class Member {
 		properties.put("mail.smtp.port","587");
 		properties.put("mail.smtp.auth","true");
 		
-		Session session = 
+		Session session = Session.getDefaultInstance(properties, new Authenticator() {
+			
+			@Override
+			protected PasswordAuthentication getPasswordAuthentication() {
+				return new PasswordAuthentication(fromemail, frompassword);
+			}
+		});
+		// 메일보내기
+		try {
+			MimeMessage message = new MimeMessage(session);
+			message.setFrom(new InternetAddress(fromemail));
+			message.addRecipient(Message.RecipientType.TO, new InternetAddress(tomail));
+			
+			message.setSubject("회원님의 비밀번호 조회 결과");
+			message.setText("회원님의 비밀번호는  : " + msg);
+			
+			Transport.send(message);
+		} catch (Exception e) {}
 	}
-	
 }

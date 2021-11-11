@@ -3,6 +3,8 @@ package controller.membercontroller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import dao.MemberDao;
+import domain.Member;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -52,6 +54,13 @@ public class FindpasswordController implements Initializable{
 
     @FXML
     void findpassword(ActionEvent event) {
-
+    	System.out.println( txtid.getText()+ txtname.getText()+ txtemail.getText()+ txtdob.getText()+ txtphone.getText() );
+    	String result = MemberDao.getMemberDao().findpassword(txtid.getText(), txtname.getText(), txtemail.getText(), txtdob.getText(), txtphone.getText());
+    	
+    	if(result != null ) {
+    		Member.sendmail(txtemail.getText(), result, 2);
+    		lblconfirm.setText("회원님의 비밀번호를 이메일로 전송했습니다.");
+    	}
+    	else { lblconfirm.setText("일치하는 정보가 존재하지 않습니다."); }
     }
 }

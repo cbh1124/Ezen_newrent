@@ -70,8 +70,8 @@ public class MemberDao {
 	}
 	// 비밀번호 찾기 메소드
 	public String findpassword(String id, String name, String email, String dob, String phone ) {
-		String sql = "select m_password from Member where m_id = ? and m_name = ? "
-				+ "m_id = email and m_dob = ? and m_phone = ?";
+		String sql = "select m_password from Member where m_id = ? and m_name = ? and "
+				+ "m_email = ? and m_dob = ? and m_phone = ?";
 		
 		try {
 			preparedStatement = connection.prepareStatement(sql);
