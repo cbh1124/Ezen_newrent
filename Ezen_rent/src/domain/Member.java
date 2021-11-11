@@ -21,7 +21,7 @@ public class Member {
 		this.m_dof = m_dof;
 		this.m_phone = m_phone;
 	}
-	asd
+	
 	public String getM_id() {
 		return m_id;
 	}
