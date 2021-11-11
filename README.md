@@ -7,7 +7,7 @@
 > 렌트카 예약 관리 시스템을 구축할 것입니다.
 
 ## 환경
-> jdk11, Eclipse, Window10, Git
+> jdk11, Eclipse, Window10, Git, MariaDB(server) , JavaFx  
 
 ## 서비스 설계 
 
