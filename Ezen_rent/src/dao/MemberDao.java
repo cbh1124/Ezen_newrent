@@ -13,12 +13,15 @@ public class MemberDao {
 	private PreparedStatement preparedStatement; 
 	private ResultSet resultSet;
 	
+	private static MemberDao memberDao = new MemberDao();
 	public MemberDao() {
 		try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/javafx?serverTimezone=UTC", "root","1234");
 		}catch (Exception e) { System.out.println("db연동 실패");}	
 	}
+	
+	public static MemberDao getMemberDao() { return memberDao; }
 	//회원가입 메소드
 	public boolean signup(Member member) {
 		

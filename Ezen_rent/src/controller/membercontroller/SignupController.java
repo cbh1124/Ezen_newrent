@@ -1,5 +1,78 @@
 package controller.membercontroller;
 
+import dao.MemberDao;
+import domain.Member;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+
 public class SignupController {
+
+	   @FXML
+	    private Label btnback;
+
+	    @FXML
+	    private Button btnsignup;
+
+	    @FXML
+	    private Label lblconfirm;
+
+	    @FXML
+	    private AnchorPane signuppane;
+
+	    @FXML
+	    private TextField txtemail;
+
+	    @FXML
+	    private TextField txtid;
+
+	    @FXML
+	    private TextField txtname;
+
+	    @FXML
+	    private PasswordField txtpassword;
+
+	    @FXML
+	    private PasswordField txtpasswordconfirm;
+	   
+	    @FXML
+	    private TextField txtphone;
+	    
+	    @FXML
+	    private TextField txtdof;
+
+	    @FXML
+	    void back(MouseEvent event) {
+	    	LoginController.getinstance().loadpage("loginpage");
+	    }
+
+	    @FXML
+	    void signup(ActionEvent event) {
+	    	if( txtid.getText().length() < 5 || txtid.getText().length() > 13) {
+	    		lblconfirm.setText("아이디는 5~ 12 글자 사이로 가능합니다.");
+	    	}
+	    	if( txtpassword.getText().length() < 8 || txtpassword.getText().length() > 21) {
+	    		lblconfirm.setText("비밀번호는 8 ~ 20 글자 사이로 가능합니다.");
+	    	}
+	    	if( !txtpassword.getText().equals(txtpasswordconfirm.getText())) {
+	    		lblconfirm.setText("비밀번호가 동일하지 않습니다.");
+	    	}
+	    	if( txtname.getText().length() < 2 ) {
+	    		lblconfirm.setText("이름은 2글자 이상 가능합니다.");
+	    	}
+	    	if( txtemail.getText().length() < 5 && txtemail.getText().contains("@")) {
+	    		lblconfirm.setText("이메일은 5글자 이상 @를 포함하여야 합니다.");
+	    	}
+	    	if( txtdof.getText().length() < 6 || txtdof.getText().length() > 7) { }
+	    	boolean idcheck = MemberDao.getMemberDao().idcheck(txtid.getText());
+	    	if(idcheck) { lblconfirm.setText("현재 사용중인 아이디입니다."); return;}
+	    	
+	    	Member member = new Member(txtid.getText(), txtpassword.getText(), txtname.getText(), txtemail.getText(), null, null)
+	    }
 
 }

@@ -3,17 +3,20 @@ package controller.membercontroller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import dao.MemberDao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 public class LoginController implements Initializable{
 	
@@ -72,12 +75,26 @@ public class LoginController implements Initializable{
 
 	    @FXML
 	    void login(ActionEvent event) {
-
+	    	boolean result = MemberDao.getMemberDao().login(txtid.getText(), txtpassword.getText());
+	    	if(result) {
+	    		lblconfirm.setText("로그인 성공");
+	    		
+	    		btnlogin.getScene().getWindow().hide();
+	    		
+	    		Stage stage = new Stage();
+	    		
+	    		try {
+					Parent parent = FXMLLoader.load(getClass().getResource("/fxml/mainpage.fxml"));
+					Scene scene = new Scene(parent);
+					stage.setResizable(false);
+					stage.show();
+				} catch (Exception e) {}
+	    	}
 	    }
 
 	    @FXML
 	    void signup(MouseEvent event) {
-	    	loadpage("");
+	    	loadpage("signuppage");
 	    }
 	    
 	    public void loadpage(String page) {

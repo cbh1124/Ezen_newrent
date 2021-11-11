@@ -10,7 +10,7 @@ public class Member {
 	private String m_phone;
 	
 	public Member() {
-	
+	//
 	}
 	// 회원가입 생성자
 	public Member(String m_id, String m_password, String m_name, String m_email, String m_dof, String m_phone) {
