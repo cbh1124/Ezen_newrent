@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="cp" prefHeight="620.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.receivecontroller.ReceiveController">
+   <children>
+      <Text layoutX="26.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ezen RentCar" wrappingWidth="94.0" />
+      <Text layoutX="14.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car info" textAlignment="CENTER" wrappingWidth="144.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Line endX="100.0" layoutX="80.0" layoutY="8.0" startX="100.0" startY="585.0" />
+      <ScrollPane fx:id="sp" layoutX="223.0" layoutY="56.0" prefHeight="516.0" prefWidth="912.0">
+         <content>
+            <AnchorPane fx:id="an" prefHeight="507.0" prefWidth="898.0" />
+         </content></ScrollPane>
+   </children>
+</AnchorPane>
