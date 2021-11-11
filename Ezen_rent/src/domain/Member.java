@@ -2,6 +2,8 @@ package domain;
 
 import java.util.Properties;
 
+import javax.mail.Session;
+
 public class Member {
 
 	private String m_id;
@@ -71,14 +73,18 @@ public class Member {
 	public void setM_phone(String m_phone) {
 		this.m_phone = m_phone;
 	}
-	////
-//	public static void senmail(String tomail, String msg, int type) {
-//		
-//		String fromemail = "아이디"; // 실제 
-//		String frompassword = "패스워드"; // 실제
-//		
-//		Properties properties = new Properties();
-//		properties.put
-//	}
+	public static void senmail(String tomail, String msg, int type) {
+		
+		String fromemail = "아이디"; // 실제 
+		String frompassword = "패스워드"; // 실제
+		
+		Properties properties = new Properties();
+		properties.put("mail.smtp.starttls.enable","true");
+		properties.put("mail.smtp.host","smtp.naver.com");
+		properties.put("mail.smtp.port","587");
+		properties.put("mail.smtp.auth","true");
+		
+		Session session = 
+	}
 	
 }
