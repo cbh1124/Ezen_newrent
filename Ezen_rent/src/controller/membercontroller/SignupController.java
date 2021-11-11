@@ -68,11 +68,18 @@ public class SignupController {
 	    	if( txtemail.getText().length() < 5 && txtemail.getText().contains("@")) {
 	    		lblconfirm.setText("이메일은 5글자 이상 @를 포함하여야 합니다.");
 	    	}
-	    	if( txtdof.getText().length() < 6 || txtdof.getText().length() > 7) { }
+	    	if( txtdof.getText().length() < 6 || txtdof.getText().length() > 7) { 
+	    		lblconfirm.setText("생년월일은 6자리로 작성해주시기 바랍니다. (주민번호 앞자리)");
+	    	}
+	    	if( txtphone.getText().length() < 10 || txtphone.getText().length()>12) {
+	    		lblconfirm.setText("연락처는 -을 제외한 10 ~ 11자리로 입력하시기 바랍니다. ");
+	    	}
 	    	boolean idcheck = MemberDao.getMemberDao().idcheck(txtid.getText());
 	    	if(idcheck) { lblconfirm.setText("현재 사용중인 아이디입니다."); return;}
 	    	
-	    	Member member = new Member(txtid.getText(), txtpassword.getText(), txtname.getText(), txtemail.getText(), null, null)
+	    	Member member = new Member(txtid.getText(), txtpassword.getText(), txtname.getText(), txtemail.getText(), txtdof.getText(), txtphone.getText());
+	    	
+	    	boolean result = MemberDao.getMemberDao().signup(member);
 	    }
 
 }
