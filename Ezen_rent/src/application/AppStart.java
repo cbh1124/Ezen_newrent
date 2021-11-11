@@ -13,7 +13,7 @@ public class AppStart extends Application{
 	@Override
 	public void start(Stage stage) throws Exception {
 	try {
-		Parent parent = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+		Parent parent = FXMLLoader.load(getClass().getResource("/fxml/loginpage.fxml"));
 		Scene scene = new Scene(parent);
 		stage.setScene(scene);
 			stage.setResizable(false); // 스테이지 크기고정
