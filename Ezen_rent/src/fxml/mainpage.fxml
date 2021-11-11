@@ -10,13 +10,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="mainpageborderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <AnchorPane fx:id="tp" prefHeight="90.0" prefWidth="1280.0" style="-fx-background-color: #51C4D3;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnhome" contentDisplay="CENTER" layoutX="51.0" layoutY="19.0" mnemonicParsing="false" onAction="#home" prefHeight="37.0" prefWidth="95.0">
+            <Button fx:id="btnhome" contentDisplay="CENTER" layoutX="51.0" layoutY="19.0" mnemonicParsing="false" onAction="#home" prefHeight="37.0" prefWidth="95.0" style="-fx-background-color: #D8E3E7;">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -25,17 +26,47 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Label layoutX="940.0" layoutY="14.0" prefHeight="30.0" prefWidth="55.0" text="Welcome" textFill="#808080">
+            <HBox layoutX="234.0" layoutY="15.0" prefHeight="60.0" prefWidth="642.0" style="-fx-border-color: #000000;">
+               <children>
+                  <Button fx:id="btnreserve" alignment="CENTER" mnemonicParsing="false" onAction="#reserve" prefHeight="35.0" prefWidth="200.0" style="-fx-background-radius: 10;" text="예약 하기">
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnmyinfo" alignment="CENTER" mnemonicParsing="false" onAction="#myinfo" prefHeight="35.0" prefWidth="200.0" style="-fx-background-radius: 10;" text="예약 정보">
+                     <HBox.margin>
+                        <Insets right="20.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btncarinfo" alignment="CENTER" mnemonicParsing="false" onAction="#carinfo" prefHeight="35.0" prefWidth="200.0" style="-fx-background-radius: 10;" text="챠랑정보">
+                     <HBox.margin>
+                        <Insets right="20.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <SplitMenuButton fx:id="btnboardlist" alignment="CENTER" mnemonicParsing="false" onAction="#boardlist" prefHeight="35.0" prefWidth="200.0" style="-fx-background-radius: 10;" text="고객센터">
+                    <items>
+                      <MenuItem fx:id="btnboard1" mnemonicParsing="false" onAction="#board1" style="-fx-background-radius: 10;" text="공지사항" />
+                      <MenuItem fx:id="btnboard2" mnemonicParsing="false" onAction="#board2" style="-fx-background-radius: 10;" text="Q &amp; A" />
+                        <MenuItem fx:id="btnboard3" mnemonicParsing="false" onAction="#board3" style="-fx-background-radius: 10;" text="이용후기" />
+                    </items>
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </SplitMenuButton>
+               </children>
+            </HBox>
+            <Label layoutX="962.0" layoutY="17.0" prefHeight="25.0" prefWidth="55.0" text="Welcome" textFill="#132c33">
                <font>
                   <Font name="Impact" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="lblloginid" layoutX="940.0" layoutY="43.0" prefHeight="30.0" prefWidth="130.0" text="LoginID">
+            <Label fx:id="lblloginid" layoutX="962.0" layoutY="45.0" prefHeight="30.0" prefWidth="150.0" text="LoginID">
                <font>
                   <Font name="Impact" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="btnlogout" alignment="CENTER" layoutX="1136.0" layoutY="30.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffffff;" text="logout" textFill="#7c7c7c">
+            <Button fx:id="btnadmin" alignment="CENTER" layoutX="1119.0" layoutY="19.0" mnemonicParsing="false" onAction="#admin" prefHeight="22.0" prefWidth="130.0" style="-fx-background-color: #ffffff;" text="ADMIN" textFill="#000dff" />
+            <Button fx:id="btnlogout" alignment="CENTER" layoutX="1119.0" layoutY="46.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffffff;" text="logout" textFill="#7c7c7c">
                <font>
                   <Font name="Impact" size="15.0" />
                </font>
@@ -47,35 +78,123 @@
                   </ImageView>
                </graphic>
             </Button>
-            <HBox layoutX="286.0" layoutY="14.0" prefHeight="60.0" prefWidth="596.0" style="-fx-border-color: #000000;">
-               <children>
-                  <Button fx:id="btnreserve" alignment="CENTER" mnemonicParsing="false" onAction="#reserve" prefHeight="35.0" prefWidth="200.0" text="예약 하기">
-                     <HBox.margin>
-                        <Insets right="20.0" top="10.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="btnmyinfo" alignment="CENTER" mnemonicParsing="false" onAction="#myinfo" prefHeight="35.0" prefWidth="200.0" text="My info">
-                     <HBox.margin>
-                        <Insets right="20.0" top="10.0" />
-                     </HBox.margin>
-                  </Button>
-                  <SplitMenuButton fx:id="btnservice" alignment="CENTER" mnemonicParsing="false" onAction="#service" prefHeight="35.0" prefWidth="200.0" text="고객센터">
-                    <items>
-                      <MenuItem fx:id="btnboard1" mnemonicParsing="false" onAction="#board1" text="공지사항" />
-                      <MenuItem fx:id="btnboard2" mnemonicParsing="false" onAction="#board2" text="Q &amp; A" />
-                        <MenuItem fx:id="btnboard3" mnemonicParsing="false" onAction="#board3" text="이용후기" />
-                    </items>
-                     <HBox.margin>
-                        <Insets right="20.0" top="10.0" />
-                     </HBox.margin>
-                  </SplitMenuButton>
-               </children>
-            </HBox>
          </children>
       </AnchorPane>
    </top>
    <bottom>
-      <AnchorPane prefHeight="80.0" prefWidth="1280.0" style="-fx-background-color: #132C33;" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="80.0" prefWidth="1280.0" style="-fx-background-color: #132C33;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="80.0" prefWidth="1280.0">
+               <children>
+                  <HBox prefHeight="80.0" prefWidth="505.0">
+                     <children>
+                        <VBox prefHeight="80.0" prefWidth="492.0">
+                           <children>
+                              <Label prefHeight="19.0" prefWidth="314.0" text="경기 안산시 상록구 광덕1로 375 강우프라자 5층" textFill="#a8a8a8">
+                                 <font>
+                                    <Font name="Impact" size="10.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="33.0" prefWidth="377.0" text="대표전화 031-123-7777 팩스 031-123-1234 이메일 ezenrentcar@ezenrentcar.co.kr" textFill="#a8a8a8">
+                                 <font>
+                                    <Font name="Impact" size="10.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="29.0" prefWidth="412.0" text="법인등록번호 123456-1234567 사업자등록번호 123-12-12345 통신판매업 제2021-경기 안산-1111호" textFill="#a8a8a8">
+                                 <font>
+                                    <Font name="Impact" size="10.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="80.0" prefWidth="416.0">
+                     <children>
+                        <VBox prefHeight="80.0" prefWidth="487.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="26.0" prefWidth="399.0" text="회사소개  |  서비스 이용약관  |  개인정보처리방침" textFill="#a8a8a8" />
+                              <Label alignment="CENTER" prefHeight="26.0" prefWidth="399.0" text="Copyright © SK렌터카. All Rights Reserved." textFill="#a8a8a8" />
+                           </children>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="80.0" prefWidth="569.0">
+                     <children>
+                        <VBox prefHeight="80.0" prefWidth="557.0">
+                           <children>
+                              <Label prefHeight="16.0" prefWidth="585.0" text="고객센터 : 1577 - 7777 평일 9:00 ~ 18:00(토요일 및 공휴일 휴무) 장기렌터카 이용 문의/상담" textFill="#a8a8a8">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </Label>
+                              <HBox prefHeight="66.0" prefWidth="672.0">
+                                 <children>
+                                    <ImageView fitHeight="34.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/foot_icon1.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="20.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fitHeight="34.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/foot_icon2.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="20.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fitHeight="34.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/foot_icon3.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="20.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fitHeight="34.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/foot_icon4.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="20.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="100.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children></AnchorPane>
    </bottom>
    <center>
       <AnchorPane fx:id="cp" prefHeight="550.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" BorderPane.alignment="CENTER" />
