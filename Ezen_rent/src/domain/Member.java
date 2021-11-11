@@ -7,13 +7,13 @@ public class Member {
 	private String m_name;
 	private String m_email;
 	private String m_dof;
-	private int m_phone;
+	private String m_phone;
 	
 	public Member() {
 	
 	}
 	// 회원가입 생성자
-	public Member(String m_id, String m_password, String m_name, String m_email, String m_dof, int m_phone) {
+	public Member(String m_id, String m_password, String m_name, String m_email, String m_dof, String m_phone) {
 		this.m_id = m_id;
 		this.m_password = m_password;
 		this.m_name = m_name;
@@ -62,11 +62,11 @@ public class Member {
 		this.m_dof = m_dof;
 	}
 
-	public int getM_phone() {
+	public String getM_phone() {
 		return m_phone;
 	}
 
-	public void setM_phone(int m_phone) {
+	public void setM_phone(String m_phone) {
 		this.m_phone = m_phone;
 	}
 	
