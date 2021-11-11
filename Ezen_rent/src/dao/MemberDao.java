@@ -11,7 +11,7 @@ public class MemberDao {
 
 	private Connection connection;
 	private PreparedStatement preparedStatement; 
-	//private ResultSet resultSet;
+	private ResultSet resultSet;
 	
 	public MemberDao() {
 		try {
