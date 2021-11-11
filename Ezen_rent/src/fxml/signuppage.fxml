@@ -63,7 +63,7 @@
                   <Font name="Arial Black" size="15.0" />
                </font>
             </PasswordField>
-            <TextField fx:id="txtdof" blendMode="SRC_ATOP" layoutX="110.0" layoutY="329.0" prefHeight="35.0" prefWidth="380.0" promptText="User dof" style="-fx-background-color: #ffffff;">
+            <TextField fx:id="txtdob" blendMode="SRC_ATOP" layoutX="110.0" layoutY="329.0" prefHeight="35.0" prefWidth="380.0" promptText="User dob" style="-fx-background-color: #ffffff;">
                <font>
                   <Font name="Arial Black" size="15.0" />
                </font>

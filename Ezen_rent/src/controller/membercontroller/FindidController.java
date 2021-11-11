@@ -33,6 +33,9 @@ public class FindidController implements Initializable{
     private AnchorPane signuppane;
 
     @FXML
+    private AnchorPane findidpane;
+    
+    @FXML
     private TextField txtemail;
 
     @FXML

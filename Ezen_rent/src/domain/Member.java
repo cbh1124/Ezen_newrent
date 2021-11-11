@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.Properties;
+
 public class Member {
 
 	private String m_id;
@@ -70,6 +72,13 @@ public class Member {
 		this.m_phone = m_phone;
 	}
 	
-	
+//	public static void senmail(String tomail, String msg, int type) {
+//		
+//		String fromemail = "아이디"; // 실제 
+//		String frompassword = "패스워드"; // 실제
+//		
+//		Properties properties = new Properties();
+//		properties.put
+//	}
 	
 }

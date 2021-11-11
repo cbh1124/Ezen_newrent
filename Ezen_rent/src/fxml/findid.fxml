@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:controller="controller.membercontroller.FindidController" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.membercontroller.FindidController">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/loginimg.jpg" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="signuppane" layoutX="340.0" layoutY="135.0" opacity="0.7" prefHeight="451.0" prefWidth="600.0" style="-fx-background-color: #111111; -fx-background-radius: 50;">
+      <AnchorPane fx:id="findidpane" layoutX="340.0" layoutY="135.0" opacity="0.7" prefHeight="451.0" prefWidth="600.0" style="-fx-background-color: #111111; -fx-background-radius: 50;">
          <children>
             <Label alignment="CENTER" layoutX="209.0" layoutY="53.0" prefHeight="35.0" prefWidth="185.0" text="아이디 찾기" textFill="WHITE">
                <font>

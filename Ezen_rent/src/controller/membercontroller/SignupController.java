@@ -55,7 +55,7 @@ public class SignupController implements Initializable{
 	    private TextField txtphone;
 	    
 	    @FXML
-	    private TextField txtdof;
+	    private TextField txtdob;
 
 	    @FXML
 	    void back(MouseEvent event) {
@@ -79,7 +79,7 @@ public class SignupController implements Initializable{
 	    	if( txtemail.getText().length() < 5 && !txtemail.getText().contains("@")) {
 	    		lblconfirm.setText("이메일은 5글자 이상 @를 포함하여야 합니다."); return;
 	    	}
-	    	if( txtdof.getText().length() < 6 || txtdof.getText().length() > 7) { 
+	    	if( txtdob.getText().length() < 6 || txtdob.getText().length() > 7) { 
 	    		lblconfirm.setText("생년월일은 6자리로 작성해주시기 바랍니다. (주민번호 앞자리)"); return;
 	    	}
 	    	if( txtphone.getText().length() < 10 || txtphone.getText().length()>12) {
@@ -88,7 +88,7 @@ public class SignupController implements Initializable{
 	    	boolean idcheck = MemberDao.getMemberDao().idcheck(txtid.getText());
 	    	if(idcheck) { lblconfirm.setText("현재 사용중인 아이디입니다."); return;}
 	    	
-	    	Member member = new Member(txtid.getText(), txtpassword.getText(), txtname.getText(), txtemail.getText(), txtdof.getText(), txtphone.getText());
+	    	Member member = new Member(txtid.getText(), txtpassword.getText(), txtname.getText(), txtemail.getText(), txtdob.getText(), txtphone.getText());
 	    	
 	    	boolean result = MemberDao.getMemberDao().signup(member);
 	    	if(result) {

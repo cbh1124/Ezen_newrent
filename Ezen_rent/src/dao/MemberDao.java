@@ -69,7 +69,24 @@ public class MemberDao {
 		}catch (Exception e) {} return null;
 	}
 	// 비밀번호 찾기 메소드
-	
+	public String findpassword(String id, String name, String email, String dob, String phone ) {
+		String sql = "select m_password from Member where m_id = ? and m_name = ? "
+				+ "m_id = email and m_dob = ? and m_phone = ?";
+		
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, id);
+			preparedStatement.setString(2, name);
+			preparedStatement.setString(3, email);
+			preparedStatement.setString(4, dob);
+			preparedStatement.setString(5, phone);
+			resultSet = preparedStatement.executeQuery();
+			
+			if(resultSet.next()) { return resultSet.getString(1); }
+			else { return null; }
+			
+		} catch (Exception e) {} return null;
+	}
 	// 아이디 체크 메소드
 	public boolean idcheck (String id) {
 		String sql = "select m_id from Member where m_id = ?";

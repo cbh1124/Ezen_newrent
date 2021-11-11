@@ -26,6 +26,8 @@
 				Password confirm : txtpasswordconfirm
 				User name	:	txtname
 				User email	:	txtemail
+				User dob	:	txtdob
+				User Phone 	:	txtphone
 				
 				Signupbtn	:	btnsignup			On Mouse Clicked	:	signup
 				
@@ -34,10 +36,12 @@
 				
 	findid
 	
+				AnchronPane : 	findidpane
 				Back		:	btnback				On Mouse Clicked	:	back
 				
 				User name	:	txtname
 				User email	:	txtemail
+				
 				
 				findid		:	btnfindid			On Mouse Clicked	:	findid
 				
@@ -46,10 +50,14 @@
 	
 	findpassword
 				
+				AnchronPane : 	findpasswordpane
 				Back		:	btnback				On Mouse Clicked	:	back
 				
-				User ID 	:	txtid
+				User id		:	txtid
+				User name	:	txtname
 				User email	:	txtemail
+				User dob	:	txtdob
+				User phone	:	txtphone
 				
 				findpassword:	btnfindpassword		On Mouse Clicked	:	findpassword	
 				
