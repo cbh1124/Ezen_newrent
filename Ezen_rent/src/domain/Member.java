@@ -71,7 +71,7 @@ public class Member {
 	public void setM_phone(String m_phone) {
 		this.m_phone = m_phone;
 	}
-	
+	//
 //	public static void senmail(String tomail, String msg, int type) {
 //		
 //		String fromemail = "아이디"; // 실제 
