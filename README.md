@@ -94,17 +94,23 @@
 <div markdown="1">
 
   1. 화면 규격 
+  <h3>1280 x 720</h3>
   
   2. 메인 폰트 
+  ![image](https://user-images.githubusercontent.com/61840067/141503419-d5e5f12e-58c6-420b-859e-f131bbddcdd2.png)
   
   3. 메인 색상 테마 
+  ![image](https://user-images.githubusercontent.com/61840067/141503065-27d27c9e-8bfd-48ef-b5f1-98f530d32637.png)
   
-  4. 페이퍼 프로토 타입 
+  4. 로고
+  ![image](https://user-images.githubusercontent.com/61840067/141504200-7af136e7-561a-45d7-8901-d591a37ec9f6.png)
+
+  
 
 </div>
 </details>
 
-## 목업
+## 목업 (프로토 타입)
 <details>
 <summary>Click</summary>
 <div markdown="1">
