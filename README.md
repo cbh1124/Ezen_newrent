@@ -31,7 +31,7 @@
 
 ## 역할 분담
 > 김태호 : Reservation <br>
-> 조지훈 : member <br>
+> 조지훈 : Member <br>
 > 최병호 : Admin 
 
 ## 주요 기능
