@@ -27,14 +27,23 @@
 </details>
 
 ## 서비스 설계 
-
+<details>
+<summary>Click</summary>
+<div markdown="1">
+  
 ![Rent_11_05 요구사항 기능](https://user-images.githubusercontent.com/61840067/140478880-b6c64bdd-ea4e-45a0-ad89-d6e1c6421d12.JPG)
+</div>
+</details>
 
 ## 프로젝트 기간
 > 11_05 ~ 11_22(22일 발표)
 
 ## 개발일정 
 
+<details>
+<summary>Click</summary>
+<div markdown="1">
+  
 |날짜|내용|
 |----|----|
 |2021.11.05|주제 선정 및 화면 목업 및 로고 제작 및 주요기능 세부 설정 및 서비스 기능 설계|
@@ -46,12 +55,19 @@
 |2021.11.17 ~ 2021.11.21|프로젝트 연결 및 오류 수정|
 |2021.11.22|프로젝트 발표|
 
+</div>
+</details>
+
 ## 역할 분담
 > 김태호 : Reservation <br>
 > 조지훈 : Member <br>
 > 최병호 : Admin 
 
 ## 주요 기능
+<details>
+<summary>Click</summary>
+<div markdown="1">
+  
 > 손님
   1. 회원가입 
   2. 로그인
@@ -67,7 +83,9 @@
   1. 예약
   2. 예약확인
   3. 예약취소
-
+  
+</div>
+</details>
 
 ## [프론트 설계]
 
