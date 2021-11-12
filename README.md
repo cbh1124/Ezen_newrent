@@ -93,7 +93,7 @@
 <summary>Click</summary>
 <div markdown="1">
 
-<h3>1. 화면 규격</h3><br>
+<h3>1. 화면 규격</h3>
   <p><h4>1280 x 720</h4></p>
   
 <h3>2. 메인 폰트</h3><br> 
