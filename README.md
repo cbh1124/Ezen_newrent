@@ -23,6 +23,8 @@
 - Git<br>
 - Eclipse<br>
 
+</div>
+</details>
 
 ## 서비스 설계 
 
