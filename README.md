@@ -94,10 +94,10 @@
 <div markdown="1">
 
   1. 화면 규격<br>
-  <h3>1280 x 720</h3><br>
+  1280 x 720<br>
   
   2. 메인 폰트<br> 
-  ![image](https://user-images.githubusercontent.com/61840067/141503419-d5e5f12e-58c6-420b-859e-f131bbddcdd2.png)
+  <img src="https://user-images.githubusercontent.com/61840067/141503419-d5e5f12e-58c6-420b-859e-f131bbddcdd2.png  width="200" height="400"/>
   
   3. 메인 색상 테마<br> 
   ![image](https://user-images.githubusercontent.com/61840067/141503065-27d27c9e-8bfd-48ef-b5f1-98f530d32637.png)
