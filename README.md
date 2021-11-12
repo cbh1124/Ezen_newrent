@@ -89,6 +89,10 @@
 
 ## [프론트 설계]
 
+<details>
+<summary>Click</summary>
+<div markdown="1">
+
   1. 화면 규격 
   
   2. 메인 폰트 
@@ -97,17 +101,37 @@
   
   4. 페이퍼 프로토 타입 
 
+</div>
+</details>
+
 ## 목업
+<details>
+<summary>Click</summary>
+<div markdown="1">
+  
 ![asd drawio](https://user-images.githubusercontent.com/61840067/140482872-9e33d121-18b2-45b6-a30c-e6db083a6606.png)
+  
+</div>
+</details>
 
 ## [DB설계]
+<details>
+<summary>Click</summary>
+<div markdown="1">
+  
 ![2021_11_10_11](https://user-images.githubusercontent.com/61840067/141075556-f27d0112-2603-4c38-be8f-52868a439a04.png)
 
+</div>
+</details>
 
 ## 관계도(depth) Controller구조
+<details>
+<summary>Click</summary>
+<div markdown="1">
 ![2021_11_10_17 (관계도 당일날짜 재정리) drawio](https://user-images.githubusercontent.com/61840067/141075388-9e2518fb-fb97-452b-9356-bb09f054e52e.png)
 
-
+</div>
+</details>
 
 
 
