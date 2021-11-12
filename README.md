@@ -1,9 +1,22 @@
 ## Ezen Rentcar 2조 TEAM
+<details>
+<summary>Click</summary>
+<div markdown="1">
+  
 - 렌트카 서비스의 구축을 목표로 잡았습니다.
 - 차량등록과 예약시스템이 렌트카 서비스의 핵심..
-
-## 주제 Ezen_newrent
+  
+</div>
+</details>
+## 주제 
+<details>
+<summary>Click</summary>
+<div markdown="1">
+  
 - 렌트카 예약 관리 시스템 
+  
+</div>
+</details>
 
 ## 프로젝트 소개
 <details>
