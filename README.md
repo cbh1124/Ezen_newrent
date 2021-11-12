@@ -10,9 +10,11 @@
 관리자와 사용자간의 편리한 서비스를 구축하기위해 차량관리, 예약관리, 사용자와 관리자간의 소통시스템을 위주로 설계하였습니다.
 
 ## 환경
+
 <details>
 <summary>Click</summary>
 <div markdown="1">
+  
 ![사용 가능 스택](https://user-images.githubusercontent.com/61840067/141501552-a8794837-9fed-4b3a-b191-fb57eaa6070c.PNG)
 - jdk11
 - JavaFx 
