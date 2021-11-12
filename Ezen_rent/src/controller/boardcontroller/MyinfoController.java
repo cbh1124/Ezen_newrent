@@ -22,38 +22,42 @@ public class MyinfoController implements Initializable {
 		
 	}
 	
-	 @FXML
-	    private Button btndelete;
 
-	    @FXML
-	    private Button btnupdate;
+    @FXML
+    private TableView<?> board2list;
 
-	    @FXML
-	    private AnchorPane cp;
+    @FXML
+    private TableView<?> board3list;
 
-	    @FXML
-	    private Label lblemail;
+    @FXML
+    private Button btndelete;
 
-	    @FXML
-	    private Label lblid;
+    @FXML
+    private Button btnupdate;
 
-	    @FXML
-	    private Label lblname;
+    @FXML
+    private Label lblemail;
 
-	    @FXML
-	    private TableView<?> myboardlist;
+    @FXML
+    private Label lblid;
 
-	    @FXML
-	    private TableView<?> myreservation;
+    @FXML
+    private Label lblloginid;
 
-	    @FXML
-	    void delete(ActionEvent event) {
+    @FXML
+    private Label lblname;
 
-	    }
+    @FXML
+    private TableView<?> myreservation;
 
-	    @FXML
-	    void update(ActionEvent event) {
+    @FXML
+    void delete(ActionEvent event) {
 
-	    }
+    }
+
+    @FXML
+    void update(ActionEvent event) {
+
+    }
 
 }
