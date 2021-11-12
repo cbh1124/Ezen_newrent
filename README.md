@@ -97,6 +97,7 @@
   1280 x 720<br>
   
   2. 메인 폰트<br> 
+  
   <img src="https://user-images.githubusercontent.com/61840067/141503419-d5e5f12e-58c6-420b-859e-f131bbddcdd2.png  width="200" height="400"/>
   
   3. 메인 색상 테마<br> 
