@@ -30,9 +30,9 @@
 |2021.11.22|프로젝트 발표|
 
 ## 역할 분담
-> 김태호 : Reservation
-> 조지훈 : member
-> 최병호 : Admin
+> 김태호 : Reservation <br>
+> 조지훈 : member <br>
+> 최병호 : Admin 
 
 ## 주요 기능
 > 손님
