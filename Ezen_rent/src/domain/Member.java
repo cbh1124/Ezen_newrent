@@ -81,8 +81,8 @@ public class Member {
 	}
 	public static void sendmail(String tomail, String msg, int type) {
 		
-		String fromemail = "slal4952@naver.com"; // 실제 
-		String frompassword = "wlwlgns2"; // 실제
+		String fromemail = "아이디"; // 실제 
+		String frompassword = "비밀번호"; // 실제
 		
 		Properties properties = new Properties();
 		properties.put("mail.smtp.starttls.enable","true");
