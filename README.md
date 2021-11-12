@@ -93,18 +93,18 @@
 <summary>Click</summary>
 <div markdown="1">
 
-###1. 화면 규격<br>
+<h2>1. 화면 규격</h2><br>
   <p><h3>1280 x 720</h3></p>
   
-###2. 메인 폰트<br> 
+<h2>2. 메인 폰트</h2><br> 
   
   <img src="https://user-images.githubusercontent.com/61840067/141503419-d5e5f12e-58c6-420b-859e-f131bbddcdd2.png"  width="400" height="200"/>
   
-###3. 메인 색상 테마<br> 
+<h2>3. 메인 색상 테마</h2><br> 
   
   <img src="https://user-images.githubusercontent.com/61840067/141503065-27d27c9e-8bfd-48ef-b5f1-98f530d32637.png"  width="400" height="200"/>
 
-###4. 로고<br>
+<h2>4. 로고</h2><br>
   
   <img src="https://user-images.githubusercontent.com/61840067/141504200-7af136e7-561a-45d7-8901-d591a37ec9f6.png"  width="400" height="200"/>
   
