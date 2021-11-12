@@ -80,7 +80,7 @@ public class Member {
 		this.m_phone = m_phone;
 	}
 	public static void sendmail(String tomail, String msg, int type) {
-		
+		//
 		String fromemail = "아이디"; // 실제 
 		String frompassword = "비밀번호"; // 실제
 		
