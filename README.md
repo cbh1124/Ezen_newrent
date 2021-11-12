@@ -110,7 +110,7 @@
 </div>
 </details>
 
-## [프론트 설계]
+## [프론트 설계 규격]
 
 <details>
 <summary>Click</summary>
