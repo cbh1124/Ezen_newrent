@@ -3,6 +3,7 @@ package domain;
 public class Car {
 	
 	private String c_num;
+	private String c_name;
 	private String c_license;
 	private String c_img;
 	private String c_price;
@@ -17,9 +18,10 @@ public class Car {
 	}
 	
 	// 모든
-	public Car(String c_num, String c_license, String c_img, String c_price, String c_ct1, String c_ct2, String c_ct3,
+	public Car(String c_num, String c_name, String c_license, String c_img, String c_price, String c_ct1, String c_ct2, String c_ct3,
 			boolean ret) {
 		this.c_num = c_num;
+		this.c_name = c_name;
 		this.c_license = c_license;
 		this.c_img = c_img;
 		this.c_price = c_price;
@@ -29,10 +31,11 @@ public class Car {
 		this.ret = ret;
 	}
 
-	//
-	public Car(String c_num, String c_license, String c_img, String c_price, String c_ct1, String c_ct2, String c_ct3) {
+	// 차등록시 생성자
+	public Car(String c_num, String c_name, String c_license, String c_img, String c_price, String c_ct1, String c_ct2, String c_ct3) {
 		super();
 		this.c_num = c_num;
+		this.c_name = c_name;
 		this.c_license = c_license;
 		this.c_img = c_img;
 		this.c_price = c_price;
@@ -47,6 +50,14 @@ public class Car {
 
 	public void setC_num(String c_num) {
 		this.c_num = c_num;
+	}
+
+	public String getC_name() {
+		return c_name;
+	}
+
+	public void setC_name(String c_name) {
+		this.c_name = c_name;
 	}
 
 	public String getC_license() {

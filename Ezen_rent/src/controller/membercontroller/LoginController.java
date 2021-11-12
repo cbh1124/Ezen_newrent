@@ -35,6 +35,10 @@ public class LoginController implements Initializable{
 			return instance;
 		}
 		
+		// 입력된 아이디 반환
+		public String getid() {
+			return txtid.getText();
+		}
 		
 	    @FXML
 	    private Label btnfindid;
