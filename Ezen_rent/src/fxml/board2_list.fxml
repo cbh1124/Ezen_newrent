@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="cp" prefHeight="630.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="304.0" layoutY="153.0" prefHeight="14.0" prefWidth="94.0" text="* Question" />
+      <Button fx:id="btnboard2" layoutX="48.0" layoutY="306.0" mnemonicParsing="false" onAction="#board2" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #126E82;" text="Q &amp; A">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnboard3" layoutX="48.0" layoutY="353.0" mnemonicParsing="false" onAction="#board3" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Review">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Text layoutX="48.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q &amp; A board" wrappingWidth="155.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Line endX="100.0" layoutX="104.0" layoutY="42.0" startX="100.0" startY="585.0" />
+      <Button fx:id="btnboard1" layoutX="48.0" layoutY="256.0" mnemonicParsing="false" onAction="#board1" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Notice">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnwrite" layoutX="1083.0" layoutY="132.0" mnemonicParsing="false" onAction="#write" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="REGISTER">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <TableView fx:id="board2list" layoutX="304.0" layoutY="173.0" prefHeight="336.0" prefWidth="900.0">
+         <columns>
+            <TableColumn prefWidth="59.0" text="No." />
+            <TableColumn prefWidth="280.0" text="Ttile" />
+            <TableColumn prefWidth="296.0" text="Writer" />
+            <TableColumn prefWidth="89.0" text="답변유무" />
+            <TableColumn prefWidth="78.0" text="Date" />
+            <TableColumn prefWidth="97.0" text="View" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
