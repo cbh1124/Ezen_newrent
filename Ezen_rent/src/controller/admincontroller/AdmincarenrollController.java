@@ -1,4 +1,4 @@
-package controller.adminController;
+package controller.admincontroller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -24,77 +24,77 @@ public class AdmincarenrollController implements Initializable{
 		
 	}
 	
-	
-	 @FXML
-	    private ImageView adminimg;
+	//юс╫ц
+	@FXML
+    private ImageView adminimg;
 
-	    @FXML
-	    private Button btncancel;
+    @FXML
+    private Button btncancel;
 
-	    @FXML
-	    private Button btnimgadd;
+    @FXML
+    private Button btnimgadd;
 
-	    @FXML
-	    private Button btnupdate;
+    @FXML
+    private Button btnupdate;
 
-	    @FXML
-	    private ToggleGroup category1;
+    @FXML
+    private ToggleGroup category1;
 
-	    @FXML
-	    private ToggleGroup category2;
+    @FXML
+    private ToggleGroup category2;
 
-	    @FXML
-	    private ToggleGroup category3;
+    @FXML
+    private ToggleGroup category3;
 
-	    @FXML
-	    private Label lblimgpath;
+    @FXML
+    private Label lblimgpath;
 
-	    @FXML
-	    private RadioButton opt_1_1;
+    @FXML
+    private RadioButton opt_1_1;
 
-	    @FXML
-	    private RadioButton opt_1_2;
+    @FXML
+    private RadioButton opt_1_2;
 
-	    @FXML
-	    private RadioButton opt_1_3;
+    @FXML
+    private RadioButton opt_1_3;
 
-	    @FXML
-	    private RadioButton opt_1_4;
+    @FXML
+    private RadioButton opt_1_4;
 
-	    @FXML
-	    private RadioButton opt_2_1;
+    @FXML
+    private RadioButton opt_2_1;
 
-	    @FXML
-	    private RadioButton opt_2_2;
+    @FXML
+    private RadioButton opt_2_2;
 
-	    @FXML
-	    private RadioButton opt_3_1;
+    @FXML
+    private RadioButton opt_3_1;
 
-	    @FXML
-	    private RadioButton opt_3_2;
+    @FXML
+    private RadioButton opt_3_2;
 
-	    @FXML
-	    private TextField txtcarlicense;
+    @FXML
+    private TextField txtcarlicense;
 
-	    @FXML
-	    private TextField txtcarname;
+    @FXML
+    private TextField txtcarname;
 
-	    @FXML
-	    private TextField txtprice;
+    @FXML
+    private TextField txtprice;
 
-	    @FXML
-	    void cancel(ActionEvent event) {
+    @FXML
+    void cancel(ActionEvent event) {
 
-	    }
+    }
 
-	    @FXML
-	    void imgadd(ActionEvent event) {
+    @FXML
+    void imgadd(ActionEvent event) {
 
-	    }
+    }
 
-	    @FXML
-	    void update(ActionEvent event) {
+    @FXML
+    void update(ActionEvent event) {
 
-	    }
+    }
 
 }

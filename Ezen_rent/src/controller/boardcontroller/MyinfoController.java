@@ -15,13 +15,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
 public class MyinfoController implements Initializable {
-	
+	//임시
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		
 	}
-	
+	//임시
 
     @FXML
     private TableView<?> board2list;

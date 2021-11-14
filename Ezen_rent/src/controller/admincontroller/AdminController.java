@@ -1,4 +1,4 @@
-package controller.adminController;
+package controller.admincontroller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,7 +20,7 @@ public class AdminController implements Initializable{
 	
 		
 	}
-	
+	//юс╫ц
 	@FXML
     private Button btncancel;
 

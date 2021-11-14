@@ -30,7 +30,7 @@ public class MainpageController implements Initializable{
 		loadpage("home");
 		
 	}
-
+	//임시
     @FXML
     private Button btnadmin;
 
@@ -78,24 +78,28 @@ public class MainpageController implements Initializable{
 
     }
 
-    @FXML
+    @FXML // 고객센터 공지사항 
     void board1(ActionEvent event) {
-
+    	loadpage("board1_list");
+    	System.out.println("board1_list");
     }
 
-    @FXML
+    @FXML // 고객센터 Q&A
     void board2(ActionEvent event) {
-
+    	loadpage("board2_list");
+    	System.out.println("board2_list");
     }
 
-    @FXML
+    @FXML // 이용후기 
     void board3(ActionEvent event) {
-
+    	loadpage("board3_list");
+    	System.out.println("board3_list");
     }
 
     @FXML
     void boardlist(ActionEvent event) {
-
+    	loadpage("board1_list");
+    	System.out.println("board1_list");
     }
 
     @FXML
