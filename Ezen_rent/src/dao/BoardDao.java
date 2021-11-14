@@ -12,7 +12,7 @@ import javafx.collections.ObservableList;
 
 public class BoardDao {
 
-	// 1. 필드 
+	// 1. 필드 //
 	private Connection connection;
 	private PreparedStatement preparedStatement;
 	private ResultSet resultSet;
