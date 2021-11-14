@@ -165,7 +165,7 @@
 </details>
 
 ## 개발일정재정리 [임시] 
-dao : member[O] car[O] board[O] Reservation[x] Reply[x]
+domain : member[O] car[O] board[O] Reservation[x] Reply[x]
 11_14 : board 작성 및 고객센터 fxml loadpage까지 작성 carinfo 부분은 남겨둘 예정 
 <p>[구현부 이미지 등록및 차량확인상세페이지 재설계필요] </p>
 
