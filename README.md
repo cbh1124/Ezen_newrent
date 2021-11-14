@@ -166,7 +166,10 @@
 
 ## 개발일정재정리 [임시] 
 dao : member[O] car[O] board[O] Reservation[x] Reply[x]
-11_14 : board 작성 및 고객센터 fxml loadpage까지 작성 carinfo 부분은 남겨둘 예정 [구현부 이미지 등록및 차량확인상세페이지 재설계필요]
+11_14 : board 작성 및 고객센터 fxml loadpage까지 작성 carinfo 부분은 남겨둘 예정 
+[구현부 이미지 등록및 차량확인상세페이지 재설계필요]
+
+<h3>[구현완료 된 부분]</h3>
 로그인 회원가입 아이디찾기 비밀번호찾기 home(default) 
 
 controller : 각 fxml당 컨트롤러 전부 작성된듯? (아직 업로드 안됨)
