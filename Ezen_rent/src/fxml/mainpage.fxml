@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:controller="controller.boardcontroller.MainpageController" fx:id="mainpageborderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="mainpageborderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.boardcontroller.MainpageController">
    <top>
       <AnchorPane fx:id="tp" prefHeight="90.0" prefWidth="1280.0" style="-fx-background-color: #51C4D3;" BorderPane.alignment="CENTER">
          <children>
@@ -102,12 +102,12 @@
                                  </VBox.margin>
                               </Label>
                               <Label prefHeight="33.0" prefWidth="377.0" text="대표전화 031-123-7777 팩스 031-123-1234 이메일 ezenrentcar@ezenrentcar.co.kr" textFill="#a8a8a8">
-                                 <font>
-                                    <Font name="Impact" size="10.0" />
-                                 </font>
                                  <VBox.margin>
                                     <Insets left="10.0" />
                                  </VBox.margin>
+                                 <font>
+                                    <Font name="Impact" size="10.0" />
+                                 </font>
                               </Label>
                               <Label prefHeight="29.0" prefWidth="412.0" text="법인등록번호 123456-1234567 사업자등록번호 123-12-12345 통신판매업 제2021-경기 안산-1111호" textFill="#a8a8a8">
                                  <font>
@@ -128,8 +128,14 @@
                      <children>
                         <VBox prefHeight="80.0" prefWidth="487.0">
                            <children>
-                              <Label alignment="CENTER" prefHeight="26.0" prefWidth="399.0" text="회사소개  |  서비스 이용약관  |  개인정보처리방침" textFill="#a8a8a8" />
-                              <Label alignment="CENTER" prefHeight="26.0" prefWidth="399.0" text="Copyright © SK렌터카. All Rights Reserved." textFill="#a8a8a8" />
+                              <Label alignment="CENTER" prefHeight="26.0" prefWidth="399.0" text="회사소개  |  서비스 이용약관  |  개인정보처리방침" textFill="#a8a8a8">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font></Label>
+                              <Label alignment="CENTER" prefHeight="26.0" prefWidth="399.0" text="Copyright © SK렌터카. All Rights Reserved." textFill="#a8a8a8">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font></Label>
                            </children>
                            <padding>
                               <Insets top="15.0" />
@@ -141,10 +147,13 @@
                      <children>
                         <VBox prefHeight="80.0" prefWidth="557.0">
                            <children>
-                              <Label prefHeight="16.0" prefWidth="585.0" text="고객센터 : 1577 - 7777 평일 9:00 ~ 18:00(토요일 및 공휴일 휴무) 장기렌터카 이용 문의/상담" textFill="#a8a8a8">
+                              <Label alignment="CENTER" prefHeight="16.0" prefWidth="585.0" text="고객센터 : 1577 - 7777 평일 9:00 ~ 18:00(토요일 및 공휴일 휴무) 장기렌터카 이용 문의/상담" textFill="#a8a8a8">
                                  <padding>
                                     <Insets top="10.0" />
                                  </padding>
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
                               </Label>
                               <HBox prefHeight="66.0" prefWidth="672.0">
                                  <children>
