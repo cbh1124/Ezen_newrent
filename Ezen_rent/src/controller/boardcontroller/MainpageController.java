@@ -30,6 +30,16 @@ public class MainpageController implements Initializable{
 		loadpage("home");
 		
 	}
+	public static MainpageController instance;
+	public MainpageController() {
+		instance = this;
+	}
+	public static MainpageController getinstance() {
+		return instance;
+	}
+	public String getloginid() {
+		return lblloginid.getText();
+	}
 	//임시
     @FXML
     private Button btnadmin;
@@ -111,7 +121,7 @@ public class MainpageController implements Initializable{
     void home(ActionEvent event) {
     	loadpage("home");
     }
-
+    // 로그아웃
     @FXML
     void logout(ActionEvent event) {
     	Alert alert = new Alert(AlertType.CONFIRMATION);
@@ -147,6 +157,7 @@ public class MainpageController implements Initializable{
     	loadpage("reserve");
     }
     
+    // 페이지 변환
     public void loadpage(String page) {
     	try {
 			Parent parent = FXMLLoader.load(getClass().getResource("/fxml/"+page+".fxml"));

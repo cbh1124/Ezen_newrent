@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 
 public class board1_listController {
+	
 	//юс╫ц
 	@FXML
     private TableView<?> board1list;

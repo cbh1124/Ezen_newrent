@@ -57,7 +57,7 @@ public class MyinfoController implements Initializable {
 
     @FXML
     void update(ActionEvent event) {
-
+    	MainpageController.getinstance().loadpage("myinfoupdate");
     }
 
 }

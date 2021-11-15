@@ -98,4 +98,33 @@ public class MemberDao {
 			else { return false; }
 		} catch (Exception e) {} return true;
 	}
+	
+	public boolean update(String id, String password, String email, String phone) {
+		String sql = "update Member set m_password = ?, m_email = ?, m_phone = ? where = m_id = ?";
+		
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, password);
+			preparedStatement.setString(2, email);
+			preparedStatement.setString(3, phone);
+			preparedStatement.setString(4, id);
+			preparedStatement.executeUpdate();
+			return true;
+		} catch (Exception e) {}return false;
+		
+	}
+	// 회원 조회
+	public Member(String loginid) {
+		
+		String sql = "select * from Member where m_id = ?";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, loginid);
+			resultSet = preparedStatement.executeQuery();
+			if(resultSet.next()) {
+				Member member = new Member(resultSet.get)
+			}
+		} catch (Exception e) {}
+	}
+	
 }
