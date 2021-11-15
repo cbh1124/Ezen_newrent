@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import domain.Member;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 public class MemberDao {
 
@@ -103,6 +105,7 @@ public class MemberDao {
 		String sql = "update Member set m_password = ?, m_email = ?, m_phone = ? where = m_id = ?";
 		
 		try {
+			
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, password);
 			preparedStatement.setString(2, email);
@@ -114,7 +117,7 @@ public class MemberDao {
 		
 	}
 	// 회원 조회
-	public Member(String loginid) {
+	public Member getMember(String loginid) {
 		
 		String sql = "select * from Member where m_id = ?";
 		try {
@@ -122,9 +125,13 @@ public class MemberDao {
 			preparedStatement.setString(1, loginid);
 			resultSet = preparedStatement.executeQuery();
 			if(resultSet.next()) {
-				Member member = new Member(resultSet.get)
+				Member member = new Member(resultSet.getString(2), resultSet.getString(4),
+						resultSet.getString(6),resultSet.getString(7));
+				return member;
+			}else {
+				return null;
 			}
-		} catch (Exception e) {}
+		} catch (Exception e) {} return null;
 	}
 	
 }

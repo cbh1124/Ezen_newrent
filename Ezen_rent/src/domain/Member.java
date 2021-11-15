@@ -32,6 +32,13 @@ public class Member {
 		this.m_phone = m_phone;
 	}
 	
+	public Member(String m_id, String m_name, String m_email, String m_phone) {
+		this.m_id = m_id;
+		this.m_name = m_name;
+		this.m_email = m_email;
+		this.m_phone = m_phone;
+	}
+	
 	public String getM_id() {
 		return m_id;
 	}
