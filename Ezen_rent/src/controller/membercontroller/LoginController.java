@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -65,7 +66,7 @@ public class LoginController implements Initializable{
 	    private TextField txtid;
 
 	    @FXML
-	    private TextField txtpassword;
+	    private PasswordField txtpassword;
 
 	    @FXML
 	    void findid(MouseEvent event) {
@@ -94,7 +95,7 @@ public class LoginController implements Initializable{
 					stage.setResizable(false);
 					stage.show();
 				} catch (Exception e) {}
-	    	}
+	    	}else { lblconfirm.setText("일치하는 정보가 존재하지 않습니다."); }
 	    }
 
 	    @FXML
