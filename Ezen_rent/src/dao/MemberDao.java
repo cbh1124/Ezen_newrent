@@ -27,19 +27,19 @@ public class MemberDao {
 	//회원가입 메소드
 	public boolean signup(Member member) {
 		
-		String sql = "insert into Member(m_id, m_password, m_name, m_email, m_dof, m_phone)" + "values(?, ?, ?, ?, ?, ?)";
+		String sql = "insert into Member(m_id, m_password, m_name, m_dob, m_phone, m_email)" + "values(?, ?, ?, ?, ?, ?)";
 		
 		try {
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, member.getM_id());
 			preparedStatement.setString(2, member.getM_password());
 			preparedStatement.setString(3, member.getM_name());
-			preparedStatement.setString(4, member.getM_email());
-			preparedStatement.setString(5, member.getM_dof());
-			preparedStatement.setString(6, member.getM_phone());
-			preparedStatement.executeLargeUpdate();
+			preparedStatement.setString(4, member.getM_dob());
+			preparedStatement.setString(5, member.getM_phone());
+			preparedStatement.setString(6, member.getM_email());
+			preparedStatement.executeUpdate();
 			return true;
-		} catch (Exception e) {} return false;
+		} catch (Exception e) {System.out.println("오류");} return false;
 		
 	}
 	//로그인 메소드
@@ -54,7 +54,7 @@ public class MemberDao {
 			resultSet = preparedStatement.executeQuery();
 			if(resultSet.next()) { return true;	}
 			else { return false; }
-		} catch (Exception e) {} return false;
+		} catch (Exception e) {System.out.println("로그인오류");} return false;
 	}
 	// 아이디 찾기 메소드
 	public String findid (String name, String email) {
@@ -115,6 +115,18 @@ public class MemberDao {
 			return true;
 		} catch (Exception e) {}return false;
 		
+	}
+	// 회원탈퇴 
+	public boolean delete( String loginid) {
+		
+		String sql = "delete from Member where m_id = ?";
+		
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, loginid);
+			preparedStatement.executeUpdate();
+			return true;
+		} catch (Exception e) {System.out.println("오류");} return false;
 	}
 	// 회원 조회
 	public Member getMember(String loginid) {

@@ -16,19 +16,19 @@ public class Member {
 	private String m_password;
 	private String m_name;
 	private String m_email;
-	private String m_dof;
+	private String m_dob;
 	private String m_phone;
 	
 	public Member() {
 	//
 	}
 	// 회원가입 생성자
-	public Member(String m_id, String m_password, String m_name, String m_email, String m_dof, String m_phone) {
+	public Member(String m_id, String m_password, String m_name, String m_email, String m_dob, String m_phone) {
 		this.m_id = m_id;
 		this.m_password = m_password;
 		this.m_name = m_name;
 		this.m_email = m_email;
-		this.m_dof = m_dof;
+		this.m_dob = m_dob;
 		this.m_phone = m_phone;
 	}
 	
@@ -71,12 +71,12 @@ public class Member {
 		this.m_email = m_email;
 	}
 
-	public String getM_dof() {
-		return m_dof;
+	public String getM_dob() {
+		return m_dob;
 	}
 
-	public void setM_dof(String m_dof) {
-		this.m_dof = m_dof;
+	public void setM_dob(String m_dob) {
+		this.m_dob = m_dob;
 	}
 
 	public String getM_phone() {
