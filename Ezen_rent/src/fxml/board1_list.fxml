@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:controller="controller.boardcontroller.board1_listController" prefHeight="630.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="550.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.boardcontroller.board1_listController">
    <children>
       <Button fx:id="btnwrite" layoutX="1039.0" layoutY="122.0" mnemonicParsing="false" onAction="#write" prefHeight="28.0" prefWidth="155.0" style="-fx-background-color: #ffffff;" text="REGISTER (관리자활성화)">
          <effect>
