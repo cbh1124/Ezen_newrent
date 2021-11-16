@@ -114,7 +114,7 @@ public class MemberDao {
 			preparedStatement.executeUpdate();
 			return true;
 		} catch (Exception e) {}return false;
-		
+		//
 	}
 	// È¸¿øÅ»Åð 
 	public boolean delete( String loginid) {
