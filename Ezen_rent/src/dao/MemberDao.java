@@ -100,9 +100,9 @@ public class MemberDao {
 			else { return false; }
 		} catch (Exception e) {} return true;
 	}
-	
+	// 회원정보수정
 	public boolean update(String id, String password, String email, String phone) {
-		String sql = "update Member set m_password = ?, m_email = ?, m_phone = ? where = m_id = ?";
+		String sql = "update Member set m_password = ?, m_email = ?, m_phone = ? where m_id = ?";
 		
 		try {
 			
@@ -119,14 +119,14 @@ public class MemberDao {
 	// 회원탈퇴 
 	public boolean delete( String loginid) {
 		
-		String sql = "delete from Member where m_id = ?";
+		String sql = "delete from Member where m_id=?";
 		
 		try {
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, loginid);
 			preparedStatement.executeUpdate();
 			return true;
-		} catch (Exception e) {System.out.println("오류");} return false;
+		} catch (Exception e) {System.out.println("회원탈퇴실패");} return false;
 	}
 	// 회원 조회
 	public Member getMember(String loginid) {
