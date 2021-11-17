@@ -3,7 +3,10 @@ package controller.admincontroller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import controller.boardcontroller.MainpageController;
+import controller.carcontroller.CarlistController;
 import dao.MemberDao;
+import domain.Car;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,9 +21,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
  // 왜 안되지
 public class AdmincarupdateController implements Initializable{
+	
+	Car car = AdminController.car; // 1. 테이블 뷰에서 클릭된 객체
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-	
+		
 		
 	}
 	
@@ -84,7 +90,7 @@ public class AdmincarupdateController implements Initializable{
 
     @FXML
     void cancel(ActionEvent event) {
-
+    	MainpageController.getinstance().loadpage("admin");
     }
 
     @FXML

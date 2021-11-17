@@ -12,7 +12,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -20,7 +19,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class LoginController implements Initializable{
-	
+		
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
 		lblconfirm.setText("");
@@ -66,7 +65,7 @@ public class LoginController implements Initializable{
 	    private TextField txtid;
 
 	    @FXML
-	    private PasswordField txtpassword;
+	    private TextField txtpassword;
 
 	    @FXML
 	    void findid(MouseEvent event) {
@@ -81,21 +80,34 @@ public class LoginController implements Initializable{
 	    @FXML
 	    void login(ActionEvent event) {
 	    	boolean result = MemberDao.getMemberDao().login(txtid.getText(), txtpassword.getText());
-	    	if(result) {
-	    		lblconfirm.setText("로그인 성공");
-	    		
-	    		btnlogin.getScene().getWindow().hide();
-	    		
-	    		Stage stage = new Stage();
-	    		
+	    	if( MemberDao.adminRs == false) {
+		    	if(result) {
+		    		lblconfirm.setText("로그인 성공");
+		    		btnlogin.getScene().getWindow().hide();
+		    		
+		    		Stage stage = new Stage();
+		    		
+		    		try {
+						Parent parent = FXMLLoader.load(getClass().getResource("/fxml/mainpage.fxml"));
+						Scene scene = new Scene(parent);
+						stage.setScene(scene);
+						stage.setResizable(false);
+						stage.show();
+					} catch (Exception e) {}
+		    	}
+	    	}else {
 	    		try {
+	    			lblconfirm.setText("관리자 로그인 성공");
+		    		btnlogin.getScene().getWindow().hide();
+		    		
+		    		Stage stage = new Stage();
 					Parent parent = FXMLLoader.load(getClass().getResource("/fxml/mainpage.fxml"));
 					Scene scene = new Scene(parent);
 					stage.setScene(scene);
 					stage.setResizable(false);
 					stage.show();
 				} catch (Exception e) {}
-	    	}else { lblconfirm.setText("일치하는 정보가 존재하지 않습니다."); }
+	    	}
 	    }
 
 	    @FXML

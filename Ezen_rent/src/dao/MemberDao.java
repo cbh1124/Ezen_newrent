@@ -10,11 +10,11 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class MemberDao {
-
+	//
 	private Connection connection;
 	private PreparedStatement preparedStatement; 
 	private ResultSet resultSet;
-	
+	public static boolean adminRs;
 	private static MemberDao memberDao = new MemberDao();
 	public MemberDao() {
 		try {
@@ -48,11 +48,13 @@ public class MemberDao {
 		String sql = "select * from Member where m_id = ? and m_password = ?";
 		
 		try {
+			adminRs = getAdmin(id, password);
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, id);
 			preparedStatement.setString(2, password);
 			resultSet = preparedStatement.executeQuery();
 			if(resultSet.next()) { return true;	}
+			
 			else { return false; }
 		} catch (Exception e) {System.out.println("로그인오류");} return false;
 	}
@@ -100,9 +102,9 @@ public class MemberDao {
 			else { return false; }
 		} catch (Exception e) {} return true;
 	}
-	// 회원정보수정
+	
 	public boolean update(String id, String password, String email, String phone) {
-		String sql = "update Member set m_password = ?, m_email = ?, m_phone = ? where m_id = ?";
+		String sql = "update Member set m_password = ?, m_email = ?, m_phone = ? where = m_id = ?";
 		
 		try {
 			
@@ -119,14 +121,14 @@ public class MemberDao {
 	// 회원탈퇴 
 	public boolean delete( String loginid) {
 		
-		String sql = "delete from Member where m_id=?";
+		String sql = "delete from Member where m_id = ?";
 		
 		try {
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, loginid);
 			preparedStatement.executeUpdate();
 			return true;
-		} catch (Exception e) {System.out.println("회원탈퇴실패");} return false;
+		} catch (Exception e) {System.out.println("오류");} return false;
 	}
 	// 회원 조회
 	public Member getMember(String loginid) {
@@ -146,4 +148,23 @@ public class MemberDao {
 		} catch (Exception e) {} return null;
 	}
 	
+	// 어드민 체크 
+	public boolean getAdmin(String m_id, String m_password) {
+		String sql = "select m_num from Member where m_id = ? and m_password = ?";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, m_id);
+			preparedStatement.setString(2, m_password);
+			resultSet = preparedStatement.executeQuery();
+			if(resultSet.next()) {
+				resultSet.getInt(1);
+				if(resultSet.getInt(1) == 1 ) { return true; }
+				System.out.println(resultSet.getInt(1) +  "작동");
+			}
+			else { return false; }	
+		}
+		catch (Exception e) {
+			
+		} return false;
+	}
 }

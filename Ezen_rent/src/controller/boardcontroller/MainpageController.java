@@ -6,6 +6,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 import controller.membercontroller.LoginController;
+import dao.MemberDao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,9 +27,16 @@ import javafx.stage.Stage;
 public class MainpageController implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-	lblloginid.setText(LoginController.getinstance().getid());
-		loadpage("home");
 		
+		if(MemberDao.adminRs == true) {
+			loadpage("admin");
+			lblloginid.setText(LoginController.getinstance().getid());
+			
+		}else {
+			lblloginid.setText(LoginController.getinstance().getid());
+			loadpage("home");
+			btnadmin.setVisible(false);
+		}
 	}
 	public static MainpageController instance;
 	public MainpageController() {
@@ -85,7 +93,7 @@ public class MainpageController implements Initializable{
 
     @FXML
     void admin(ActionEvent event) {
-
+    	loadpage("admin");
     }
 
     @FXML // 고객센터 공지사항 
