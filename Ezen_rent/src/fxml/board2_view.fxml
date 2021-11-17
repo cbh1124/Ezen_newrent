@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="630.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="-Infinity" prefHeight="550.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="btnboard2" layoutX="38.0" layoutY="296.0" mnemonicParsing="false" onAction="#board2" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #126E82;" text="Q &amp; A">
          <effect>
@@ -29,28 +29,28 @@
             <Font size="31.0" />
          </font>
       </Text>
-      <Line endX="100.0" layoutX="94.0" layoutY="32.0" startX="100.0" startY="585.0" />
+      <Line endX="100.0" layoutX="94.0" layoutY="32.0" startX="100.0" startY="488.5" />
       <Button fx:id="btnboard1" layoutX="38.0" layoutY="246.0" mnemonicParsing="false" onAction="#board1" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Notice">
          <effect>
             <InnerShadow />
          </effect>
       </Button>
-      <Button fx:id="btnupdate" layoutX="1032.0" layoutY="68.0" mnemonicParsing="false" onAction="#update" prefHeight="22.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="Update" textFill="WHITE">
+      <Button fx:id="btnupdate" layoutX="1032.0" layoutY="17.0" mnemonicParsing="false" onAction="#update" prefHeight="22.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="Update" textFill="WHITE">
          <font>
             <Font name="Bauhaus 93" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btndelete" layoutX="1123.0" layoutY="68.0" mnemonicParsing="false" onAction="#delete" prefHeight="22.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="Delete" textFill="WHITE">
+      <Button fx:id="btndelete" layoutX="1123.0" layoutY="17.0" mnemonicParsing="false" onAction="#delete" prefHeight="22.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="Delete" textFill="WHITE">
          <font>
             <Font name="Bauhaus 93" size="12.0" />
          </font>
       </Button>
-      <TextField fx:id="txttitle" editable="false" layoutX="393.0" layoutY="127.0" prefHeight="30.0" prefWidth="810.0" promptText="제목입력창" />
-      <TextArea fx:id="txtcontents" editable="false" layoutX="393.0" layoutY="168.0" prefHeight="136.0" prefWidth="810.0" promptText="내용입력창" />
-      <Label fx:id="lblwriter" layoutX="833.0" layoutY="99.0" prefHeight="22.0" prefWidth="116.0" text="작성자" />
-      <Label fx:id="lbldate" layoutX="957.0" layoutY="99.0" prefHeight="22.0" prefWidth="116.0" text="작성일" />
-      <Label fx:id="lblview" layoutX="1087.0" layoutY="99.0" prefHeight="22.0" prefWidth="116.0" text="조회수" />
-      <TableView fx:id="answerlist" layoutX="393.0" layoutY="357.0" prefHeight="180.0" prefWidth="810.0">
+      <TextField fx:id="txttitle" editable="false" layoutX="393.0" layoutY="76.0" prefHeight="30.0" prefWidth="810.0" promptText="제목입력창" />
+      <TextArea fx:id="txtcontents" editable="false" layoutX="393.0" layoutY="117.0" prefHeight="136.0" prefWidth="810.0" promptText="내용입력창" />
+      <Label fx:id="lblwriter" layoutX="833.0" layoutY="48.0" prefHeight="22.0" prefWidth="116.0" text="작성자" />
+      <Label fx:id="lbldate" layoutX="957.0" layoutY="48.0" prefHeight="22.0" prefWidth="116.0" text="작성일" />
+      <Label fx:id="lblview" layoutX="1087.0" layoutY="48.0" prefHeight="22.0" prefWidth="116.0" text="조회수" />
+      <TableView fx:id="answerlist" layoutX="393.0" layoutY="306.0" prefHeight="180.0" prefWidth="810.0">
          <columns>
             <TableColumn prefWidth="75.0" text="No" />
             <TableColumn prefWidth="251.0" text="Write" />
@@ -59,12 +59,12 @@
             <TableColumn prefWidth="103.0" text="Date" />
          </columns>
       </TableView>
-      <Button fx:id="btncancel" layoutX="626.0" layoutY="564.0" mnemonicParsing="false" onAction="#cancel" prefHeight="22.0" prefWidth="344.0" style="-fx-background-color: #000000;" text="BACK" textFill="WHITE">
+      <Button fx:id="btncancel" layoutX="626.0" layoutY="513.0" mnemonicParsing="false" onAction="#cancel" prefHeight="22.0" prefWidth="344.0" style="-fx-background-color: #000000;" text="BACK" textFill="WHITE">
          <font>
             <Font name="Bauhaus 93" size="12.0" />
          </font>
       </Button>
-      <Label layoutX="393.0" layoutY="336.0" prefHeight="14.0" prefWidth="155.0" text="* 관리자 답변" />
-      <Label layoutX="393.0" layoutY="106.0" prefHeight="14.0" prefWidth="155.0" text="* 질문내용" />
+      <Label layoutX="393.0" layoutY="285.0" prefHeight="14.0" prefWidth="155.0" text="* 관리자 답변" />
+      <Label layoutX="393.0" layoutY="55.0" prefHeight="14.0" prefWidth="155.0" text="* 질문내용" />
    </children>
 </AnchorPane>

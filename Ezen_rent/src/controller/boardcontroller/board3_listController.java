@@ -47,17 +47,17 @@ public class board3_listController {
 
     @FXML
     void board1(ActionEvent event) {
-
+    	MainpageController.getinstance().loadpage("board1_list");
     }
 
     @FXML
     void board2(ActionEvent event) {
-
+    	MainpageController.getinstance().loadpage("board2_list");
     }
 
     @FXML
     void board3(ActionEvent event) {
-
+    	MainpageController.getinstance().loadpage("board3_list");
     }
 
     @FXML
@@ -67,7 +67,7 @@ public class board3_listController {
 
     @FXML
     void register(ActionEvent event) {
-
+    	MainpageController.getinstance().loadpage("board3_write");
     }
 
     @FXML
