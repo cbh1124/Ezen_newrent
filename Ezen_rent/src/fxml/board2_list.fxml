@@ -10,36 +10,30 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="cp" minHeight="-Infinity" prefHeight="550.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.boardcontroller.board2_listController">
+<AnchorPane fx:id="cp" prefHeight="550.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.boardcontroller.board2_listController">
    <children>
-      <Label layoutX="304.0" layoutY="104.0" prefHeight="14.0" prefWidth="94.0" text="* Question" />
-      <Button fx:id="btnboard2" layoutX="48.0" layoutY="306.0" mnemonicParsing="false" onAction="#board2" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #126E82;" text="Q &amp; A">
+      <Label layoutX="304.0" layoutY="153.0" prefHeight="14.0" prefWidth="94.0" text="* Question" />
+      <Button fx:id="btnboard2" layoutX="40.0" layoutY="280.0" mnemonicParsing="false" onAction="#board2" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #126E82;" text="Q &amp; A">
          <effect>
             <InnerShadow />
          </effect>
       </Button>
-      <Button fx:id="btnboard3" layoutX="48.0" layoutY="353.0" mnemonicParsing="false" onAction="#board3" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Review">
+      <Button fx:id="btnboard3" layoutX="40.0" layoutY="320.0" mnemonicParsing="false" onAction="#board3" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Review">
          <effect>
             <InnerShadow />
          </effect>
       </Button>
-      <Text layoutX="48.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q &amp; A board" wrappingWidth="155.0">
-         <font>
-            <Font size="31.0" />
-         </font>
-      </Text>
-      <Line endX="100.0" layoutX="104.0" layoutY="42.0" startX="100.0" startY="461.5" />
-      <Button fx:id="btnboard1" layoutX="48.0" layoutY="256.0" mnemonicParsing="false" onAction="#board1" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Notice">
+      <Button fx:id="btnboard1" layoutX="40.0" layoutY="240.0" mnemonicParsing="false" onAction="#board1" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ffffff;" text="Notice">
          <effect>
             <InnerShadow />
          </effect>
       </Button>
-      <Button fx:id="btnwrite" layoutX="1083.0" layoutY="83.0" mnemonicParsing="false" onAction="#write" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="REGISTER">
+      <Button fx:id="btnwrite" layoutX="1083.0" layoutY="132.0" mnemonicParsing="false" onAction="#write" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="REGISTER">
          <effect>
             <InnerShadow />
          </effect>
       </Button>
-      <TableView fx:id="board2list" layoutX="304.0" layoutY="124.0" prefHeight="336.0" prefWidth="900.0">
+      <TableView fx:id="board2list" layoutX="304.0" layoutY="173.0" prefHeight="336.0" prefWidth="900.0">
          <columns>
             <TableColumn prefWidth="59.0" text="No." />
             <TableColumn prefWidth="280.0" text="Ttile" />
@@ -49,5 +43,11 @@
             <TableColumn prefWidth="97.0" text="View" />
          </columns>
       </TableView>
+      <Line endX="100.0" endY="100.0" layoutX="100.0" layoutY="-70.0" startX="100.0" startY="600.0" />
+      <Text layoutX="44.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q &amp; A Board" wrappingWidth="110.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

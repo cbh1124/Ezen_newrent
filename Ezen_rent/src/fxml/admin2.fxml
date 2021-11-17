@@ -11,25 +11,14 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.admincontroller.AdminController">
    <children>
-      <Text layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" textAlignment="CENTER" wrappingWidth="155.0">
-         <font>
-            <Font size="31.0" />
-         </font>
-      </Text>
-      <Text fill="RED" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Page" textAlignment="CENTER" wrappingWidth="155.0">
-         <font>
-            <Font size="31.0" />
-         </font>
-      </Text>
-      <Line endX="100.0" endY="100.0" layoutX="100.0" layoutY="-70.0" startX="100.0" startY="600.0" />
       <Label layoutX="382.0" layoutY="95.0" text="- AdminTable">
          <font>
             <Font name="Impact" size="13.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="229.0" layoutY="24.0" prefHeight="501.0" prefWidth="1016.0" style="-fx-background-color: #f1f1f1;">
+      <AnchorPane layoutX="256.0" layoutY="22.0" prefHeight="511.0" prefWidth="986.0" style="-fx-background-color: #f1f1f1;">
          <children>
-            <TableView fx:id="carlistboard" layoutX="536.0" layoutY="68.0" prefHeight="360.0" prefWidth="460.0">
+            <TableView fx:id="carlistboard" layoutX="556.0" layoutY="51.0" prefHeight="401.0" prefWidth="424.0">
               <columns>
                   <TableColumn prefWidth="41.0" text="num" />
                   <TableColumn prefWidth="60.0" text="name" />
@@ -41,12 +30,12 @@
                   <TableColumn prefWidth="94.0" text="price" />
               </columns>
             </TableView>
-            <Label layoutX="550.0" layoutY="31.0" prefHeight="14.0" prefWidth="128.0" text="Car list">
+            <Label layoutX="556.0" layoutY="14.0" prefHeight="14.0" prefWidth="128.0" text="Car list">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TableView fx:id="reservationboardlist" layoutX="32.0" layoutY="68.0" prefHeight="360.0" prefWidth="497.0">
+            <TableView fx:id="reservationboardlist" layoutX="32.0" layoutY="51.0" prefHeight="401.0" prefWidth="441.0">
                <columns>
                   <TableColumn prefWidth="32.0" text="num" />
                   <TableColumn prefWidth="71.0" text="name" />
@@ -59,32 +48,43 @@
                   <TableColumn prefWidth="48.0" text="return" />
                </columns>
             </TableView>
-            <Label layoutX="32.0" layoutY="31.0" prefHeight="14.0" prefWidth="128.0" text="Reservation list">
+            <Label layoutX="32.0" layoutY="14.0" prefHeight="14.0" prefWidth="128.0" text="Reservation list">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="btnenroll" layoutX="529.0" layoutY="439.0" mnemonicParsing="false" onAction="#enroll" prefHeight="37.0" prefWidth="84.0" style="-fx-background-color: #f1f1f1; -fx-border-color: #000000;" text="enroll">
+            <Button fx:id="btnenroll" layoutX="556.0" layoutY="459.0" mnemonicParsing="false" onAction="#enroll" prefHeight="37.0" prefWidth="84.0" style="-fx-background-color: #f1f1f1; -fx-border-color: #000000;" text="enroll">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnupdate" layoutX="625.0" layoutY="439.0" mnemonicParsing="false" onAction="#update" prefHeight="37.0" prefWidth="84.0" style="-fx-background-color: #f1f1f1; -fx-border-color: #000000;" text="update">
+            <Button fx:id="btnupdate" layoutX="652.0" layoutY="459.0" mnemonicParsing="false" onAction="#update" prefHeight="37.0" prefWidth="84.0" style="-fx-background-color: #f1f1f1; -fx-border-color: #000000;" text="update">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btndelete" layoutX="720.0" layoutY="439.0" mnemonicParsing="false" onAction="#delete" prefHeight="37.0" prefWidth="84.0" style="-fx-background-color: #f1f1f1; -fx-border-color: #000000;" text="delete">
+            <Button fx:id="btndelete" layoutX="747.0" layoutY="459.0" mnemonicParsing="false" onAction="#delete" prefHeight="37.0" prefWidth="84.0" style="-fx-background-color: #f1f1f1; -fx-border-color: #000000;" text="delete">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btncancel" layoutX="906.0" layoutY="439.0" mnemonicParsing="false" onAction="#cancel" prefHeight="6.0" prefWidth="84.0" style="-fx-background-color: #f1f1f1; -fx-border-color: #000000;" text="cancel">
+            <Button fx:id="btncancel" layoutX="888.0" layoutY="459.0" mnemonicParsing="false" onAction="#cancel" prefHeight="6.0" prefWidth="84.0" style="-fx-background-color: #f1f1f1; -fx-border-color: #000000;" text="cancel">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
+      <Line endX="100.0" endY="98.7197265625" layoutX="120.0" layoutY="-70.0" startX="100.0" startY="600.0" />
+      <Text layoutX="44.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" wrappingWidth="110.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fill="RED" layoutX="44.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Board" wrappingWidth="110.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

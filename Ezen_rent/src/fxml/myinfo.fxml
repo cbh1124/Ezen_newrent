@@ -16,13 +16,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:controller="controller.boardcontroller.MyinfoController" prefHeight="630.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="550.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.boardcontroller.MyinfoController">
    <children>
-      <Text layoutX="14.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My infomation" wrappingWidth="155.0">
-         <font>
-            <Font size="31.0" />
-         </font>
-      </Text>
       <Label fx:id="lblloginid" layoutX="17.0" layoutY="119.0" prefHeight="30.0" prefWidth="150.0" text="고객님 반갑습니다.">
          <font>
             <Font name="Impact" size="12.0" />
@@ -33,7 +28,6 @@
             <Font name="Impact" size="12.0" />
          </font>
       </Label>
-      <Line endX="100.0" layoutX="84.0" layoutY="22.0" startX="100.0" startY="585.0" />
       <Label layoutX="237.0" layoutY="58.0" text="- My Account">
          <font>
             <Font name="Impact" size="13.0" />
@@ -119,12 +113,12 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </VBox>
-      <Label layoutX="718.0" layoutY="315.0" text="- My Review">
+      <Label layoutX="715.0" layoutY="291.0" text="- My Review">
          <font>
             <Font name="Impact" size="13.0" />
          </font>
       </Label>
-      <TableView fx:id="board3list" layoutX="718.0" layoutY="336.0" prefHeight="224.0" prefWidth="507.0" style="-fx-border-color: #ffffff;">
+      <TableView fx:id="board3list" layoutX="715.0" layoutY="312.0" prefHeight="191.0" prefWidth="507.0" style="-fx-border-color: #ffffff;">
          <columns>
             <TableColumn prefWidth="49.0" style="-fx-background-color: #ffffff;" text="num" />
             <TableColumn prefWidth="149.0" style="-fx-background-color: #ffffff;" text="Title" />
@@ -146,12 +140,12 @@
             <TableColumn prefWidth="112.0" style="-fx-background-color: #ffffff;" text="Date" />
          </columns>
       </TableView>
-      <Label layoutX="237.0" layoutY="315.0" text="- My Q &amp; A">
+      <Label layoutX="237.0" layoutY="291.0" text="- My Q &amp; A">
          <font>
             <Font name="Impact" size="13.0" />
          </font>
       </Label>
-      <TableView fx:id="board2list" layoutX="237.0" layoutY="336.0" prefHeight="224.0" prefWidth="398.0" style="-fx-border-color: #ffffff;">
+      <TableView fx:id="board2list" layoutX="237.0" layoutY="312.0" prefHeight="191.0" prefWidth="398.0" style="-fx-border-color: #ffffff;">
          <columns>
             <TableColumn prefWidth="49.0" style="-fx-background-color: #ffffff;" text="num" />
             <TableColumn prefWidth="149.0" style="-fx-background-color: #ffffff;" text="Title" />
@@ -159,5 +153,16 @@
             <TableColumn prefWidth="49.0" style="-fx-background-color: #ffffff;" text="View" />
          </columns>
       </TableView>
+      <Line endX="100.0" endY="98.7197265625" layoutX="100.0" layoutY="-70.0" startX="100.0" startY="600.0" />
+      <Text layoutX="20.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My" wrappingWidth="165.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text layoutX="20.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Information" wrappingWidth="165.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

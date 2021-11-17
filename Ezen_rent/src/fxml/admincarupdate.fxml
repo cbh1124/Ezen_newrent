@@ -11,25 +11,20 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="630.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.adminController.AdminController">
+<AnchorPane prefHeight="550.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.adminController.AdminController">
    <children>
-      <Text layoutX="14.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car" wrappingWidth="155.0">
+      <Line endX="100.0" endY="100.0" layoutX="100.0" layoutY="-70.0" startX="100.0" startY="600.0" />
+      <Text layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car" textAlignment="CENTER" wrappingWidth="155.0">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <Text fill="RED" layoutX="14.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="update" wrappingWidth="155.0">
+      <Text fill="RED" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="update" textAlignment="CENTER" wrappingWidth="155.0">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <Line endX="100.0" layoutX="84.0" layoutY="22.0" startX="100.0" startY="585.0" />
-      <Label layoutX="382.0" layoutY="95.0" text="- AdminTable">
-         <font>
-            <Font name="Impact" size="13.0" />
-         </font>
-      </Label>
-      <AnchorPane layoutX="268.0" layoutY="26.0" prefHeight="579.0" prefWidth="812.0" style="-fx-background-color: #f1f1f1;">
+      <AnchorPane layoutX="278.0" layoutY="36.0" prefHeight="507.0" prefWidth="812.0" style="-fx-background-color: #f1f1f1;">
          <children>
             <Label layoutX="36.0" layoutY="62.0" prefHeight="14.0" prefWidth="128.0" text="Reservation list">
                <font>
@@ -37,33 +32,33 @@
                </font>
             </Label>
             <TextField fx:id="txtcarname" layoutX="125.0" layoutY="103.0" prefHeight="36.0" prefWidth="237.0" />
-            <RadioButton fx:id="opt_1_1" layoutX="125.0" layoutY="291.0" mnemonicParsing="false" text="대형">
+            <RadioButton fx:id="opt_1_1" layoutX="118.0" layoutY="269.0" mnemonicParsing="false" text="대형">
                <toggleGroup>
                   <ToggleGroup fx:id="category1" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="opt_1_2" layoutX="185.0" layoutY="291.0" mnemonicParsing="false" text="중형" toggleGroup="$category1" />
-            <RadioButton fx:id="opt_1_3" layoutX="246.0" layoutY="291.0" mnemonicParsing="false" text="소형" toggleGroup="$category1" />
-            <RadioButton fx:id="opt_1_4" layoutX="308.0" layoutY="291.0" mnemonicParsing="false" text="기타 " toggleGroup="$category1" />
-            <Label layoutX="43.0" layoutY="281.0" prefHeight="36.0" prefWidth="63.0" text="카테고리 1" />
-            <RadioButton fx:id="opt_2_1" layoutX="125.0" layoutY="327.0" mnemonicParsing="false" text="국산">
+            <RadioButton fx:id="opt_1_2" layoutX="178.0" layoutY="269.0" mnemonicParsing="false" text="중형" toggleGroup="$category1" />
+            <RadioButton fx:id="opt_1_3" layoutX="239.0" layoutY="269.0" mnemonicParsing="false" text="소형" toggleGroup="$category1" />
+            <RadioButton fx:id="opt_1_4" layoutX="301.0" layoutY="269.0" mnemonicParsing="false" text="기타 " toggleGroup="$category1" />
+            <Label layoutX="36.0" layoutY="259.0" prefHeight="36.0" prefWidth="63.0" text="카테고리 1" />
+            <RadioButton fx:id="opt_2_1" layoutX="118.0" layoutY="305.0" mnemonicParsing="false" text="국산">
                <toggleGroup>
                   <ToggleGroup fx:id="category2" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="opt_2_2" layoutX="185.0" layoutY="327.0" mnemonicParsing="false" text="외제">
+            <RadioButton fx:id="opt_2_2" layoutX="178.0" layoutY="305.0" mnemonicParsing="false" text="외제">
                <toggleGroup>
                   <ToggleGroup fx:id="category2" />
                </toggleGroup>
             </RadioButton>
-            <Label layoutX="43.0" layoutY="317.0" prefHeight="36.0" prefWidth="63.0" text="카테고리 2" />
-            <RadioButton fx:id="opt_3_1" layoutX="125.0" layoutY="363.0" mnemonicParsing="false" text="suv">
+            <Label layoutX="36.0" layoutY="295.0" prefHeight="36.0" prefWidth="63.0" text="카테고리 2" />
+            <RadioButton fx:id="opt_3_1" layoutX="118.0" layoutY="341.0" mnemonicParsing="false" text="suv">
                <toggleGroup>
                   <ToggleGroup fx:id="category3" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="opt_3_2" layoutX="185.0" layoutY="363.0" mnemonicParsing="false" text="세단 " toggleGroup="$category3" />
-            <Label layoutX="43.0" layoutY="353.0" prefHeight="36.0" prefWidth="63.0" text="카테고리 3" />
+            <RadioButton fx:id="opt_3_2" layoutX="178.0" layoutY="341.0" mnemonicParsing="false" text="세단 " toggleGroup="$category3" />
+            <Label layoutX="36.0" layoutY="331.0" prefHeight="36.0" prefWidth="63.0" text="카테고리 3" />
             <Label layoutX="43.0" layoutY="103.0" prefHeight="36.0" prefWidth="63.0" text="차량이름 " />
             <TextField fx:id="txtcarlicense" layoutX="125.0" layoutY="157.0" prefHeight="36.0" prefWidth="237.0" />
             <Label layoutX="43.0" layoutY="157.0" prefHeight="36.0" prefWidth="63.0" text="차량번호판" />
@@ -74,11 +69,11 @@
                   <ImageView fx:id="adminimg" fitHeight="258.0" fitWidth="266.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </AnchorPane>
-            <Label layoutX="43.0" layoutY="414.0" prefHeight="36.0" prefWidth="63.0" text="이미지등록" />
-            <Label fx:id="lblimgpath" layoutX="118.0" layoutY="454.0" prefHeight="25.0" prefWidth="237.0" text="이미지경로" />
-            <Button fx:id="btnimgadd" layoutX="117.0" layoutY="417.0" mnemonicParsing="false" onAction="#imgadd" prefHeight="25.0" prefWidth="237.0" text="이미지 등록" />
-            <Button fx:id="btnupdate" layoutX="106.0" layoutY="489.0" mnemonicParsing="false" onAction="#update" prefHeight="36.0" prefWidth="530.0" text="수정" />
-            <Button fx:id="btncancel" layoutX="107.0" layoutY="535.0" mnemonicParsing="false" onAction="#cancel" prefHeight="36.0" prefWidth="530.0" text="취소" />
+            <Label layoutX="36.0" layoutY="392.0" prefHeight="36.0" prefWidth="63.0" text="이미지등록" />
+            <Label fx:id="lblimgpath" layoutX="111.0" layoutY="432.0" prefHeight="25.0" prefWidth="237.0" text="이미지경로" />
+            <Button fx:id="btnimgadd" layoutX="110.0" layoutY="395.0" mnemonicParsing="false" onAction="#imgadd" prefHeight="25.0" prefWidth="237.0" text="이미지 등록" />
+            <Button fx:id="btnupdate" layoutX="112.0" layoutY="457.0" mnemonicParsing="false" onAction="#update" prefHeight="36.0" prefWidth="300.0" text="수정" />
+            <Button fx:id="btncancel" layoutX="417.0" layoutY="457.0" mnemonicParsing="false" onAction="#cancel" prefHeight="36.0" prefWidth="300.0" text="취소" />
          </children>
       </AnchorPane>
    </children>
