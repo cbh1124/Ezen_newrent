@@ -148,6 +148,23 @@ public class MemberDao {
 		} catch (Exception e) {} return null;
 	}
 	
+	public int getmno(String m_id) {
+		
+		String sql = "select m_num from Member where m_id = ?";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, m_id);
+			resultSet = preparedStatement.executeQuery();
+			if(resultSet.next()) {
+				return resultSet.getInt(1);
+			}
+			else {
+				return 0;
+			}
+		} catch (Exception e) {} return 0;
+		
+	}
+	
 	// ¾îµå¹Î Ã¼Å© 
 	public boolean getAdmin(String m_id, String m_password) {
 		String sql = "select m_num from Member where m_id = ? and m_password = ?";

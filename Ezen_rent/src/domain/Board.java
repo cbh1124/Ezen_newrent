@@ -6,7 +6,7 @@ public class Board {
 	private String b_contents;
 	private String b_date;
 	private int b_view;
-	private int b_type;
+	private String b_type;
 	private int m_num;
 	private int c_num;
 	
@@ -16,7 +16,7 @@ public class Board {
 	}
 	
 	// 모든 필드 받는 생성자 
-	public Board(int b_num, String b_title, String b_contents, String b_date, int b_view, int b_type, int m_num,
+	public Board(int b_num, String b_title, String b_contents, String b_date, int b_view, String b_type, int m_num,
 			int c_num) {
 		this.b_num = b_num;
 		this.b_title = b_title;
@@ -33,6 +33,15 @@ public class Board {
 		this.b_contents = b_contents;
 		this.m_num = m_num;  // (작성자)등록자 식별번호
 		this.c_num = c_num;  // (이용차량)자동차 식별번호
+	}
+	
+	// 공지사항 게시물 등록시
+	public Board(String b_title, String b_contents, int m_num, String b_type, int c_num) {
+		this.b_title = b_title;
+		this.b_contents = b_contents;
+		this.m_num = m_num;
+		this.b_type = b_type;
+		this.c_num = c_num;
 	}
 
 	public int getB_num() {
@@ -75,11 +84,11 @@ public class Board {
 		this.b_view = b_view;
 	}
 
-	public int getB_type() {
+	public String getB_type() {
 		return b_type;
 	}
 
-	public void setB_type(int b_type) {
+	public void setB_type(String b_type) {
 		this.b_type = b_type;
 	}
 

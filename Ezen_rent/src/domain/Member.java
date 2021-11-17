@@ -11,7 +11,8 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class Member {
-
+	
+	private int m_no;
 	private String m_id;
 	private String m_password;
 	private String m_name;
@@ -86,6 +87,14 @@ public class Member {
 	public void setM_phone(String m_phone) {
 		this.m_phone = m_phone;
 	}
+	public int getM_no() {
+		return m_no;
+	}
+	public void setM_no(int m_no) {
+		this.m_no = m_no;
+	}
+	
+	
 	public static void sendmail(String tomail, String msg, int type) {
 		//
 		String fromemail = "아이디"; // 실제 
