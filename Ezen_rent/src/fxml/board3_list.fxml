@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="550.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.boardcontroller.board3_listController">
+<AnchorPane minHeight="-Infinity" prefHeight="550.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.boardcontroller.board3_listController">
    <children>
       <Button fx:id="btnboard2" layoutX="48.0" layoutY="306.0" mnemonicParsing="false" onAction="#board2" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Q &amp; A">
          <effect>
@@ -28,13 +28,13 @@
             <Font size="31.0" />
          </font>
       </Text>
-      <Line endX="100.0" layoutX="104.0" layoutY="42.0" startX="100.0" startY="585.0" />
+      <Line endX="100.0" layoutX="104.0" layoutY="42.0" startX="100.0" startY="465.5" />
       <Button fx:id="btnboard1" layoutX="48.0" layoutY="256.0" mnemonicParsing="false" onAction="#board1" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Notice">
          <effect>
             <InnerShadow />
          </effect>
       </Button>
-      <TableView fx:id="board3list" layoutX="601.0" layoutY="158.0" prefHeight="400.0" prefWidth="575.0">
+      <TableView fx:id="board3list" layoutX="601.0" layoutY="73.0" prefHeight="400.0" prefWidth="575.0">
          <columns>
             <TableColumn prefWidth="64.0" text="No." />
             <TableColumn prefWidth="387.0" text="Ttile" />
@@ -50,13 +50,13 @@
       </AnchorPane>
       <Label fx:id="lblrname" layoutX="356.0" layoutY="374.0" text="차량명" />
       <Button fx:id="btnactivation" layoutX="453.0" layoutY="128.0" mnemonicParsing="false" onAction="#activation" prefHeight="22.0" prefWidth="65.0" style="-fx-background-color: #000000;" text="렌트중" textFill="WHITE" />
-      <Button fx:id="btnregister" layoutX="601.0" layoutY="565.0" mnemonicParsing="false" onAction="#register" prefHeight="23.0" prefWidth="575.0" style="-fx-background-color: #000000;" text="리뷰등록" textFill="WHITE">
+      <Button fx:id="btnregister" layoutX="601.0" layoutY="480.0" mnemonicParsing="false" onAction="#register" prefHeight="23.0" prefWidth="575.0" style="-fx-background-color: #000000;" text="리뷰등록" textFill="WHITE">
          <font>
             <Font name="Bauhaus 93" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="btndelete" layoutX="1117.0" layoutY="128.0" mnemonicParsing="false" onAction="#delete" prefHeight="22.0" prefWidth="59.0" style="-fx-background-color: #000000;" text="삭제" textFill="WHITE" />
-      <Button fx:id="btnupdate" layoutX="1051.0" layoutY="128.0" mnemonicParsing="false" onAction="#update" prefHeight="22.0" prefWidth="59.0" style="-fx-background-color: #000000;" text="수정" textFill="WHITE">
+      <Button fx:id="btndelete" layoutX="1117.0" layoutY="43.0" mnemonicParsing="false" onAction="#delete" prefHeight="22.0" prefWidth="59.0" style="-fx-background-color: #000000;" text="삭제" textFill="WHITE" />
+      <Button fx:id="btnupdate" layoutX="1051.0" layoutY="43.0" mnemonicParsing="false" onAction="#update" prefHeight="22.0" prefWidth="59.0" style="-fx-background-color: #000000;" text="수정" textFill="WHITE">
          <font>
             <Font name="Bauhaus 93" size="11.0" />
          </font>
