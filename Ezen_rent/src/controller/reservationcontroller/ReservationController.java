@@ -34,10 +34,11 @@ public class ReservationController implements Initializable {
 
 	// 등록된 차량 불러오기
 	public void rentcarltableload() {
+		0.
 
 		// 1. DB에서 차량목록 가져오기
-		ObservableList<Car> cars = CarDao.getCarDao().carlist();
-
+		ObservableList<Car> cars = CarDao.getCarDao().carlist3();
+		System.out.println("확인" + cars);
 		// 2. 제품목록을 테이블뷰에 넣어주기
 		rentcarlist.setItems(cars);
 		// 3. 테이블뷰에 열 를 하나씩 가져와서 리스트내 객체에 필드와 연결
@@ -75,7 +76,7 @@ public class ReservationController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
+		rentcarltableload();
 
 	}
 

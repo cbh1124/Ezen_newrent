@@ -63,6 +63,18 @@ public class Car {
 			this.c_return = c_return;
 		}
 	
+		// ¼öÁ¤
+		
+		public Car(int c_num, String c_name, String c_ct1, String c_ct2,
+				String c_ct3, int c_price) {
+			
+			this.c_num = c_num;
+			this.c_name = c_name;
+			this.c_ct1 = c_ct1;
+			this.c_ct2 = c_ct2;
+			this.c_ct3 = c_ct3;
+			this.c_price = c_price;
+		}
 	
 	
 	

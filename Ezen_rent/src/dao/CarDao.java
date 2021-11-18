@@ -82,7 +82,7 @@ public class CarDao {
 						resultSet.getBoolean(8)
 						
 						);
-				System.out.println("오류찾기");
+				System.out.println("오류찾기" +  car);
 				// 객체 리스트 저장 
 				cars.add(car);
 				System.out.println(cars);
@@ -124,6 +124,36 @@ public class CarDao {
 	}
 	
 	
+	//
+	// 3-2. 차량목록
+	public ObservableList<Car> carlist3() {
+		// 1. 리스트선언 
+		ObservableList<Car> cars = FXCollections.observableArrayList();
+		String sql = "select c_num, c_name,c_ct1,c_ct2,c_ct3,c_price from Car order by c_num desc"; // 다 가져오기
+		System.out.println("오류찾기");
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			System.out.println("오류찾기");
+			resultSet = preparedStatement.executeQuery();
+			System.out.println("오류찾기");
+			while( resultSet.next() ) { // 검색결과 레코드가 없을때까지 레코드 하나씩 반환
+				// 해당 레코드를 객체화
+				Car car = new Car(resultSet.getInt(1), 
+						resultSet.getString(2), 
+						resultSet.getString(3), 
+						resultSet.getString(4), 
+						resultSet.getString(5),
+						resultSet.getInt(6)
+						);
+				System.out.println("오류찾기" +  car);
+				// 객체 리스트 저장 
+				cars.add(car);
+				System.out.println(cars);
+			}
+			return cars;
+		} catch (Exception e) {} return cars;
+		
+	}
 
 
 }
