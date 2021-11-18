@@ -53,7 +53,8 @@ public class Board {
 		this.b_date = b_date;
 		this.b_view = b_view;
 	}
-
+	
+	
 	public int getB_num() {
 		return b_num;
 	}

@@ -35,6 +35,25 @@ public class BoardDao {
 	// 객체 반환 메소드 
 	public static BoardDao getboardDao() {return boardDao;}
 	
+	// Q&A(board2) 게시물 등록 메소드
+	public boolean board2write(Board board) {
+		String sql = "insert into Board(b_title, b_contents, m_num, b_type, c_num) values(?,?,?,?,?)";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, board.getB_title());
+			preparedStatement.setString(2, board.getB_contents());
+			preparedStatement.setInt(3, board.getM_num());  // 멤버 넘버로 조회후 아이디 찾아야됨 
+			preparedStatement.setString(4, "2");
+			preparedStatement.setInt(5, 1);
+			preparedStatement.executeUpdate();
+			return true;
+			
+		}catch (Exception e) {System.out.println("저장실패");	}
+		return false;
+	}
+	
+	
+	// 공지사항(board1) 게시물 등록 메소드
 	public boolean board1write(Board board) {
 		String sql = "insert into Board(b_title, b_contents, m_num, b_type, c_num) values(?,?,?,?,?)";
 		try {
