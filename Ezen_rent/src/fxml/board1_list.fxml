@@ -18,11 +18,10 @@
       </Button>
       <TableView fx:id="board1list" layoutX="294.0" layoutY="97.0" prefHeight="388.0" prefWidth="900.0">
          <columns>
-            <TableColumn prefWidth="59.0" text="No." />
-            <TableColumn prefWidth="280.0" text="Ttile" />
-            <TableColumn prefWidth="274.0" text="Writer" />
-            <TableColumn prefWidth="105.0" text="Date" />
-            <TableColumn prefWidth="181.0" text="View" />
+            <TableColumn prefWidth="95.0" text="No." />
+            <TableColumn prefWidth="588.0" text="Ttile" />
+            <TableColumn prefWidth="129.0" text="Date" />
+            <TableColumn prefWidth="87.0" text="View" />
          </columns>
       </TableView>
       <Button fx:id="btnboard2" layoutX="38.0" layoutY="296.0" mnemonicParsing="false" onAction="#board2" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Q &amp; A">

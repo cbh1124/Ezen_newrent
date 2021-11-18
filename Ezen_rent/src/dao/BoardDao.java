@@ -70,6 +70,25 @@ public class BoardDao {
 		}
 		return false;
 	}
+	// 공지사항(borad1) 게시물 조회 
+	public ObservableList<Board> board1list(){
+		ObservableList<Board> boards1 = FXCollections.observableArrayList();
+		
+		String sql = "select b_num, b_title, b_date, b_view from Board order by b_num desc";
+		
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+			
+			while( resultSet.next()) {
+				Board board = new Board(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getInt(4));
+				
+				boards1.add(board);
+			}
+			return boards1;
+		} catch (Exception e) {} return boards1;
+		
+	}
 	
 		// 게시물 조회 메소드 
 	public ObservableList<Board> boardlist( ){

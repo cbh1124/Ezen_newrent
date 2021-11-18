@@ -35,6 +35,8 @@ public class Board {
 		this.c_num = c_num;  // (이용차량)자동차 식별번호
 	}
 	
+	
+	
 	// 공지사항 게시물 등록시
 	public Board(String b_title, String b_contents, int m_num, String b_type, int c_num) {
 		this.b_title = b_title;
@@ -42,6 +44,14 @@ public class Board {
 		this.m_num = m_num;
 		this.b_type = b_type;
 		this.c_num = c_num;
+	}
+	// 공지사항 게시물 조회
+	public Board(int b_num, String b_title, String b_date, int b_view) {
+		super();
+		this.b_num = b_num;
+		this.b_title = b_title;
+		this.b_date = b_date;
+		this.b_view = b_view;
 	}
 
 	public int getB_num() {
