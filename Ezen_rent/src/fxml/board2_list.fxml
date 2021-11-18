@@ -42,11 +42,10 @@
       <TableView fx:id="board2list" layoutX="304.0" layoutY="124.0" prefHeight="336.0" prefWidth="900.0">
          <columns>
             <TableColumn prefWidth="59.0" text="No." />
-            <TableColumn prefWidth="280.0" text="Ttile" />
-            <TableColumn prefWidth="296.0" text="Writer" />
-            <TableColumn prefWidth="89.0" text="답변유무" />
-            <TableColumn prefWidth="78.0" text="Date" />
-            <TableColumn prefWidth="97.0" text="View" />
+            <TableColumn prefWidth="497.0" text="Ttile" />
+            <TableColumn prefWidth="150.0" text="Writer" />
+            <TableColumn prefWidth="110.0" text="Date" />
+            <TableColumn prefWidth="83.0" text="View" />
          </columns>
       </TableView>
    </children>

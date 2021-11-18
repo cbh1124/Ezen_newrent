@@ -108,6 +108,26 @@ public class BoardDao {
 		} catch (Exception e) {} return boards1;
 		
 	}
+	// Q&A(borad2) 게시물 조회 
+		public ObservableList<Board> board2list(){
+			ObservableList<Board> boards2 = FXCollections.observableArrayList();
+			
+			String sql = "select * from Board where b_type = 2 order by b_num desc";
+			
+			try {
+				preparedStatement = connection.prepareStatement(sql);
+				resultSet = preparedStatement.executeQuery();
+				
+				while( resultSet.next()) {
+					Board board = new Board(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4)
+							, resultSet.getInt(5), resultSet.getString(6),resultSet.getInt(7),resultSet.getInt(8));
+					
+					boards2.add(board);
+				}
+				return boards2;
+			} catch (Exception e) {} return boards2;
+			
+		}
 	
 		// 게시물 조회 메소드 
 	public ObservableList<Board> boardlist( ){
