@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -65,8 +66,8 @@ public class LoginController implements Initializable{
 	    private TextField txtid;
 
 	    @FXML
-	    private TextField txtpassword;
-
+	    private PasswordField txtpassword;
+	    
 	    @FXML
 	    void findid(MouseEvent event) {
 	    	loadpage("findid");
