@@ -1,9 +1,11 @@
 package controller.reservationcontroller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+import application.Main;
 import dao.MemberDao;
 import dao.CarDao;
 import dao.ReservationDao;
@@ -12,7 +14,10 @@ import domain.Reservation;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -20,6 +25,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -27,14 +33,22 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.stage.Modality;
+import javafx.stage.Popup;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.stage.Window;
 
 public class ReservationController implements Initializable {
+	
+ 
+	
 
 	// 등록된 차량 불러오기
 	public void rentcarltableload() {
-		0.
 
 		// 1. DB에서 차량목록 가져오기
 		ObservableList<Car> cars = CarDao.getCarDao().carlist3();
@@ -64,7 +78,7 @@ public class ReservationController implements Initializable {
 				// 3.테이블뷰에서 클릭한 모델의 아이템[ 객체 ]
 				car = rentcarlist.getSelectionModel().getSelectedItem();
 				// 4. 선택된 객체내 이미지경로 가져오기
-				Image image = new Image( car.getC_img() );
+				Image image = new Image(car.getC_img());
 				cimg.setImage(image);
 				// 5. 그외
 				lblcname.setText(car.getC_name());
@@ -77,6 +91,8 @@ public class ReservationController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		rentcarltableload();
+		
+
 
 	}
 
@@ -131,7 +147,29 @@ public class ReservationController implements Initializable {
 	private TextField searchtxt;
 
 	@FXML
+	Button btnreservecarButton;
+	Popup popup;
+	TextArea textArea;
+
+	@FXML
 	void reservecar(ActionEvent event) {
+//		controller.boardcontroller.MainpageController.getinstance().loadpage("reservepopup");
+		try {
+	        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/reservepopup.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+            stage.setTitle("check info");
+            stage.show();
+            
+			
+		} catch (Exception e) {
+	           e.printStackTrace();
+			// TODO: handle exception
+		}
+		
+
+//		
 
 	}
 
@@ -152,7 +190,5 @@ public class ReservationController implements Initializable {
 		}
 
 	}
-	
-	
 
 }

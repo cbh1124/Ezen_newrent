@@ -48,6 +48,7 @@ public class MainpageController implements Initializable{
 	public String getloginid() {
 		return lblloginid.getText();
 	}
+	
 	//юс╫ц
     @FXML
     private Button btnadmin;
