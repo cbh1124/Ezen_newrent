@@ -46,10 +46,10 @@ public class Board {
 		this.c_num = c_num;
 	}
 	// 공지사항 게시물 조회
-	public Board(int b_num, String b_title, String b_date, int b_view) {
-		super();
+	public Board(int b_num, String b_title, String b_contents, String b_date, int b_view ) {
 		this.b_num = b_num;
 		this.b_title = b_title;
+		this.b_contents = b_contents;
 		this.b_date = b_date;
 		this.b_view = b_view;
 	}

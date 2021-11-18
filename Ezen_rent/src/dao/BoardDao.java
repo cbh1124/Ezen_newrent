@@ -74,14 +74,14 @@ public class BoardDao {
 	public ObservableList<Board> board1list(){
 		ObservableList<Board> boards1 = FXCollections.observableArrayList();
 		
-		String sql = "select b_num, b_title, b_date, b_view from Board order by b_num desc";
+		String sql = "select b_num, b_title, b_contents, b_date, b_view  from Board order by b_num desc";
 		
 		try {
 			preparedStatement = connection.prepareStatement(sql);
 			resultSet = preparedStatement.executeQuery();
 			
 			while( resultSet.next()) {
-				Board board = new Board(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getInt(4));
+				Board board = new Board(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getInt(5));
 				
 				boards1.add(board);
 			}
