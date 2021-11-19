@@ -2,6 +2,8 @@ package controller.reservationcontroller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -23,6 +25,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -43,9 +46,6 @@ import javafx.stage.StageStyle;
 import javafx.stage.Window;
 
 public class ReservationController implements Initializable {
-	
- 
-	
 
 	// 등록된 차량 불러오기
 	public void rentcarltableload() {
@@ -69,9 +69,11 @@ public class ReservationController implements Initializable {
 		tc = rentcarlist.getColumns().get(5);
 		tc.setCellValueFactory(new PropertyValueFactory<>("c_price"));
 
+		rentcarlist.setItems(cars);
+
 		// 테이블뷰에서 클릭했을때 아이템 가져오기
 		// 1. 테이블뷰에 클릭 이벤트
-		// productlist.setOnMouseClicked( e -> { 정의 } );
+
 		rentcarlist.setOnMouseClicked(e -> {
 			// 2. 클릭 이벤트가 마우스 클릭과 같으면
 			if (e.getButton().equals(MouseButton.PRIMARY)) {
@@ -91,13 +93,17 @@ public class ReservationController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		rentcarltableload();
-		
-
 
 	}
 
 	public static Car car; // 밖으로 빼줌
 
+	@FXML
+	Button btnreservecarButton;
+	Popup popup;
+	TextArea textArea;
+
+	/////////////////////////////////////////////////////////////////
 	@FXML
 	private Button btnreservecar;
 
@@ -108,10 +114,22 @@ public class ReservationController implements Initializable {
 	private Button btnsearch;
 
 	@FXML
+	private TableColumn<?, ?> c_name;
+
+	@FXML
+	private TableColumn<?, ?> c_num;
+
+	@FXML
 	private ImageView cimg;
 
 	@FXML
-	private DatePicker inputdate;
+	private DatePicker inputdateDatePicker;
+
+	@FXML
+	private Button inputdateadd;
+
+	@FXML
+	private TextField keyworldTextFilter;
 
 	@FXML
 	private Label lblcname;
@@ -120,7 +138,13 @@ public class ReservationController implements Initializable {
 	private Label lbldayp;
 
 	@FXML
+	private TextField lbldaypck;
+
+	@FXML
 	private Label lblinputdate;
+
+	@FXML
+	private TextField lblinputdateck;
 
 	@FXML
 	private Label lblmid;
@@ -129,48 +153,98 @@ public class ReservationController implements Initializable {
 	private Label lbloutputdate;
 
 	@FXML
+	private TextField lbloutputdateck;
+
+	@FXML
+	private Label lblselectcar;
+
+	@FXML
+	private MenuButton lblselectcarck;
+
+	@FXML
 	private Label lbltotdate;
+
+	@FXML
+	private TextField lbltotdateck;
 
 	@FXML
 	private Label lbltotp;
 
 	@FXML
-	private DatePicker outputdate;
+	private TextField lbltotpck;
+
+	@FXML
+	private DatePicker outputdateDatePicker;
+
+	@FXML
+	private Button outputdateadd;
 
 	@FXML
 	private TableView<Car> rentcarlist;
+	// 테이블에 넣을 객체의 클래스명 : 제네릭
 
 	@FXML
 	private TableView<?> reservationlist;
 
 	@FXML
-	private TextField searchtxt;
+	void daypck(ActionEvent event) {
+
+	}
+
+	// 렌트일자 선택
+	@FXML
+	void inputdateac(ActionEvent event) {
+		LocalDate rentDate = inputdateDatePicker.getValue();
+		String rentFormattedDate = rentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
+		lblinputdateck.setText(rentFormattedDate);
+	}
 
 	@FXML
-	Button btnreservecarButton;
-	Popup popup;
-	TextArea textArea;
+	void inputdateaddac(ActionEvent event) {
+
+	}
+
+	@FXML
+	void inputdateck(ActionEvent event) {
+
+	}
+
+	// 반납일자 선택
+	@FXML
+	void outputdateac(ActionEvent event) {
+		LocalDate returnDate = outputdateDatePicker.getValue();
+		String returnFormattedDate = returnDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
+		lbloutputdateck.setText(returnFormattedDate);
+	}
+
+	@FXML
+	void outputdateaddac(ActionEvent event) {
+
+	}
+
+	@FXML
+	void outputdateck(ActionEvent event) {
+
+	}
 
 	@FXML
 	void reservecar(ActionEvent event) {
+		// 팝업화면 이벤트
 //		controller.boardcontroller.MainpageController.getinstance().loadpage("reservepopup");
 		try {
-	        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/reservepopup.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.setTitle("check info");
-            stage.show();
-            
-			
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/reservepopup.fxml"));
+			Parent root1 = (Parent) fxmlLoader.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(root1));
+			stage.setTitle("check info");
+			stage.show();
+
 		} catch (Exception e) {
-	           e.printStackTrace();
+			e.printStackTrace();
 			// TODO: handle exception
 		}
-		
-
-//		
-
 	}
 
 	@FXML
@@ -188,6 +262,25 @@ public class ReservationController implements Initializable {
 			// DB 처리
 
 		}
+	}
+
+	@FXML
+	void selectcarck(ActionEvent event) {
+
+	}
+
+	@FXML
+	void totdateck(ActionEvent event) {
+
+	}
+
+	@FXML
+	void totpck(ActionEvent event) {
+
+	}
+
+	// 반납일 - 렌트일 메소드
+	public void lbltotdateck() {
 
 	}
 

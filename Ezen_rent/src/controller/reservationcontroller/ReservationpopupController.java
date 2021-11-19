@@ -8,6 +8,7 @@ import dao.MemberDao;
 import dao.CarDao;
 import dao.ReservationDao;
 import domain.Car;
+import domain.Member;
 import domain.Reservation;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -38,32 +39,38 @@ public class ReservationpopupController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 
+
+
+
 	}
 	
-	@FXML
-    private Button btnreservecar;
+	
 
     @FXML
-    private TextField lblinputdate;
+    private Button btnreservecarck;
 
     @FXML
-    private TextField lbloutputdate;
+    private Label lblinputdate;
 
     @FXML
-    private TextField lblselectcar;
+    private Label lbloutputdate;
+
+    @FXML
+    private Label lblselectcar;
 
     @FXML
     private Label lbltotdate;
 
     @FXML
+    private Label lbltotp;
+
+    @FXML
     private AnchorPane registercheck;
 
     @FXML
-    void reservecar(ActionEvent event) {
+    void reservecarck(ActionEvent event) {
     	controller.boardcontroller.MainpageController.getinstance().loadpage("reserve");
-    }
-
-	
+    }	
 
 	
 	
