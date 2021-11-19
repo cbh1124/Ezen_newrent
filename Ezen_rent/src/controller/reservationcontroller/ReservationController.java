@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -233,15 +234,23 @@ public class ReservationController implements Initializable {
 		
 		// 두일자의 대한 기간 
 		Period period = Period.between(rentDate, returnDate);
+		
+		long days = ChronoUnit.DAYS.between(rentDate, returnDate);
 
 		// 반납일자와 렌트일자가 null값이 아니면
 		if (!lblinputdateck.getText().equals("") && !lbloutputdateck.getText().equals("")) {
-			lbltotdateck.setText(period.getYears() + " - " + period.getMonths() + " - " + period.getDays());
+			lbltotdateck.setText(days + "일");
+//			System.err.println(days);
+			
+//			lbltotdateck.setText(period.getYears() + " - " + period.getMonths() + " - " + period.getDays());
+			
 		}
 		
 		
 		
-				
+
+		
+		
 		
 	}
 
