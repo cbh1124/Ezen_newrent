@@ -39,7 +39,10 @@
         <columns>
           <TableColumn fx:id="c_num" prefWidth="45.0" text="No" />
             <TableColumn fx:id="c_name" prefWidth="43.0" text="모델" />
-            <TableColumn prefWidth="126.0" text="구분1 (대형/중형/소형)" />
+            <TableColumn prefWidth="126.0" text="구분1 (대형/중형/소형)">
+               <columns>
+                  <TableColumn prefWidth="114.0" text="(국산/외제)" />
+               </columns></TableColumn>
             <TableColumn prefWidth="114.0" text="구분2 (국산/외제)" />
             <TableColumn prefWidth="105.0" text="구분3 (세단 / suv)" />
             <TableColumn prefWidth="69.0" text="일일가격" />
@@ -93,7 +96,7 @@
             <Label fx:id="lblinputdate" layoutX="17.0" layoutY="20.0" text="렌트 예약일 : " />
             <TextField fx:id="lblinputdateck" layoutX="92.0" layoutY="17.0" onAction="#inputdateck" prefHeight="22.0" prefWidth="101.0" promptText="렌트예약일" />
             <TextField fx:id="lbloutputdateck" layoutX="92.0" layoutY="46.0" onAction="#outputdateck" prefHeight="22.0" prefWidth="101.0" promptText="렌트반납일" />
-            <TextField fx:id="lbltotdateck" layoutX="92.0" layoutY="74.0" onAction="#totdateck" prefHeight="22.0" prefWidth="101.0" promptText="렌트기간" />
+            <Label fx:id="lbltotdateck" layoutX="98.0" layoutY="77.0" text="총기간" />
          </children>
       </Pane>
       <Pane layoutX="456.0" layoutY="144.0" prefHeight="112.0" prefWidth="214.0" style="-fx-background-color: gray; -fx-background-radius: 20;">
@@ -105,7 +108,6 @@
             <Label fx:id="lbltotp" layoutX="18.0" layoutY="80.0" prefHeight="11.0" prefWidth="72.0" text="총렌트비용 : " />
             <MenuButton fx:id="lblselectcarck" layoutX="93.0" layoutY="13.0" mnemonicParsing="false" onAction="#selectcarck" prefHeight="22.0" prefWidth="101.0" text="차량선택">
               <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
                 <MenuItem mnemonicParsing="false" text="Action 2" />
               </items>
             </MenuButton>
