@@ -6,7 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+import controller.boardcontroller.ReplywriteController;
 import domain.Board;
+import domain.Reply;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -120,11 +122,14 @@ public class BoardDao {
 				
 				while( resultSet.next()) {
 					Board board = new Board(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4)
-							, resultSet.getInt(5), resultSet.getString(6),resultSet.getInt(7),resultSet.getInt(8));
+							, resultSet.getInt(5), resultSet.getString(6),resultSet.getInt(7),resultSet.getInt(8)
+					);
+					
 					
 					boards2.add(board);
+					System.out.println("작동해봐요2" + board);
 				}
-				return boards2;
+				
 			} catch (Exception e) {} return boards2;
 			
 		}
@@ -189,9 +194,32 @@ public class BoardDao {
 		}return false;
 	}
 	
+	public String getmid (int m_num) {
+		String sql = "select m_id from Member where m_num = ?";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, m_num);
+			resultSet = preparedStatement.executeQuery();
+			if(resultSet.next()) {
+				
+				return resultSet.getString(1);
+			}else {
+				return "";
+			}
+		} catch (Exception e) {} return "";
+	}
 	
-	
-	
+	// 댓글등록 메소드
+	public boolean replywrite( Reply reply ) {
+		
+		String sql = "insert into reply(r_contents)+values(?) ";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, reply.getBr_contents());
+			preparedStatement.executeUpdate();
+			return true;
+		} catch (Exception e) {}return false;
+	}
 	
 	
 	
