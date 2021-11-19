@@ -1,5 +1,8 @@
 package domain;
 
+import dao.BoardDao;
+import dao.MemberDao;
+
 public class Board {
 	private int b_num;
 	private String b_title;
@@ -9,6 +12,7 @@ public class Board {
 	private String b_type;
 	private int m_num;
 	private int c_num;
+	private String b_writer;
 	
 	// 깡통 (빈 생성자 ) 
 	public Board() {
@@ -16,8 +20,7 @@ public class Board {
 	}
 	
 	// 모든 필드 받는 생성자 
-	public Board(int b_num, String b_title, String b_contents, String b_date, int b_view, String b_type, int m_num,
-			int c_num) {
+	public Board(int b_num, String b_title, String b_contents, String b_date, int b_view, String b_type, int m_num,	int c_num) {
 		this.b_num = b_num;
 		this.b_title = b_title;
 		this.b_contents = b_contents;
@@ -26,7 +29,11 @@ public class Board {
 		this.b_type = b_type;
 		this.m_num = m_num;
 		this.c_num = c_num;
+		
+		this.b_writer = BoardDao.getboardDao().getmid(m_num);
+		
 	}
+	
 	// 게시물 등록시 받는 생성자 
 	public Board(String b_title, String b_contents, int m_num, int c_num) {
 		this.b_title = b_title;
@@ -53,7 +60,6 @@ public class Board {
 		this.b_date = b_date;
 		this.b_view = b_view;
 	}
-	
 	
 	public int getB_num() {
 		return b_num;
@@ -117,6 +123,14 @@ public class Board {
 
 	public void setC_num(int c_num) {
 		this.c_num = c_num;
+	}
+
+	public String getB_writer() {
+		return b_writer;
+	}
+
+	public void setB_writer(String b_writer) {
+		this.b_writer = b_writer;
 	}
 	
 	// 게시물 등록시 받는 생성자

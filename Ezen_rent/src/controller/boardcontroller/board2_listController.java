@@ -21,8 +21,9 @@ public class board2_listController implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-ObservableList<Board> boards = BoardDao.getboardDao().board2list();
 		
+		ObservableList<Board> boards = BoardDao.getboardDao().board2list();
+		System.out.println("작동해봐요" + boards);
 		TableColumn tc = board2list.getColumns().get(0);
 		tc.setCellValueFactory(new PropertyValueFactory<>("b_num"));
 		
@@ -30,8 +31,8 @@ ObservableList<Board> boards = BoardDao.getboardDao().board2list();
 		tc.setCellValueFactory(new PropertyValueFactory<>("b_title"));
 
 		tc = board2list.getColumns().get(2);
-		tc.setCellValueFactory(new PropertyValueFactory<>("b_contents"));
-		
+		tc.setCellValueFactory(new PropertyValueFactory<>("b_writer"));
+		//BoardDao.getboardDao().getmid(board.getM_num()))
 		tc = board2list.getColumns().get(3);
 		tc.setCellValueFactory(new PropertyValueFactory<>("b_date"));
 		
@@ -39,12 +40,7 @@ ObservableList<Board> boards = BoardDao.getboardDao().board2list();
 		tc.setCellValueFactory(new PropertyValueFactory<>("b_view"));
 		
 		board2list.setItems(boards);
-//		// 만약에 b_type이 2라면 setitems 실행 
-//		if(boards.get(5).equals("2")) {
-//			board2list.setItems(boards);
-//		}
 		
-		board2list.setItems(boards);
 		board2list.setOnMouseClicked(e -> {
 			if(e.getButton().equals(MouseButton.PRIMARY)) {
 				board = board2list.getSelectionModel().getSelectedItem();
