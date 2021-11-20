@@ -56,7 +56,7 @@ public class ReservationController implements Initializable {
 	public void rentcarltableload() {
 
 		// 1. DB에서 차량목록 가져오기
-		ObservableList<Car> cars = CarDao.getCarDao().carlist3();
+		ObservableList<Car> cars = CarDao.getCarDao().carlist();
 		System.out.println("확인" + cars);
 		// 2. 제품목록을 테이블뷰에 넣어주기
 		rentcarlist.setItems(cars);
@@ -82,13 +82,18 @@ public class ReservationController implements Initializable {
 		rentcarlist.setOnMouseClicked(e -> {
 			// 2. 클릭 이벤트가 마우스 클릭과 같으면
 			if (e.getButton().equals(MouseButton.PRIMARY)) {
+
 				// 3.테이블뷰에서 클릭한 모델의 아이템[ 객체 ]
 				car = rentcarlist.getSelectionModel().getSelectedItem();
+
 				// 4. 선택된 객체내 이미지경로 가져오기
 				Image image = new Image(car.getC_img());
 				cimg.setImage(image);
+
 				// 5. 그외
 				lblcname.setText(car.getC_name());
+				
+				
 
 			}
 		});
@@ -125,6 +130,18 @@ public class ReservationController implements Initializable {
 
 	@FXML
 	private TableColumn<?, ?> c_num;
+	
+    @FXML
+    private TableColumn<?, ?> c_ct1;
+
+    @FXML
+    private TableColumn<?, ?> c_ct2;
+
+    @FXML
+    private TableColumn<?, ?> c_ct3;
+    
+    @FXML
+    private TableColumn<?, ?> c_price;
 
 	@FXML
 	private ImageView cimg;
@@ -140,6 +157,9 @@ public class ReservationController implements Initializable {
 
 	@FXML
 	private Label lblcname;
+	
+    @FXML
+    private Label lblcnum;
 
 	@FXML
 	private Label lbldayp;
