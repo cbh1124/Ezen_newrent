@@ -51,8 +51,6 @@ import javafx.stage.StageStyle;
 import javafx.stage.Window;
 
 public class ReservationController implements Initializable {
-	
-
 
 	// 등록된 차량 불러오기
 	public void rentcarltableload() {
@@ -105,12 +103,14 @@ public class ReservationController implements Initializable {
 
 	public static Car car; // 밖으로 빼줌
 
+	LocalDate rentDate; // 전역변수 설정
+	LocalDate returnDate; // 전역변수 설정
+
 	@FXML
 	Button btnreservecarButton;
 	Popup popup;
 	TextArea textArea;
 
-	/////////////////////////////////////////////////////////////////
 	@FXML
 	private Button btnreservecar;
 
@@ -145,16 +145,19 @@ public class ReservationController implements Initializable {
 	private Label lbldayp;
 
 	@FXML
-	private TextField lbldaypck;
+	private Label lbldaypck;
+
+	@FXML
+	private Label lbldaypck1;
+
+	@FXML
+	private Label lbldaypck11;
 
 	@FXML
 	private Label lblinputdate;
 
 	@FXML
 	private TextField lblinputdateck;
-
-	@FXML
-	private Label lblmid;
 
 	@FXML
 	private Label lbloutputdate;
@@ -171,16 +174,14 @@ public class ReservationController implements Initializable {
 	@FXML
 	private Label lbltotdate;
 
-
-	//  총기간
-    @FXML
-    private Label lbltotdateck;
+	@FXML
+	private Label lbltotdateck;
 
 	@FXML
 	private Label lbltotp;
 
 	@FXML
-	private TextField lbltotpck;
+	private Label lbltotpck;
 
 	@FXML
 	private DatePicker outputdateDatePicker;
@@ -196,25 +197,16 @@ public class ReservationController implements Initializable {
 	private TableView<?> reservationlist;
 
 	@FXML
-	void daypck(ActionEvent event) {
-		
-	}
-
-	LocalDate rentDate; // 전역변수 설정
-	// 렌트일자 선택
-	@FXML
 	void inputdateac(ActionEvent event) {
-		 rentDate = inputdateDatePicker.getValue();
-		String rentFormattedDate = rentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
-		lblinputdateck.setText(rentFormattedDate);
-	
-		
 	}
 
 	@FXML
 	void inputdateaddac(ActionEvent event) {
+		rentDate = inputdateDatePicker.getValue();
+		String rentFormattedDate = rentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
+		lblinputdateck.setText(rentFormattedDate);
 	}
 
 	@FXML
@@ -222,36 +214,27 @@ public class ReservationController implements Initializable {
 
 	}
 
-	// 반납일자 선택
-	LocalDate returnDate; // 전역변수 설정
 	@FXML
 	void outputdateac(ActionEvent event) {
 		returnDate = outputdateDatePicker.getValue();
 		String returnFormattedDate = returnDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
 		lbloutputdateck.setText(returnFormattedDate);
-		
-		
-		// 두일자의 대한 기간 
+
+		// 두일자의 대한 기간
 		Period period = Period.between(rentDate, returnDate);
-		
+
+		// days 환산
 		long days = ChronoUnit.DAYS.between(rentDate, returnDate);
 
 		// 반납일자와 렌트일자가 null값이 아니면
 		if (!lblinputdateck.getText().equals("") && !lbloutputdateck.getText().equals("")) {
 			lbltotdateck.setText(days + "일");
 //			System.err.println(days);
-			
-//			lbltotdateck.setText(period.getYears() + " - " + period.getMonths() + " - " + period.getDays());
-			
-		}
-		
-		
-		
 
-		
-		
-		
+//			lbltotdateck.setText(period.getYears() + " - " + period.getMonths() + " - " + period.getDays());
+
+		}
 	}
 
 	@FXML
@@ -264,9 +247,10 @@ public class ReservationController implements Initializable {
 
 	}
 
+	// 팝업
 	@FXML
 	void reservecar(ActionEvent event) {
-		// 팝업화면 이벤트
+
 //		controller.boardcontroller.MainpageController.getinstance().loadpage("reservepopup");
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/reservepopup.fxml"));
@@ -287,6 +271,7 @@ public class ReservationController implements Initializable {
 
 	}
 
+	// 필터 조회버튼 이벤트
 	@FXML
 	void search(ActionEvent event) {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
@@ -304,67 +289,32 @@ public class ReservationController implements Initializable {
 
 	}
 
-	@FXML
-	void totdateck(ActionEvent event) {
-		String rentFormattedDate = null;
-		String returnFormattedDate = null;
-		
-		try{ // String Type을 Date Type으로 캐스팅하면서 생기는 예외로 인해 여기서 예외처리 해주지 않으면 컴파일러에서 에러가 발생해서 컴파일을 할 수 없다.
-	        SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
-	        // 두 날짜를 parse()를 통해 Date형으로 변환.
-	        Date FirstDate = format.parse(rentFormattedDate);
-	        Date SecondDate = format.parse(returnFormattedDate);
-	        
-	        // Date로 변환된 두 날짜를 계산한 뒤 그 리턴값으로 long type 변수를 초기화 하고 있다.
-
-	        long calDate = FirstDate.getTime() - SecondDate.getTime(); 
-	        
-	        // Date.getTime() 은 해당날짜를 기준으로1970년 00:00:00 부터 몇 초가 흘렀는지를 반환해준다. 
-
-	        long calDateDays = calDate / ( 24*60*60*1000); 
-	 
-	        calDateDays = Math.abs(calDateDays);
-	        
-	        System.out.println("두 날짜의 날짜 차이: "+calDateDays);
-	        }
-	        catch(Exception e)
-	        {
-	            // 예외 처리
-	        }
-	}
-
-	@FXML
-	void totpck(ActionEvent event) {
-
-	}
-
 	// 반납일 - 렌트일 메소드
 	public void lbltotdateck() {
 		String rentFormattedDate = null;
 		String returnFormattedDate = null;
-		
-		try{ // String Type을 Date Type으로 캐스팅하면서 생기는 예외로 인해 여기서 예외처리 해주지 않으면 컴파일러에서 에러가 발생해서 컴파일을 할 수 없다.
-	        SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
-	        // 두 날짜를 parse()를 통해 Date형으로 변환.
-	        Date FirstDate = format.parse(rentFormattedDate);
-	        Date SecondDate = format.parse(returnFormattedDate);
-	        
-	        // Date로 변환된 두 날짜를 계산한 뒤 그 리턴값으로 long type 변수를 초기화 하고 있다.
 
-	        long calDate = FirstDate.getTime() - SecondDate.getTime(); 
-	        
-	        // Date.getTime() 은 해당날짜를 기준으로1970년 00:00:00 부터 몇 초가 흘렀는지를 반환해준다. 
+		try { // String Type을 Date Type으로 캐스팅하면서 생기는 예외로 인해 여기서 예외처리 해주지 않으면 컴파일러에서 에러가 발생해서
+				// 컴파일을 할 수 없다.
+			SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+			// 두 날짜를 parse()를 통해 Date형으로 변환.
+			Date FirstDate = format.parse(rentFormattedDate);
+			Date SecondDate = format.parse(returnFormattedDate);
 
-	        long calDateDays = calDate / ( 24*60*60*1000); 
-	 
-	        calDateDays = Math.abs(calDateDays);
-	        
-	        System.out.println("두 날짜의 날짜 차이: "+calDateDays);
-	        }
-	        catch(Exception e)
-	        {
-	            // 예외 처리
-	        }
+			// Date로 변환된 두 날짜를 계산한 뒤 그 리턴값으로 long type 변수를 초기화 하고 있다.
+
+			long calDate = FirstDate.getTime() - SecondDate.getTime();
+
+			// Date.getTime() 은 해당날짜를 기준으로1970년 00:00:00 부터 몇 초가 흘렀는지를 반환해준다.
+
+			long calDateDays = calDate / (24 * 60 * 60 * 1000);
+
+			calDateDays = Math.abs(calDateDays);
+
+			System.out.println("두 날짜의 날짜 차이: " + calDateDays);
+		} catch (Exception e) {
+			// 예외 처리
+		}
 
 	}
 

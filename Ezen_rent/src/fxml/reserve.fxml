@@ -24,21 +24,21 @@
          </font>
       </Text>
       <Line endX="90.0" layoutX="90.0" layoutY="25.0" startX="90.0" startY="500.0" />
-      <Button layoutX="207.0" layoutY="72.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="65.0" style="-fx-background-color: #000000;" text="날짜선택" textFill="WHITE" />
-      <Button fx:id="inputdateadd" layoutX="207.0" layoutY="103.0" mnemonicParsing="false" onAction="#inputdateaddac" prefHeight="30.0" prefWidth="214.0" text="예약일 등록">
+      <Button layoutX="207.0" layoutY="51.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="65.0" style="-fx-background-color: #000000;" text="날짜선택" textFill="WHITE" />
+      <Button fx:id="inputdateadd" layoutX="207.0" layoutY="82.0" mnemonicParsing="false" onAction="#inputdateaddac" prefHeight="30.0" prefWidth="214.0" text="예약일 등록">
          <graphic>
             <DatePicker fx:id="inputdateDatePicker" onAction="#inputdateac" prefHeight="22.0" prefWidth="128.0" promptText="예약날짜" />
          </graphic>
       </Button>
-      <Button fx:id="outputdateadd" layoutX="456.0" layoutY="103.0" mnemonicParsing="false" onAction="#outputdateaddac" prefHeight="30.0" prefWidth="214.0" text="반납일 등록">
+      <Button fx:id="outputdateadd" layoutX="456.0" layoutY="82.0" mnemonicParsing="false" onAction="#outputdateaddac" prefHeight="30.0" prefWidth="214.0" text="반납일 등록">
          <graphic>
             <DatePicker fx:id="outputdateDatePicker" onAction="#outputdateac" prefHeight="22.0" prefWidth="128.0" promptText="반납날짜" />
          </graphic>
       </Button>
       <TableView fx:id="rentcarlist" layoutX="737.0" layoutY="297.0" prefHeight="173.0" prefWidth="500.0">
         <columns>
-          <TableColumn fx:id="c_num" prefWidth="34.0" text="No" />
-            <TableColumn fx:id="c_name" prefWidth="66.0" text="모델명" />
+          <TableColumn fx:id="c_num" prefWidth="60.0" text="No" />
+            <TableColumn fx:id="c_name" prefWidth="74.0" text="모델명" />
             <TableColumn prefWidth="100.0" text="구분1">
                <columns>
                   <TableColumn prefWidth="100.0" text="(대형/중형/소형)" />
@@ -53,17 +53,17 @@
                   <TableColumn prefWidth="100.0" text="(세단 / suv)" />
                </columns>
             </TableColumn>
-            <TableColumn prefWidth="102.0" text="일일가격" />
+            <TableColumn prefWidth="65.0" text="일일가격" />
         </columns>
       </TableView>
-      <AnchorPane layoutX="998.0" layoutY="97.0" prefHeight="160.0" prefWidth="250.0" style="-fx-border-color: #000000;">
+      <AnchorPane layoutX="987.0" layoutY="87.0" prefHeight="160.0" prefWidth="250.0" style="-fx-border-color: #000000;">
          <children>
             <ImageView fx:id="cimg" fitHeight="160.0" fitWidth="250.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
       <Button fx:id="btnreservecar" defaultButton="true" layoutX="207.0" layoutY="489.0" mnemonicParsing="false" onAction="#reservecar" prefHeight="22.0" prefWidth="201.0" text="예약하기 (Check In)" />
       <Button fx:id="btnreturncar" layoutX="479.0" layoutY="489.0" mnemonicParsing="false" onAction="#returncar" prefHeight="22.0" prefWidth="201.0" text="반납하기(Check Out)" />
-      <Button layoutX="737.0" layoutY="72.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="65.0" style="-fx-background-color: #000000;" text="차량조회" textFill="WHITE" />
+      <Button layoutX="737.0" layoutY="51.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="65.0" style="-fx-background-color: #000000;" text="차량조회" textFill="WHITE" />
       <TableView fx:id="reservationlist" layoutX="207.0" layoutY="297.0" prefHeight="173.0" prefWidth="473.0">
         <columns>
           <TableColumn prefWidth="59.0" text="접수번호" />
@@ -79,7 +79,7 @@
             <TableColumn prefWidth="71.0" text="렌트비용 " />
         </columns>
       </TableView>
-      <Pane layoutX="737.0" layoutY="98.0" prefHeight="160.0" prefWidth="236.0" style="-fx-background-color: gray; -fx-background-radius: 20;">
+      <Pane layoutX="737.0" layoutY="88.0" prefHeight="160.0" prefWidth="236.0" style="-fx-background-color: gray; -fx-background-radius: 20;">
          <children>
             <CheckBox layoutX="14.0" layoutY="73.0" mnemonicParsing="false" text="대형" />
           <Button fx:id="btnsearch" layoutX="177.0" layoutY="31.0" mnemonicParsing="false" onAction="#search" text="Search" />
@@ -106,18 +106,20 @@
       </Pane>
       <Pane layoutX="456.0" layoutY="144.0" prefHeight="112.0" prefWidth="214.0" style="-fx-background-color: gray; -fx-background-radius: 20;">
          <children>
-            <TextField fx:id="lbldaypck" layoutX="92.0" layoutY="46.0" onAction="#daypck" prefHeight="22.0" prefWidth="101.0" promptText="린트비용(일)" />
             <Label fx:id="lbldayp" layoutX="7.0" layoutY="50.0" text="일일렌트비용 : " />
             <Label fx:id="lblselectcar" layoutX="30.0" layoutY="17.0" text="선택차량 : " />
-            <TextField fx:id="lbltotpck" layoutX="92.0" layoutY="76.0" onAction="#totpck" prefHeight="22.0" prefWidth="101.0" promptText="총 렌트비용" />
             <Label fx:id="lbltotp" layoutX="18.0" layoutY="80.0" prefHeight="11.0" prefWidth="72.0" text="총렌트비용 : " />
-            <MenuButton fx:id="lblselectcarck" layoutX="93.0" layoutY="13.0" mnemonicParsing="false" onAction="#selectcarck" prefHeight="22.0" prefWidth="101.0" text="차량선택">
+            <MenuButton fx:id="lblselectcarck" layoutX="106.0" layoutY="13.0" mnemonicParsing="false" onAction="#selectcarck" prefHeight="22.0" prefWidth="88.0" text="차량선택">
               <items>
                 <MenuItem mnemonicParsing="false" text="Action 2" />
               </items>
             </MenuButton>
+            <Label fx:id="lbldaypck" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="101.0" layoutY="49.0" prefHeight="14.0" prefWidth="72.0" text="렌트비용" textAlignment="RIGHT" />
+            <Label fx:id="lbldaypck1" layoutX="175.0" layoutY="49.0" text="원" textAlignment="RIGHT" />
+            <Label fx:id="lbltotpck" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="101.0" layoutY="80.0" prefHeight="14.0" prefWidth="72.0" text="렌트비용" textAlignment="RIGHT" />
+            <Label fx:id="lbldaypck11" layoutX="175.0" layoutY="80.0" text="원" textAlignment="RIGHT" />
          </children>
       </Pane>
-      <Label fx:id="lblcname" layoutX="998.0" layoutY="81.0" text="모델명" />
+      <Label fx:id="lblcname" layoutX="987.0" layoutY="66.0" text="모델명" />
    </children>
 </AnchorPane>
