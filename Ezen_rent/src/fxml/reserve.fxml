@@ -37,12 +37,13 @@
       </Button>
       <TableView fx:id="rentcarlist" layoutX="737.0" layoutY="297.0" prefHeight="173.0" prefWidth="500.0">
         <columns>
-          <TableColumn fx:id="c_num" prefWidth="60.0" text="No" />
-            <TableColumn fx:id="c_name" prefWidth="74.0" text="모델명" />
-            <TableColumn fx:id="c_ct1" prefWidth="100.0" text="(대형/중형/소형)" />
-            <TableColumn fx:id="c_ct2" prefWidth="100.0" text="(국산/외제)" />
-            <TableColumn fx:id="c_ct3" prefWidth="100.0" text="(세단 / suv)" />
+          <TableColumn fx:id="c_num" prefWidth="48.0" text="No" />
+            <TableColumn fx:id="c_name" prefWidth="75.0" text="모델명" />
+            <TableColumn fx:id="c_ct1" text="(대형/중형/소형)" />
+            <TableColumn fx:id="c_ct2" text="(국산/외제)" />
+            <TableColumn fx:id="c_ct3" text="(세단 / suv)" />
             <TableColumn fx:id="c_price" prefWidth="65.0" text="일일가격" />
+            <TableColumn fx:id="c_return" prefWidth="71.0" text="상태(렌트)" />
         </columns>
       </TableView>
       <AnchorPane layoutX="987.0" layoutY="87.0" prefHeight="160.0" prefWidth="250.0" style="-fx-border-color: #000000;">
@@ -70,9 +71,9 @@
       </TableView>
       <Pane layoutX="737.0" layoutY="88.0" prefHeight="160.0" prefWidth="236.0" style="-fx-background-color: gray; -fx-background-radius: 20;">
          <children>
+            <TextField fx:id="keyworldTextFilter" layoutX="10.0" layoutY="31.0" prefHeight="22.0" prefWidth="167.0" promptText="keyworldTextFilter" />
             <CheckBox layoutX="14.0" layoutY="73.0" mnemonicParsing="false" text="대형" />
           <Button fx:id="btnsearch" layoutX="177.0" layoutY="31.0" mnemonicParsing="false" onAction="#search" text="Search" />
-            <TextField fx:id="keyworldTextFilter" layoutX="10.0" layoutY="31.0" prefHeight="22.0" prefWidth="167.0" promptText="keyworldTextFilter" />
             <CheckBox layoutX="77.0" layoutY="73.0" mnemonicParsing="false" text="중형" />
             <CheckBox layoutX="143.0" layoutY="73.0" mnemonicParsing="false" text="소형" />
             <CheckBox layoutX="14.0" layoutY="103.0" mnemonicParsing="false" text="국산" />

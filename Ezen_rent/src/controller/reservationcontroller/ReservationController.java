@@ -8,8 +8,10 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
+import java.util.Observable;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 import application.Main;
 import controller.boardcontroller.MainpageController;
@@ -18,7 +20,10 @@ import dao.CarDao;
 import dao.ReservationDao;
 import domain.Car;
 import domain.Reservation;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -36,6 +41,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -73,6 +79,13 @@ public class ReservationController implements Initializable {
 		tc.setCellValueFactory(new PropertyValueFactory<>("c_ct3"));
 		tc = rentcarlist.getColumns().get(5);
 		tc.setCellValueFactory(new PropertyValueFactory<>("c_price"));
+		tc = rentcarlist.getColumns().get(6);
+		tc.setCellValueFactory(new PropertyValueFactory<>("c_return"));
+
+//		boolean ∫∏¿Ø = true;
+//		boolean ∑ª∆Æ = false;
+//		String trueString = Boolean.toString(∑ª∆Æ);
+//		String falseString = Boolean.toString(∫∏¿Ø);
 
 		rentcarlist.setItems(cars);
 
@@ -92,19 +105,37 @@ public class ReservationController implements Initializable {
 
 				// 5. ±◊ø‹
 				lblcname.setText(car.getC_name());
-				
-				
-
 			}
 		});
 
 	}
 
+	ObservableList<Car> cars = CarDao.getCarDao().carlist();
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		rentcarltableload();
 
+		/*
+		 * c_num.setCellValueFactory(new PropertyValueFactory<>("c_num"));
+		 * c_ct1.setCellValueFactory(new PropertyValueFactory<>("c_ct1"));
+		 * c_ct2.setCellValueFactory(new PropertyValueFactory<>("c_ct2"));
+		 * c_ct3.setCellValueFactory(new PropertyValueFactory<>("c_ct3"));
+		 * 
+		 * rentcarlist.setItems(cars);
+		 */
+		c_num.setCellValueFactory(new PropertyValueFactory<>("c_num"));
+		c_ct1.setCellValueFactory(new PropertyValueFactory<>("c_ct1"));
+		c_ct2.setCellValueFactory(new PropertyValueFactory<>("c_ct2"));
+		c_ct3.setCellValueFactory(new PropertyValueFactory<>("c_ct3"));
+
+		rentcarlist.setItems(cars);
+
 	}
+
+	/*
+	 * FilteredList filter = new FilteredList(cars, e -> true);
+	 */
 
 	public static Car car; // π€¿∏∑Œ ª©¡‹
 
@@ -126,22 +157,25 @@ public class ReservationController implements Initializable {
 	private Button btnsearch;
 
 	@FXML
-	private TableColumn<?, ?> c_name;
+	private TableColumn<?, ?> c_num;
 
 	@FXML
-	private TableColumn<?, ?> c_num;
-	
-    @FXML
-    private TableColumn<?, ?> c_ct1;
+	private TableColumn<Car, String> c_name;
 
-    @FXML
-    private TableColumn<?, ?> c_ct2;
+	@FXML
+	private TableColumn<Car, String> c_ct1;
 
-    @FXML
-    private TableColumn<?, ?> c_ct3;
-    
-    @FXML
-    private TableColumn<?, ?> c_price;
+	@FXML
+	private TableColumn<Car, String> c_ct2;
+
+	@FXML
+	private TableColumn<Car, String> c_ct3;
+
+	@FXML
+	private TableColumn<?, ?> c_price;
+
+	@FXML
+	private TableColumn<?, ?> c_return;
 
 	@FXML
 	private ImageView cimg;
@@ -157,9 +191,9 @@ public class ReservationController implements Initializable {
 
 	@FXML
 	private Label lblcname;
-	
-    @FXML
-    private Label lblcnum;
+
+	@FXML
+	private Label lblcnum;
 
 	@FXML
 	private Label lbldayp;
@@ -308,6 +342,54 @@ public class ReservationController implements Initializable {
 	void selectcarck(ActionEvent event) {
 
 	}
+
+	@FXML
+	void searchtext(ActionEvent event) {
+//		// personList is table setter getter
+//		FilteredList<Car> cars = new FilteredList<>(rentcarlist,cars -> true);
+//		keyworldTextFilter.textProperty().addListener((obsevable, oldvalue, newvalue) -> {
+//			cars.setPredicate(pers -> {
+//
+//				if (newvalue == null || newvalue.isEmpty()) {
+//					return true;
+//				}
+//				String typedText = newvalue.toLowerCase();
+//				if (pers.getC_ct1().toLowerCase().indexOf(typedText) != -1) {
+//
+//					return true;
+//				}
+//				if (pers.getC_ct2().toLowerCase().indexOf(typedText) != -1) {
+//
+//					return true;
+//				}
+//				if (pers.getC_ct3().toLowerCase().indexOf(typedText) != -1) {
+//					return true;
+//				}
+//
+//				return false;
+//			});
+//			SortedList<Car> sortedList = new SortedList<>(cars);
+//			sortedList.comparatorProperty().bind(rentcarlist.comparatorProperty());
+//
+//		});
+		
+		/*
+		 * keyworldTextFilter.textProperty().addListener((Observable, oldValue, newVlue)
+		 * -> {
+		 * 
+		 * filter.setPredicate((Predicate<? super Car>) (Car car) -> {
+		 * 
+		 * if (newVlue.isEmpty() || newVlue == null) { return true; }
+		 * 
+		 * else { return true; } }); });
+		 * 
+		 * SortedList sort = new SortedList(filter);
+		 * sort.comparatorProperty().bind(rentcarlist.comparatorProperty());
+		 */
+
+	}
+
+	
 
 	// π›≥≥¿œ - ∑ª∆Æ¿œ ∏ﬁº“µÂ
 	public void lbltotdateck() {
