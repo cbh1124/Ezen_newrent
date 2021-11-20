@@ -38,7 +38,7 @@
                         <Insets right="20.0" top="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="btncarinfo" alignment="CENTER" mnemonicParsing="false" onAction="#carinfo" prefHeight="35.0" prefWidth="200.0" style="-fx-background-radius: 10;" text="챠랑정보">
+                  <Button fx:id="btncarinfo" alignment="CENTER" mnemonicParsing="false" onAction="#carinfo" prefHeight="35.0" prefWidth="200.0" style="-fx-background-radius: 10;" text="차랑정보">
                      <HBox.margin>
                         <Insets right="20.0" top="10.0" />
                      </HBox.margin>
