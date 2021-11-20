@@ -26,7 +26,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <HBox layoutX="234.0" layoutY="15.0" prefHeight="60.0" prefWidth="642.0" style="-fx-border-color: #000000;">
+            <HBox layoutX="234.0" layoutY="15.0" prefHeight="60.0" prefWidth="642.0">
                <children>
                   <Button fx:id="btnreserve" alignment="CENTER" mnemonicParsing="false" onAction="#reserve" prefHeight="35.0" prefWidth="200.0" style="-fx-background-radius: 10;" text="예약 하기">
                      <HBox.margin>
@@ -132,7 +132,7 @@
                                  <font>
                                     <Font size="10.0" />
                                  </font></Label>
-                              <Label alignment="CENTER" prefHeight="26.0" prefWidth="399.0" text="Copyright © SK렌터카. All Rights Reserved." textFill="#a8a8a8">
+                              <Label alignment="CENTER" prefHeight="26.0" prefWidth="399.0" text="Copyright © Ezen 렌터카. All Rights Reserved." textFill="#a8a8a8">
                                  <font>
                                     <Font size="10.0" />
                                  </font></Label>

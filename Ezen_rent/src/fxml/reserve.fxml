@@ -18,12 +18,12 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.reservationcontroller.ReservationController">
    <children>
-      <Text layoutX="24.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car rent" wrappingWidth="155.0">
+      <Text layoutX="15.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car rent" wrappingWidth="155.0">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <Line endX="100.0" layoutX="79.0" layoutY="15.0" startX="100.0" startY="500.0" />
+      <Line endX="90.0" layoutX="90.0" layoutY="25.0" startX="90.0" startY="500.0" />
       <Button layoutX="207.0" layoutY="58.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="65.0" style="-fx-background-color: #000000;" text="날짜선택" textFill="WHITE" />
       <Button fx:id="inputdateadd" layoutX="207.0" layoutY="89.0" mnemonicParsing="false" onAction="#inputdateaddac" prefHeight="30.0" prefWidth="214.0" text="예약일 등록">
          <graphic>
@@ -88,7 +88,6 @@
       </Pane>
       <Button layoutX="207.0" layoutY="271.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="65.0" style="-fx-background-color: #000000;" text="접수내역" textFill="WHITE" />
       <Button layoutX="737.0" layoutY="271.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="82.0" style="-fx-background-color: #000000;" text="차량리스트" textFill="WHITE" />
-      <Pane prefHeight="200.0" prefWidth="200.0" />
       <Pane layoutX="207.0" layoutY="144.0" prefHeight="112.0" prefWidth="214.0" style="-fx-background-color: gray; -fx-background-radius: 20;">
          <children>
             <Label fx:id="lbltotdate" layoutX="32.0" layoutY="77.0" text="렌트기간 : " />
