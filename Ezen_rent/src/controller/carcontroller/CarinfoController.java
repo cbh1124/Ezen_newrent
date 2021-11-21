@@ -22,6 +22,7 @@ public class CarinfoController implements Initializable {
 	 public void cartableload() {
 	
 	 }
+	 
 	//ObservableList<Car> carloads = CarDao.getCarDao().cartableloading();
 	
 	 
@@ -76,16 +77,18 @@ public class CarinfoController implements Initializable {
 			}
 
 	}
-
-
-			
-		
-		
+	
     @FXML
     private AnchorPane an;
 
     @FXML
     private ScrollPane sp;
+
+
+
+			
+		
+		
 
 
 }
