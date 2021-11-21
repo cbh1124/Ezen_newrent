@@ -222,8 +222,8 @@ public class ReservationController implements Initializable {
 	@FXML
 	private Label lblselectcar;
 
-	@FXML
-	private MenuButton lblselectcarck;
+    @FXML
+    private Label lblselectcarck;
 
 	@FXML
 	private Label lbltotdate;
@@ -338,10 +338,6 @@ public class ReservationController implements Initializable {
 		}
 	}
 
-	@FXML
-	void selectcarck(ActionEvent event) {
-
-	}
 
 	@FXML
 	void searchtext(ActionEvent event) {
