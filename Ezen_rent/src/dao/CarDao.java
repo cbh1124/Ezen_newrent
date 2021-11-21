@@ -64,7 +64,7 @@ public class CarDao {
 	public ObservableList<Car> carlist() {
 		// 1. 리스트선언
 		ObservableList<Car> cars = FXCollections.observableArrayList();
-		String sql = "select c_num, c_name,c_license, c_price,c_ct1,c_ct2,c_ct3,c_return from Car order by c_num desc"; // 다
+		String sql = "select c_num, c_name,c_license, c_img, c_price,c_ct1,c_ct2,c_ct3,c_return from Car order by c_num desc"; // 다
 																														// 가져오기
 		System.out.println("오류찾기");
 		try {
@@ -74,9 +74,15 @@ public class CarDao {
 			System.out.println("오류찾기");
 			while (resultSet.next()) { // 검색결과 레코드가 없을때까지 레코드 하나씩 반환
 				// 해당 레코드를 객체화
-				Car car = new Car(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3),
-						resultSet.getInt(4), resultSet.getString(5), resultSet.getString(6), resultSet.getString(7),
-						resultSet.getBoolean(8)
+				Car car = new Car(resultSet.getInt(1),
+						resultSet.getString(2),
+						resultSet.getString(3),
+						resultSet.getString(4),
+						resultSet.getInt(5),
+						resultSet.getString(6),
+						resultSet.getString(7),
+						resultSet.getString(8),
+						resultSet.getBoolean(9)
 
 				);
 				System.out.println("오류찾기30");
