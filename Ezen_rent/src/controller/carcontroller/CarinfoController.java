@@ -85,9 +85,6 @@ public class CarinfoController implements Initializable {
     private AnchorPane an;
 
     @FXML
-    private AnchorPane cp;
-
-    @FXML
     private ScrollPane sp;
 
 
