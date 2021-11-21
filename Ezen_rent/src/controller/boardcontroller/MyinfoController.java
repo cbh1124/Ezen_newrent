@@ -5,9 +5,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 import dao.MemberDao;
-import dao.ProductDao;
 import dao.ReservationDao;
-import domain.Product;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,7 +32,7 @@ public class MyinfoController implements Initializable {
 
 		
 		//// 내가 등록한 예약 가져오기
-		int m_num = MemberDao.getMemberDao().mnumcheck(lblloginid); // 회원id -> 회원번호 
+//		int m_num = MemberDao.getMemberDao().mnumcheck(lblloginid); // 회원id -> 회원번호 
 //		ObservableList<Reservation> reservations = ReservationDao.getreservationDao().reservationlist( r_num );
 		
 	}
