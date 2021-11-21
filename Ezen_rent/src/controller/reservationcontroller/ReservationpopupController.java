@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+
 import dao.MemberDao;
 import dao.CarDao;
 import dao.ReservationDao;
@@ -34,40 +35,33 @@ import javafx.scene.layout.HBox;
 
 public class ReservationpopupController implements Initializable {
 
-	
-
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 
-
-
-
 	}
-	
-	
 
-    @FXML
-    private Button btnreservecarck;
+	@FXML
+	private Button btnreservecarck;
 
-    @FXML
-    private Label lblinputdate;
+	@FXML
+	private Label lblinputdate;
 
-    @FXML
-    private Label lbloutputdate;
+	@FXML
+	private Label lbloutputdate;
 
-    @FXML
-    private Label lblselectcar;
+	@FXML
+	private Label lblselectcar;
 
-    @FXML
-    private Label lbltotdate;
+	@FXML
+	private Label lbltotdate;
 
-    @FXML
-    private Label lbltotp;
+	@FXML
+	private Label lbltotp;
 
-    @FXML
-    private AnchorPane registercheck;
+	@FXML
+	private AnchorPane registercheck;
 
-    @FXML
+	@FXML
     void reservecarck(ActionEvent event) {
     	
     	Alert alert = new Alert(AlertType.CONFIRMATION);
@@ -75,34 +69,35 @@ public class ReservationpopupController implements Initializable {
 		Optional<ButtonType> optional = alert.showAndWait();
 
 		if (optional.get() == ButtonType.OK) {
-		
-			controller.boardcontroller.MainpageController.getinstance().loadpage("reserve");
 			
-			// DB 처리
+	   		// 로그인된 id의 회원번호 검색 db처리
+//    		int m_num = MemberDao.getMemberDao().
+//    				mnumcheck( controller.boardcontroller.MainpageController.getinstance().getloginid() );
+			
+////			// 객체화 [ 상태 초기값 = 1 ]
+//	    	Reservation reservation = new Reservation(int r_num , int m_num , int c_num , String r_dayin , r_dayout , r_plusday , r_totday , r_totprice ); 
+
+			
+			
+//			// DB처리  - 
+//	    	boolean result = ReservationDao.getreservationDao().reservecarck( reservation);
+	    	
+	    	Alert alert2 = new Alert( AlertType.INFORMATION );
+	    	
+	    	alert2.setHeaderText("예약 등록 성공"); alert2.showAndWait();	// 메시지창 띄우기 
+    		controller.boardcontroller.MainpageController.getinstance().loadpage("reserve"); // 페이지 전환
+//	    	if( result ) {
+//	    		alert.setHeaderText("예약 등록 성공"); alert.showAndWait();	// 메시지창 띄우기 
+//	    		controller.boardcontroller.MainpageController.getinstance().loadpage("reserve"); // 페이지 전환 
+//	    	}
+		
+			
+
 		}
 		
     	
-    	
-//   		// 로그인된 id의 회원번호 검색 db처리 - 21.11.04
-//		int m_num = MemberDao.getMemberDao().
-//				getmno( controller.boardcontroller.MainpageController.getinstance().getloginid() );
-//
-//    	// 객체화 [ 상태 초기값 = 1 ]
-//    	Reservation reservation = new Reservation ( r_dayin, r_dayout, r_plusday, r_totday, r_totprice, c_num  1, m_num );
-//    	
-//    	// DB처리 
-//    	boolean result =  ReservationDao.getreservationDao().register(reservation);
-//    	
-//     	Alert alert = new Alert( AlertType.INFORMATION );
-//    	if( result ) {
-//    		alert.setHeaderText("예약 등록 성공"); alert.showAndWait();	// 메시지창 띄우기 
-//    		controller.boardcontroller.MainpageController.getinstance().loadpage("reserve"); 
-//    	}
-    	
-    }	
 
-	
-	
-	
+    	
+    }
 
 }

@@ -105,6 +105,11 @@ public class ReservationController implements Initializable {
 
 				// 5. 그외
 				lblcname.setText(car.getC_name());
+				
+				// 예약창
+				lblc_num.setText(String.valueOf(car.getC_num()) );
+				lblselectcarck.setText(car.getC_name() );
+				lbldaypck.setText(String.valueOf(car.getC_price()) );
 			}
 		});
 
@@ -146,6 +151,8 @@ public class ReservationController implements Initializable {
 	Button btnreservecarButton;
 	Popup popup;
 	TextArea textArea;
+	
+    
 
 	@FXML
 	private Button btnreservecar;
@@ -188,6 +195,9 @@ public class ReservationController implements Initializable {
 
 	@FXML
 	private TextField keyworldTextFilter;
+	
+	@FXML
+    private Label lblc_num;
 
 	@FXML
 	private Label lblcname;
@@ -222,8 +232,8 @@ public class ReservationController implements Initializable {
 	@FXML
 	private Label lblselectcar;
 
-    @FXML
-    private Label lblselectcarck;
+	@FXML
+	private Label lblselectcarck;
 
 	@FXML
 	private Label lbltotdate;
@@ -338,7 +348,6 @@ public class ReservationController implements Initializable {
 		}
 	}
 
-
 	@FXML
 	void searchtext(ActionEvent event) {
 //		// personList is table setter getter
@@ -368,7 +377,7 @@ public class ReservationController implements Initializable {
 //			sortedList.comparatorProperty().bind(rentcarlist.comparatorProperty());
 //
 //		});
-		
+
 		/*
 		 * keyworldTextFilter.textProperty().addListener((Observable, oldValue, newVlue)
 		 * -> {
@@ -385,34 +394,36 @@ public class ReservationController implements Initializable {
 
 	}
 
-	
-
 	// 반납일 - 렌트일 메소드
 	public void lbltotdateck() {
 		String rentFormattedDate = null;
 		String returnFormattedDate = null;
 
-		try { // String Type을 Date Type으로 캐스팅하면서 생기는 예외로 인해 여기서 예외처리 해주지 않으면 컴파일러에서 에러가 발생해서
-				// 컴파일을 할 수 없다.
-			SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
-			// 두 날짜를 parse()를 통해 Date형으로 변환.
-			Date FirstDate = format.parse(rentFormattedDate);
-			Date SecondDate = format.parse(returnFormattedDate);
-
-			// Date로 변환된 두 날짜를 계산한 뒤 그 리턴값으로 long type 변수를 초기화 하고 있다.
-
-			long calDate = FirstDate.getTime() - SecondDate.getTime();
-
-			// Date.getTime() 은 해당날짜를 기준으로1970년 00:00:00 부터 몇 초가 흘렀는지를 반환해준다.
-
-			long calDateDays = calDate / (24 * 60 * 60 * 1000);
-
-			calDateDays = Math.abs(calDateDays);
-
-			System.out.println("두 날짜의 날짜 차이: " + calDateDays);
-		} catch (Exception e) {
-			// 예외 처리
-		}
+//		try { 
+//			
+//			// String Type을 Date Type으로 캐스팅하면서 생기는 예외로 인해 여기서 예외처리 해주지 않으면 컴파일러에서 에러가 발생해서
+//				// 컴파일을 할 수 없다.
+//			SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+//			// 두 날짜를 parse()를 통해 Date형으로 변환.
+//			Date FirstDate = format.parse(rentFormattedDate);
+//			Date SecondDate = format.parse(returnFormattedDate);
+//
+//			// Date로 변환된 두 날짜를 계산한 뒤 그 리턴값으로 long type 변수를 초기화 하고 있다.
+//
+//			long calDate = FirstDate.getTime() - SecondDate.getTime();
+//
+//			// Date.getTime() 은 해당날짜를 기준으로1970년 00:00:00 부터 몇 초가 흘렀는지를 반환해준다.
+//
+//			long calDateDays = calDate / (24 * 60 * 60 * 1000);
+//
+//			calDateDays = Math.abs(calDateDays);
+//
+//			System.out.println("두 날짜의 날짜 차이: " + calDateDays);
+//		} catch (Exception e) {
+//			// 예외 처리
+//		}
+		
+		
 
 	}
 
