@@ -11,6 +11,7 @@ public class Car {
 	private String c_ct3;
 	private boolean c_return;
 	
+	
 	// ±øÅë
 	public Car() {
 		

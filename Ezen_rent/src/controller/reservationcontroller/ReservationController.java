@@ -7,8 +7,9 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
-import java.util.Observable;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
@@ -57,6 +58,8 @@ import javafx.stage.StageStyle;
 import javafx.stage.Window;
 
 public class ReservationController implements Initializable {
+	
+
 
 	// 등록된 차량 불러오기
 	public void rentcarltableload() {
@@ -107,14 +110,20 @@ public class ReservationController implements Initializable {
 				lblcname.setText(car.getC_name());
 
 				// 예약창
-				lblc_num.setText(String.valueOf(car.getC_num()));
+				lblc_num.setText(String.valueOf(car.getC_num()) );
 				lblselectcarck.setText(car.getC_name());
-				lbldaypck.setText(String.valueOf(car.getC_price()));
+				lbldaypck.setText(String.valueOf(car.getC_price()) );
+
+				// 총가격
+				lbltotpck.setText(String.valueOf(car.getC_price())  ); 
 
 			}
 		});
+		
+
 
 	}
+
 
 	ObservableList<Car> cars = CarDao.getCarDao().carlist();
 
@@ -135,9 +144,10 @@ public class ReservationController implements Initializable {
 		c_ct2.setCellValueFactory(new PropertyValueFactory<>("c_ct2"));
 		c_ct3.setCellValueFactory(new PropertyValueFactory<>("c_ct3"));
 
-		rentcarlist.setItems(cars);
 
 	}
+	
+
 
 	/*
 	 * FilteredList filter = new FilteredList(cars, e -> true);
@@ -148,8 +158,12 @@ public class ReservationController implements Initializable {
 	LocalDate rentDate; // 전역변수 설정
 	LocalDate returnDate; // 전역변수 설정
 
-	// 일수 * 일가격 = 전체가격
-	private void lbltotpck () {};
+//	// 일수 * 일가격 = 전체가격
+//	private void lbltotpck () {
+//		String c1;
+//		String lbltotdateck = c1;
+//		 String.valueOf(car.getC_price()) * lbltotdateck;
+//	};
 
 	@FXML
 	Button btnreservecarButton;
@@ -363,13 +377,17 @@ public class ReservationController implements Initializable {
 		Optional<ButtonType> optional = alert.showAndWait();
 
 		if (optional.get() == ButtonType.OK) {
-			// DB 처리
+			
+			
+			
 
 		}
 	}
+	
 
-	@FXML
-	void searchtext(ActionEvent event) {
+
+//	@FXML
+//	void searchtext(ActionEvent event) {
 //		// personList is table setter getter
 //		FilteredList<Car> cars = new FilteredList<>(rentcarlist,cars -> true);
 //		keyworldTextFilter.textProperty().addListener((obsevable, oldvalue, newvalue) -> {
@@ -397,22 +415,22 @@ public class ReservationController implements Initializable {
 //			sortedList.comparatorProperty().bind(rentcarlist.comparatorProperty());
 //
 //		});
-
-		/*
-		 * keyworldTextFilter.textProperty().addListener((Observable, oldValue, newVlue)
-		 * -> {
-		 * 
-		 * filter.setPredicate((Predicate<? super Car>) (Car car) -> {
-		 * 
-		 * if (newVlue.isEmpty() || newVlue == null) { return true; }
-		 * 
-		 * else { return true; } }); });
-		 * 
-		 * SortedList sort = new SortedList(filter);
-		 * sort.comparatorProperty().bind(rentcarlist.comparatorProperty());
-		 */
-
-	}
+//
+//		/*
+//		 * keyworldTextFilter.textProperty().addListener((Observable, oldValue, newVlue)
+//		 * -> {
+//		 * 
+//		 * filter.setPredicate((Predicate<? super Car>) (Car car) -> {
+//		 * 
+//		 * if (newVlue.isEmpty() || newVlue == null) { return true; }
+//		 * 
+//		 * else { return true; } }); });
+//		 * 
+//		 * SortedList sort = new SortedList(filter);
+//		 * sort.comparatorProperty().bind(rentcarlist.comparatorProperty());
+//		 */
+//
+//	}
 
 	// 반납일 - 렌트일 메소드
 	public void lbltotdateck() {

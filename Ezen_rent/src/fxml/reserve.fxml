@@ -101,8 +101,8 @@
             <Label fx:id="lbldaypck1" layoutX="175.0" layoutY="49.0" text="원" textAlignment="RIGHT" />
             <Label fx:id="lbltotpck" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="101.0" layoutY="80.0" prefHeight="14.0" prefWidth="72.0" text="총렌트비용" textAlignment="RIGHT" />
             <Label fx:id="lbldaypck11" layoutX="175.0" layoutY="80.0" text="원" textAlignment="RIGHT" />
-            <Label fx:id="lblselectcarck" contentDisplay="RIGHT" layoutX="137.0" layoutY="17.0" prefHeight="14.0" prefWidth="51.0" text="차량" textAlignment="CENTER" />
-            <Label fx:id="lblc_num" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="82.0" layoutY="17.0" prefHeight="14.0" prefWidth="51.0" text="No" textAlignment="CENTER" />
+            <Label fx:id="lblselectcarck" contentDisplay="RIGHT" layoutX="162.0" layoutY="17.0" prefHeight="14.0" prefWidth="51.0" text="차량" textAlignment="CENTER" />
+            <Label fx:id="lblc_num" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="90.0" layoutY="17.0" prefHeight="14.0" prefWidth="51.0" text="No" textAlignment="CENTER" />
          </children>
       </Pane>
       <Label fx:id="lblcname" layoutX="987.0" layoutY="66.0" text="모델명" />
