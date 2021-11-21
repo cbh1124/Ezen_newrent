@@ -35,7 +35,7 @@ public class Reservation {
 	// 예약등록시 생성자 : 확인필요
 	public Reservation(int r_num, String r_dayin, String r_dayout, String r_plusday, String r_totday, String r_totprice,
 			int c_num) {
-		super();
+		
 		this.r_num = r_num;
 		this.r_dayin = r_dayin;
 		this.r_dayout = r_dayout;
@@ -45,9 +45,16 @@ public class Reservation {
 		this.c_num = c_num;
 	}	
 
-	
-	
-	
+	//r_num m_num c_license  r_inday r_outday r_totday r_totprice 
+	public Reservation(int r_num, int m_num, int c_num, String r_dayin, String r_dayout, String r_totday, String r_totprice) {
+		this.r_num = r_num;
+		this.m_num = m_num;
+		this.c_num = c_num;
+		this.r_dayin = r_dayin;
+		this.r_dayout = r_dayout;
+		this.r_totday = r_totday;
+		this.r_totprice = r_totprice;
+	}
 	
 
 	// 3. 메소드 Gitter / Setter

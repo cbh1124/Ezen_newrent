@@ -4,7 +4,7 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-
+import controller.boardcontroller.MainpageController;
 import dao.MemberDao;
 import dao.CarDao;
 import dao.ReservationDao;
@@ -32,6 +32,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.stage.Window;
 
 public class ReservationpopupController implements Initializable {
 
@@ -85,7 +86,13 @@ public class ReservationpopupController implements Initializable {
 	    	Alert alert2 = new Alert( AlertType.INFORMATION );
 	    	
 	    	alert2.setHeaderText("예약 등록 성공"); alert2.showAndWait();	// 메시지창 띄우기 
-    		controller.boardcontroller.MainpageController.getinstance().loadpage("reserve"); // 페이지 전환
+    		MainpageController.getinstance().loadpage("reserve"); // 페이지 전환]
+    		
+    		
+    			ReservationController.stage2.close();
+    		
+    		
+    		
 //	    	if( result ) {
 //	    		alert.setHeaderText("예약 등록 성공"); alert.showAndWait();	// 메시지창 띄우기 
 //	    		controller.boardcontroller.MainpageController.getinstance().loadpage("reserve"); // 페이지 전환 
