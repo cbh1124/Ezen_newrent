@@ -105,11 +105,12 @@ public class ReservationController implements Initializable {
 
 				// 5. 그외
 				lblcname.setText(car.getC_name());
-				
+
 				// 예약창
-				lblc_num.setText(String.valueOf(car.getC_num()) );
-				lblselectcarck.setText(car.getC_name() );
-				lbldaypck.setText(String.valueOf(car.getC_price()) );
+				lblc_num.setText(String.valueOf(car.getC_num()));
+				lblselectcarck.setText(car.getC_name());
+				lbldaypck.setText(String.valueOf(car.getC_price()));
+
 			}
 		});
 
@@ -147,12 +148,13 @@ public class ReservationController implements Initializable {
 	LocalDate rentDate; // 전역변수 설정
 	LocalDate returnDate; // 전역변수 설정
 
+	// 일수 * 일가격 = 전체가격
+	private void lbltotpck () {};
+
 	@FXML
 	Button btnreservecarButton;
 	Popup popup;
 	TextArea textArea;
-	
-    
 
 	@FXML
 	private Button btnreservecar;
@@ -195,9 +197,9 @@ public class ReservationController implements Initializable {
 
 	@FXML
 	private TextField keyworldTextFilter;
-	
+
 	@FXML
-    private Label lblc_num;
+	private Label lblc_num;
 
 	@FXML
 	private Label lblcname;
@@ -282,6 +284,9 @@ public class ReservationController implements Initializable {
 	void outputdateac(ActionEvent event) {
 		returnDate = outputdateDatePicker.getValue();
 		String returnFormattedDate = returnDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+		
+		rentDate = inputdateDatePicker.getValue();
+		String rentFormattedDate = rentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
 		lbloutputdateck.setText(returnFormattedDate);
 
@@ -292,13 +297,28 @@ public class ReservationController implements Initializable {
 		long days = ChronoUnit.DAYS.between(rentDate, returnDate);
 
 		// 반납일자와 렌트일자가 null값이 아니면
-		if (!lblinputdateck.getText().equals("") && !lbloutputdateck.getText().equals("")) {
+		if (!lblinputdateck.getText().equals("") && !lbloutputdateck.getText().equals("") ) {
 			lbltotdateck.setText(days + "일");
-//			System.err.println(days);
-
-//			lbltotdateck.setText(period.getYears() + " - " + period.getMonths() + " - " + period.getDays());
-
 		}
+		
+//		try {
+//
+//			while ( rentFormattedDate < returnFormattedDate ) {
+//				if (!lblinputdateck.getText().equals("") && !lbloutputdateck.getText().equals("") ) {
+//					lbltotdateck.setText(days + "일");
+////					System.err.println(days);
+//
+////					lbltotdateck.setText(period.getYears() + " - " + period.getMonths() + " - " + period.getDays());
+//				} else {
+//					
+//				}
+//			}
+//		} catch (Exception e) {
+//
+//		}
+
+
+		
 	}
 
 	@FXML
@@ -422,9 +442,9 @@ public class ReservationController implements Initializable {
 //		} catch (Exception e) {
 //			// 예외 처리
 //		}
-		
-		
 
 	}
+	
+	
 
 }
