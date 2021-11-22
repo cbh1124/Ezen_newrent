@@ -309,6 +309,31 @@ public class BoardDao {
 		
 	}
 	
+
+	//myinfo QnA Ãâ·Â
+	public ObservableList<Board> myinfoboard2list(int m_num){
+		ObservableList<Board> boards2 = FXCollections.observableArrayList();
+		
+		String sql = "select * from Board where b_type = 2 and m_num = ? order by b_num desc";
+		
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, m_num);
+			resultSet = preparedStatement.executeQuery();
+			
+			while( resultSet.next()) {
+				Board board = new Board(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4)
+						, resultSet.getInt(5), resultSet.getString(6),resultSet.getInt(7),resultSet.getInt(8));
+				boards2.add(board);
+			}
+			return boards2;
+			
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		} return boards2;
+	}
+	
+	
 	
 	
 	

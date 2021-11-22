@@ -201,4 +201,17 @@ public String getmname(int m_num) {
 		} catch (Exception e) {} return "";
 		
 	}
+
+public int m_numcount() {
+	
+	String sql = "SELECT count(*) FROM ezen.Menber";
+	try {
+		preparedStatement = connection.prepareStatement(sql);
+		resultSet = preparedStatement.executeQuery();
+		if( resultSet.next() ) {
+			return resultSet.getInt(1);
+		}
+	}catch (Exception e) {} return 0;
+
+}
 }

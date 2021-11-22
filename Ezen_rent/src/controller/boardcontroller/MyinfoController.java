@@ -4,7 +4,12 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+import dao.BoardDao;
 import dao.MemberDao;
+import domain.Board;
+import domain.Member;
+import domain.Reply;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,8 +22,10 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitMenuButton;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -27,16 +34,44 @@ public class MyinfoController implements Initializable {
 	//임시
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-		
+		Member member = MemberDao.getMemberDao().getMember(loginid);
+		myinfoQnAlist();
+		lblloginid.setText(member.getM_id());
+		lblid.setText(member.getM_id());
+		lblname.setText(member.getM_name());
+		lblemail.setText(member.getM_email());
 	}
 	//임시
+	String loginid = MainpageController.getinstance().getloginid();
+		
+	public void myinfoQnAlist() {
+		
+		ObservableList<Board> board2 = BoardDao.getboardDao().myinfoboard2list(MemberDao.getMemberDao().getmno(loginid));
+		
+		board2list.setItems(board2);
+		
+    	TableColumn tc = board2list.getColumns().get(0);
+    	tc.setCellValueFactory(new PropertyValueFactory<>("b_num"));
+    	
+    	tc = board2list.getColumns().get(1);
+    	tc.setCellValueFactory(new PropertyValueFactory<>("b_title"));
+    	
+    	tc = board2list.getColumns().get(2);
+    	tc.setCellValueFactory(new PropertyValueFactory<>("b_date"));
+    	
+     	tc = board2list.getColumns().get(3);
+    	tc.setCellValueFactory(new PropertyValueFactory<>("b_view"));
+    	
+    	board2list.setItems(board2);
+    	
+    }
+	
 
     @FXML
-    private TableView<?> board2list;
+    private TableView<Board> board2list;
 
     @FXML
-    private TableView<?> board3list;
+    private TableView<Board> board3list;
 
     @FXML
     private Button btndelete;

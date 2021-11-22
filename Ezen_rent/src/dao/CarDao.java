@@ -256,5 +256,20 @@ public class CarDao {
 			// TODO: handle exception
 		}return cars;
 	}
+	
+	public int c_numcount() {
+
+		String sql = "SELECT count(*) FROM ezen.Car";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+			if (resultSet.next()) {
+				return resultSet.getInt(1);
+			}
+		} catch (Exception e) {
+		}
+		return 0;
+
+	}
 
 }

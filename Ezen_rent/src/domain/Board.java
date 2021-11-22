@@ -33,8 +33,7 @@ public class Board {
 		this.b_type = b_type;
 		this.m_num = m_num;
 		this.c_num = c_num;
-		
-		this.b_writer = BoardDao.getboardDao().getmid(m_num);
+				
 		
 	}
 	

@@ -126,6 +126,21 @@ public class ReservationDao {
 		}
 		return reservations; // 객체선언 reservation 에서 가져온 reservations를 반환
 	}
+	
+	public int r_numcount() {
+
+		String sql = "SELECT count(*) FROM ezen.Resevation";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+			if (resultSet.next()) {
+				return resultSet.getInt(1);
+			}
+		} catch (Exception e) {
+		}
+		return 0;
+
+	}
 
 	// 렌트 삭제
 	
