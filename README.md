@@ -82,9 +82,9 @@
 </details>
 
 ## 역할 분담
-> 김태호 : 설계 / Reservation / FXML /<br>
+> 김태호 : 설계 / Reservation / FXML<br>
 > 조지훈 : Member / Board <br>
-> 최병호 : Car / Reservation / DB
+> 최병호 : Car / Reservation / Admin / 발표
 
 ## 주요 기능
 <details>
