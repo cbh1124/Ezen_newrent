@@ -38,7 +38,11 @@ public class ReservationpopupController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-
+		lblselectcar.setText( ReservationController.reservation2.getC_num() + "");
+		lblinputdate.setText(ReservationController.reservation2.getR_dayin() + "" );
+		lbloutputdate.setText(ReservationController.reservation2.getR_dayout() + "" );
+		lbltotdate.setText(ReservationController.reservation2.getR_totday() + "");
+		lbltotp.setText(ReservationController.reservation2.getR_totprice() + "");
 	}
 
 	@FXML
@@ -64,11 +68,17 @@ public class ReservationpopupController implements Initializable {
 
 	@FXML
     void reservecarck(ActionEvent event) {
-    	
+		ReservationDao.getreservationDao().write(ReservationController.reservation2);
+		System.out.println(ReservationController.reservation2.getM_num()+ "출력된건가?");
+		System.out.println(ReservationController.reservation2.getC_num()+ "출력된건가?");
+		System.out.println(ReservationController.reservation2.getR_totprice().getClass().getName() + "출력된건가?");
+		System.out.println(ReservationController.reservation2.getR_totday().getClass().getName() + "출력된건가?");
+		System.out.println(ReservationController.reservation2.getR_dayin().getClass().getName() + "출력된건가?");
+		System.out.println(ReservationController.reservation2.getR_dayout().getClass().getName() + "출력된건가?");
     	Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setHeaderText(" 렌트예약을 하시겠습니까?");
 		Optional<ButtonType> optional = alert.showAndWait();
-
+		
 		if (optional.get() == ButtonType.OK) {
 			
 	   		// 로그인된 id의 회원번호 검색 db처리

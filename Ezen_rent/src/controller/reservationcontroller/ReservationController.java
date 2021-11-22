@@ -66,6 +66,7 @@ public class ReservationController implements Initializable {
 	long days;
 	int dayss;
 	int totdaysp;
+	int car_g;
 	String st="";
 	public static Stage stg;
 	public static boolean flagstage;
@@ -129,6 +130,7 @@ public class ReservationController implements Initializable {
 					
 					lbltotpck.setText(String.valueOf(car.getC_price() * days2 )  ); 
 					totdaysp = car.getC_price() * days2 ;
+					car_g = car.getC_num();
 				}
 			});
 		}
@@ -396,7 +398,7 @@ public class ReservationController implements Initializable {
 
 		
 	}
-
+	
 	@FXML
 	void outputdateaddac(ActionEvent event) {
 
@@ -405,6 +407,14 @@ public class ReservationController implements Initializable {
 	@FXML
 	void outputdateck(ActionEvent event) {
 
+	}
+	public static ReservationController instance;
+	public ReservationController() {
+		instance = this;
+	}
+	
+	public static ReservationController getinstance() {
+		return instance;
 	}
 	
 	public static Stage stage2;
@@ -485,9 +495,10 @@ public class ReservationController implements Initializable {
 		String rentFormattedDate = null;
 		String returnFormattedDate = null;
 
-
+		
 	}
 	
+	public static Reservation reservation2;
 	//
 	@FXML
 	void basket(ActionEvent event) {
@@ -504,7 +515,7 @@ public class ReservationController implements Initializable {
 		tc = reservationlist.getColumns().get(1);
 		tc.setCellValueFactory(new PropertyValueFactory<>("m_num"));
 		tc = reservationlist.getColumns().get(2);
-		tc.setCellValueFactory(new PropertyValueFactory<>("c_cum")); 
+		tc.setCellValueFactory(new PropertyValueFactory<>("c_num")); 
 		tc = reservationlist.getColumns().get(3);
 		tc.setCellValueFactory(new PropertyValueFactory<>("r_dayin"));
 		tc = reservationlist.getColumns().get(4);
@@ -513,6 +524,17 @@ public class ReservationController implements Initializable {
 		tc.setCellValueFactory(new PropertyValueFactory<>("r_totday"));
 		tc = reservationlist.getColumns().get(6);
 		tc.setCellValueFactory(new PropertyValueFactory<>("r_totprice"));
+		
+		reservationlist.setOnMouseClicked( e -> { 
+			// 2. 클릭 이벤트가 마우스 클릭과 같으면 
+			if( e.getButton().equals( MouseButton.PRIMARY ) ) {
+				// 3.테이블뷰에서 클릭한 모델의 아이템[ 객체 ]
+				reservation2 = reservationlist.getSelectionModel().getSelectedItem();
+				
+				
+				
+			}
+		} );
 	}
 	
 

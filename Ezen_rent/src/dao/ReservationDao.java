@@ -19,7 +19,7 @@ public class ReservationDao {
 	private ResultSet resultSet;
 
 	// 객체
-	public static ReservationDao reservation = new ReservationDao();
+	public static ReservationDao reservationDao = new ReservationDao();
 
 	// 2. 생성자
 	public ReservationDao() {
@@ -34,10 +34,10 @@ public class ReservationDao {
 		}
 
 	}
-
+	
 	// 객체 반환 메소드
 	public static ReservationDao getreservationDao() {
-		return reservation;
+		return reservationDao;
 	}
 
 	// 3. 메소드
@@ -45,18 +45,20 @@ public class ReservationDao {
 	// 1. 예약등록 메소드
 
 	public boolean write(Reservation reservation) {
-		String sql = "insert into Reservation( r_num , m_num , c_num , r_dayin , r_dayout , r_plusday , r_totday , r_totprice ) values( ? , ? , ? , ? , ? , ? , ? , ? )";
+		String sql = "insert into Resevation( m_num , c_num , r_dayin , r_dayout , r_plusday, r_totday , r_totprice ) values( ? , ? , ? , ? , ? , ?, ?)";
 		try {
+			System.out.println("작동체크를 시작합니다");
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setInt(1, reservation.getR_num());
-			preparedStatement.setInt(2, reservation.getM_num());
-			preparedStatement.setInt(3, reservation.getC_num());
-			preparedStatement.setString(4, reservation.getR_dayin());
-			preparedStatement.setString(5, reservation.getR_dayout());
-			preparedStatement.setString(6, reservation.getR_plusday());
-			preparedStatement.setString(7, reservation.getR_totday());
-			preparedStatement.setString(8, reservation.getR_totprice());
+			
+			preparedStatement.setInt(1, reservation.getM_num());
+			preparedStatement.setInt(2, reservation.getC_num());
+			preparedStatement.setString(3, reservation.getR_dayin());
+			preparedStatement.setString(4, reservation.getR_dayout());
+			preparedStatement.setString(5, "0");
+			preparedStatement.setString(6, reservation.getR_totday());
+			preparedStatement.setString(7, reservation.getR_totprice());
 			preparedStatement.executeUpdate();
+			System.out.println("작동체크를 시작합니다");
 			return true;
 		} catch (Exception e) {
 		}
