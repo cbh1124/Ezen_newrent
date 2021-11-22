@@ -333,7 +333,20 @@ public class BoardDao {
 		} return boards2;
 	}
 	
-	
+	public int b_numcount() {
+
+		String sql = "SELECT count(*) FROM ezen.Board;";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+			if (resultSet.next()) {
+				return resultSet.getInt(1);
+			}
+		} catch (Exception e) {
+		}
+		return 0;
+
+	}
 	
 	
 	
