@@ -164,6 +164,26 @@
 </div>
 </details>
 
+## presentation - 21/11/22 
+<details>
+<summary>Click</summary>
+<div markdown="1">
+  
+![2021_11_10_17 (관계도 당일날짜 재정리) drawio](https://user-images.githubusercontent.com/61840067/141075388-9e2518fb-fb97-452b-9356-bb09f054e52e.png)
+
+</div>
+</details>
+
+## 향후 보완필요 사항
+<details>
+<summary>Click</summary>
+<div markdown="1">
+  
+![2021_11_10_17 (관계도 당일날짜 재정리) drawio](https://user-images.githubusercontent.com/61840067/141075388-9e2518fb-fb97-452b-9356-bb09f054e52e.png)
+
+</div>
+</details>
+
 ## 개발일정재정리 [임시] 
 domain : member[O] car[O] board[O] Reservation[x] Reply[x]
 11_14 : board 작성 및 고객센터 fxml loadpage까지 작성 carinfo 부분은 남겨둘 예정 
