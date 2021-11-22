@@ -173,7 +173,8 @@
   <hr>
   <div>
     ■ 발표자료
-    ![211122-발표자료 drawio](https://user-images.githubusercontent.com/61840067/142820335-4f952054-94f4-4885-ac28-549148b80076.png)
+    [211122-발표자료.drawio.pdf](https://github.com/cbh1124/Ezen_newrent/files/7578934/211122-.drawio.pdf)
+
 
 
   </div>
