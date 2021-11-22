@@ -173,7 +173,8 @@
   <hr>
   <div>
     ■ 발표자료
-    url:https://github.com/cbh1124/Ezen_newrent/files/7578934/211122-.drawio.pdf
+    url:[211122-발표자료.pdf](https://github.com/cbh1124/Ezen_newrent/files/7579010/211122-.pdf)
+
 
 
 
