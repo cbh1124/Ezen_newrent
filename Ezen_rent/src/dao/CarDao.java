@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import controller.admincontroller.AdminController;
 import domain.Car;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -124,7 +125,7 @@ public class CarDao {
 			preparedStatement.setString(6, car.getC_ct2());
 			preparedStatement.setString(7, car.getC_ct3());
 			preparedStatement.setBoolean(8, car.isC_return());
-			preparedStatement.setInt(9, car.getC_num());
+			preparedStatement.setInt(9, AdminController.car.getC_num());
 			preparedStatement.executeUpdate();
 			return true;
 		} catch (Exception e) {
@@ -207,16 +208,14 @@ public class CarDao {
 		System.out.println("오류체크 cardao carsearch");
 		try {
 			preparedStatement = connection.prepareStatement(sql);
-			System.out.println(car2.getC_name() + "안녕하세요2");
+			
 			preparedStatement.setString(1, car2.getC_name() + "%");
-			System.out.println(car2.getC_ct1() + "안녕하세요2");
 			preparedStatement.setString(2, car2.getC_ct1() + "%");
 			preparedStatement.setString(3, car2.getC_ct2() + "%");
 			preparedStatement.setString(4, car2.getC_ct3() + "%");
 			
-			System.out.println(car2.getC_name() + "안녕하세요");
 			resultSet = preparedStatement.executeQuery();
-			System.out.println("오류체크 cardao  carsearch asdasd");
+			
 			while(resultSet.next()) {
 				Car car= new Car(
 						resultSet.getInt(1),    

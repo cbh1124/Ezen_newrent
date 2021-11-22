@@ -1,6 +1,7 @@
 package controller.admincontroller;
 
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import controller.boardcontroller.MainpageController;
@@ -14,7 +15,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -64,12 +68,22 @@ public class AdminController implements Initializable{
 
     @FXML
     void cancel(ActionEvent event) {
-    	
+    	MainpageController.getinstance().loadpage("home");
     }
 
     @FXML
     void delete(ActionEvent event) {
-    	
+    	Alert alert = new Alert( AlertType.CONFIRMATION );
+    	alert.setHeaderText(" 제품을 삭제 하시겠습니까?" );
+    	Optional<ButtonType> optional = alert.showAndWait();
+    	if( optional.get() == ButtonType.OK ) {
+    		// DB 처리 
+    		CarDao.getCarDao().delete( AdminController.car.getC_num() );
+    		
+    		Alert alert2 = new Alert( AlertType.INFORMATION );
+    		alert2.setHeaderText(" 삭제 되었습니다 "); alert2.showAndWait();
+    		MainpageController.getinstance().loadpage("admin");
+    	}
     }
 
     @FXML
@@ -81,6 +95,7 @@ public class AdminController implements Initializable{
     @FXML
     void update(ActionEvent event) {
     	MainpageController.getinstance().loadpage("admincarupdate");
+    	System.out.println("어드민 페이지 작동2!!");
     }
     
     public static Car car;
@@ -111,6 +126,15 @@ public class AdminController implements Initializable{
     			tc = carlistboard.getColumns().get(7);
     				tc.setCellValueFactory( new PropertyValueFactory<>("c_price"));
 	    				
+    				carlistboard.setOnMouseClicked( e -> { 
+    					// 2. 클릭 이벤트가 마우스 클릭과 같으면 
+    					if( e.getButton().equals( MouseButton.PRIMARY ) ) {
+    						// 3.테이블뷰에서 클릭한 모델의 아이템[ 객체 ]
+    						car = carlistboard.getSelectionModel().getSelectedItem();
+    						System.out.println(car);
+    						System.out.println("객체 저장됬어요");
+    					}
+    				} );
 	  }
     
    
