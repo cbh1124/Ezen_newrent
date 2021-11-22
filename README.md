@@ -178,7 +178,10 @@
   </div>
   <hr>
   <div>■ 주요 메소드 및 기능1개 소개</div>
-    예약 메소드 : ![image](https://user-images.githubusercontent.com/61840067/142823404-ca9cb5fd-461e-4cc1-9945-f65001ce6c4e.png)
+   1. 날짜선택 (렌트일/ 반납일) 
+   2. 검색 및 카테고리 선택 후 search 
+   3. 차량리스트 선택 및 선택하기 
+   4. 예약하기 >> 팝업창 >> SQL DB반영 
 
   <hr>
   <br>
