@@ -82,9 +82,9 @@
 </details>
 
 ## 역할 분담
-> 김태호 : Reservation <br>
-> 조지훈 : Member <br>
-> 최병호 : Admin 
+> 김태호 : Reservation / FXML / 설계<br>
+> 조지훈 : Member / Board <br>
+> 최병호 : Car / Reservation / DB
 
 ## 주요 기능
 <details>
@@ -165,25 +165,39 @@
 </details>
 
 ## presentation - 21/11/22 
-- 화면 및 기능 구현
 <details>
 <summary>Click</summary>
 <div markdown="1">
   
-![2021_11_10_17 (관계도 당일날짜 재정리) drawio](https://user-images.githubusercontent.com/61840067/141075388-9e2518fb-fb97-452b-9356-bb09f054e52e.png)
+  <div>■ 발표자 : 최병호</div>
+  <div>■ 주요 메소드 및 기능1개 소개</div>
+  <br>
+  <div>■ 보완할 점</div>
+  <br>
+  <div>■ 느낀점, 힘들었던점, 힘들었을때 해결했던 방법</div>
+  <ul>
+    <br>
+    <p>조지훈</p>
+    <li> 느낀점 : </li>
+    <li> 힘들었던 점 : </li>
+    <li> 해결방법 : </li>
+    <br>
+    <p>최병호</p>
+    <li> 느낀점 : </li>
+        <li> 힘들었던 점 : </li>
+    <li> 해결방법 : </li>
+    <br>
+    <p>김태호</p>
+    <li> 느낀점 : 콘솔프로젝트랑 다르게 fxml을 토대로 코드를 따오고, 화면시각적인 모습을 같이 구현해보니 보다 흥미롭게 작업을 진행할 수 있었습니다. </li>
+    <li> 힘들었던 점 : 주요메인인 예약메소드가 후반부에 작업이 진행되어 구현하는데 진행이 더디게 된점이 아쉬웠고, 수업시간 이외에 이용하는 코드들을 많이 찾아보았지만, 구현하는데 어려움이 있었스니다.</li>
+    <li> 해결방법 : 서로 모르는 것들과 충분한 토의를 통하여서 각자 맡은 할일을 묵묵히 수행해준 덕분에 구현하는데 큰 힘이 된 거 같습니다.</li>
+  </ul>
+
 
 </div>
 </details>
 
-## 향후 보완필요 사항
-<details>
-<summary>Click</summary>
-<div markdown="1">
-  
-![2021_11_10_17 (관계도 당일날짜 재정리) drawio](https://user-images.githubusercontent.com/61840067/141075388-9e2518fb-fb97-452b-9356-bb09f054e52e.png)
 
-</div>
-</details>
 
 ## 개발일정재정리 [임시] 
 domain : member[O] car[O] board[O] Reservation[x] Reply[x]
