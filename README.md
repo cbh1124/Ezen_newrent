@@ -82,7 +82,7 @@
 </details>
 
 ## 역할 분담
-> 김태호 : Reservation / FXML / 설계<br>
+> 김태호 : 설계 / Reservation / FXML /<br>
 > 조지훈 : Member / Board <br>
 > 최병호 : Car / Reservation / DB
 
@@ -170,9 +170,17 @@
 <div markdown="1">
   
   <div>■ 발표자 : 최병호</div>
+  <hr>
+  <div>
+    ■ 발표자료
+211122-발표자료.svg
+  </div>
+  <hr>
   <div>■ 주요 메소드 및 기능1개 소개</div>
+  <hr>
   <br>
   <div>■ 보완할 점</div>
+    <hr>
   <br>
   <div>■ 느낀점, 힘들었던점, 힘들었을때 해결했던 방법</div>
   <ul>
