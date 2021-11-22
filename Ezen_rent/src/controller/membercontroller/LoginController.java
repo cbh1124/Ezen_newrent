@@ -96,6 +96,7 @@ public class LoginController implements Initializable{
 						stage.show();
 					} catch (Exception e) {}
 		    	}
+		    	else { lblconfirm.setText("로그인 실패 관리자에게 문의하세요"); }
 	    	}else {
 	    		try {
 	    			lblconfirm.setText("관리자 로그인 성공");
