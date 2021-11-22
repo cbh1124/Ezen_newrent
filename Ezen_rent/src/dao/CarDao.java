@@ -229,8 +229,7 @@ public class CarDao {
 				);
 				
 				cars.add(car);
-				System.out.println("오류체크 cardao  carsearch12" + car);
-				System.out.println("오류체크 cardao  carsearch2" + cars);
+				
 			}
 			return cars;
 			
