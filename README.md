@@ -173,7 +173,7 @@
   <hr>
   <div>
     ■ 발표자료
-    url:[211122-발표자료.pdf](https://github.com/cbh1124/Ezen_newrent/files/7579010/211122-.pdf)
+[211122-발표자료.pdf](https://github.com/cbh1124/Ezen_newrent/files/7579010/211122-.pdf)
 
   </div>
   <hr>
@@ -222,7 +222,6 @@
 
 
 
-)
 
 
 
