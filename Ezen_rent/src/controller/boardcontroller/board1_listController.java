@@ -25,7 +25,6 @@ public class board1_listController implements Initializable{
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
 		txttitle.setText("");
-		txtview.setText("");
 		
 		if(MemberDao.adminRs == true) {	btnwrite.setVisible(true); }
 		else { btnwrite.setVisible(false); }
@@ -44,9 +43,6 @@ public class board1_listController implements Initializable{
 		tc = board1list.getColumns().get(3);
 		tc.setCellValueFactory(new PropertyValueFactory<>("b_date"));
 		
-		tc = board1list.getColumns().get(4);
-		tc.setCellValueFactory(new PropertyValueFactory<>("b_view"));
-
 		board1list.setItems(boards);
 		
 		board1list.setOnMouseClicked(e -> {
@@ -55,7 +51,6 @@ public class board1_listController implements Initializable{
 				board = board1list.getSelectionModel().getSelectedItem(); 
 				txttitle.setText(board.getB_title());
 				txtdate.setText(board.getB_date());
-				txtview.setText(""+board.getB_view());
 				txtcontents.setText(board.getB_contents());
 			}
 		});
@@ -86,9 +81,6 @@ public class board1_listController implements Initializable{
 
 	@FXML
 	private TextField txttitle;
-
-	@FXML
-	private Text txtview;
 
     @FXML
     void board1(ActionEvent event) {

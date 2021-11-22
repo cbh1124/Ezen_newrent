@@ -11,6 +11,7 @@ import domain.Board;
 import domain.Reply;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
 
 public class BoardDao {
 
@@ -95,7 +96,7 @@ public class BoardDao {
 	public ObservableList<Board> board1list(){
 		ObservableList<Board> boards1 = FXCollections.observableArrayList();
 		
-		String sql = "select b_num, b_title, b_contents, b_date, b_view  from Board order by b_num desc";
+		String sql = "select * from Board where b_type = 1 order by b_num desc";
 		
 		try {
 			preparedStatement = connection.prepareStatement(sql);
@@ -122,14 +123,10 @@ public class BoardDao {
 				
 				while( resultSet.next()) {
 					Board board = new Board(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4)
-							, resultSet.getInt(5), resultSet.getString(6),resultSet.getInt(7),resultSet.getInt(8)
-					);
-					
-					
+							, resultSet.getInt(5), resultSet.getString(6),resultSet.getInt(7),resultSet.getInt(8));
 					boards2.add(board);
-					System.out.println("작동해봐요2" + board);
 				}
-				
+				return boards2;
 			} catch (Exception e) {} return boards2;
 			
 		}
@@ -212,17 +209,105 @@ public class BoardDao {
 	// 댓글등록 메소드
 	public boolean replywrite( Reply reply ) {
 		
-		String sql = "insert into reply(r_contents)+values(?) ";
+		String sql = "insert into Reply(br_contents, b_num, m_num) values(?,?,?)";
 		try {
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, reply.getBr_contents());
+			preparedStatement.setInt(2, reply.getb_num());
+			preparedStatement.setInt(3, reply.getM_num());
 			preparedStatement.executeUpdate();
 			return true;
 		} catch (Exception e) {}return false;
 	}
 	
-	
-	
+	//댓글 리스트
+	public ObservableList<Reply> replylist(int b_num) {
+		
+		ObservableList<Reply> replys = FXCollections.observableArrayList();
+		String sql = "select * from Reply where b_num = ? order by br_num desc";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, b_num);
+			resultSet = preparedStatement.executeQuery();
+			
+			while(resultSet.next()) {
+				
+				Reply reply = new Reply(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getInt(4), resultSet.getInt(5));
+				replys.add(reply);
+			}
+			return replys;
+		} catch (Exception e) {} return replys;
+	}
+	// 조회수 업데이트
+	public boolean viewupdate( int b_num) {
+		
+		String sql = "update Board set b_view = b_view+1 where b_num = ?";
+		
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, b_num);
+			preparedStatement.executeUpdate();
+			return true;
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+		return false;
+	}
+	// 게시판2 수정
+	public boolean board2update(int b_num, String b_title, String b_contents) {
+		
+		String sql = "update Board set b_title = ?, b_contents = ?, where b_num = ?";
+		
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, b_title);
+			preparedStatement.setString(2, b_contents);
+			preparedStatement.setInt(3, b_num);
+			return true;
+		} catch (Exception e) {} return false;
+		
+	}
+	// 게시판2 삭제
+	public boolean boarddelete(int b_num) {
+		
+		String sql = "delete from Board where b_num = ?";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, b_num);
+			preparedStatement.executeUpdate();
+			return true;
+		} catch (Exception e) {} return false;
+	}
+	// 조인을 통한 예약 넘버 및 예약된 차량의 넘버 조회 
+	public ObservableList<Board> write3( int m_num ) {
+		
+		ObservableList<Board> boards = FXCollections.observableArrayList();
+		
+		String sql = "select Resevation.r_num, Car.c_name"
+				+ " from Resevation join Car "
+				+ "on Resevation.c_num = Car.c_num where m_num = ?";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, m_num);
+			resultSet = preparedStatement.executeQuery();
+			
+			while(resultSet.next()){
+				// 쿼리 결과내 레코드가 없을때 까지 반복 
+				Board board = new Board(resultSet.getInt(1), 
+								  resultSet.getString(2)
+				);
+				System.out.println( board );
+				boards.add(board);
+			}
+			System.out.println("출력이 되시나요??1");
+			return boards;
+		}
+		catch (Exception e) {
+			
+		} return boards;
+		
+		
+	}
 	
 	
 	

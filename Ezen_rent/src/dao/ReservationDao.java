@@ -70,7 +70,7 @@ public class ReservationDao {
 			String r_totprice) {
 
 		// reservation 테이블 번호를 기준 조건으로 찾아서 업데이트를 하는 것임
-		String sql = "update Reservation set c_num=? , r_dayin=? , r_dayout=? , r_plusday=? , r_totday=? , r=totprice=? where r_num = ?"; // 업데이트
+		String sql = "update Resevation set c_num=? , r_dayin=? , r_dayout=? , r_plusday=? , r_totday=? , r=totprice=? where r_num = ?"; // 업데이트
 		try {
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, r_num);
@@ -98,24 +98,28 @@ public class ReservationDao {
 
 		// 1. 조건 없이 모두 가져오기
 
-		String sql = "select * from Reservation order by r_num desc"; // 전부 가져옴 해당 값을 desc 즉 내림차순으로 가져오는것
+		String sql = "select * from Resevation order by r_num desc"; // 전부 가져옴 해당 값을 desc 즉 내림차순으로 가져오는것
 		try {
 			preparedStatement = connection.prepareStatement(sql);
 			resultSet = preparedStatement.executeQuery();
 			// 2.
 			while (resultSet.next()) {
 				// 쿼리 결과내 레코드가 없을때 까지 반복
-				Reservation reservation = new Reservation ( resultSet.getInt(1), 
-						resultSet.getInt(2),
-						resultSet.getInt(3),
+				Reservation reservation = new Reservation ( 
+						resultSet.getInt(1), 
+						resultSet.getString(2),
+						resultSet.getString(3),
 						resultSet.getString(4),
 						resultSet.getString(5),
 						resultSet.getString(6),
-						resultSet.getString(7),
-						resultSet.getString(8) );
+						resultSet.getInt(7),
+						resultSet.getInt(8)
+						);
 						
 				// 객체를 리스트에 담기
+				
 				reservations.add(reservation);
+				System.out.println("출력2" + reservations );
 			}
 			return reservations;
 		} catch (Exception e) {

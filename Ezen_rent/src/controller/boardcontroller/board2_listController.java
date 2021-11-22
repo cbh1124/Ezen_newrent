@@ -23,7 +23,6 @@ public class board2_listController implements Initializable{
 		
 		
 		ObservableList<Board> boards = BoardDao.getboardDao().board2list();
-		System.out.println("¿€µø«ÿ∫¡ø‰" + boards);
 		TableColumn tc = board2list.getColumns().get(0);
 		tc.setCellValueFactory(new PropertyValueFactory<>("b_num"));
 		
@@ -31,8 +30,8 @@ public class board2_listController implements Initializable{
 		tc.setCellValueFactory(new PropertyValueFactory<>("b_title"));
 
 		tc = board2list.getColumns().get(2);
-		tc.setCellValueFactory(new PropertyValueFactory<>("b_writer"));
-		//BoardDao.getboardDao().getmid(board.getM_num()))
+		tc.setCellValueFactory(new PropertyValueFactory<>("b_contents"));
+
 		tc = board2list.getColumns().get(3);
 		tc.setCellValueFactory(new PropertyValueFactory<>("b_date"));
 		
@@ -45,6 +44,7 @@ public class board2_listController implements Initializable{
 			if(e.getButton().equals(MouseButton.PRIMARY)) {
 				board = board2list.getSelectionModel().getSelectedItem();
 				MainpageController.getinstance().loadpage("board2_view");
+				
 			}
 		});
 	}

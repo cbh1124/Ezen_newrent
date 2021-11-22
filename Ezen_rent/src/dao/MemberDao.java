@@ -184,4 +184,21 @@ public class MemberDao {
 			
 		} return false;
 	}
+	
+public String getmname(int m_num) {
+		
+		String sql = "select m_id from Member where m_num = ?";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, m_num);
+			resultSet = preparedStatement.executeQuery();
+			if(resultSet.next()) {
+				return resultSet.getString(1);
+			}
+			else {
+				return "";
+			}
+		} catch (Exception e) {} return "";
+		
+	}
 }

@@ -5,8 +5,6 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 import dao.MemberDao;
-import dao.ReservationDao;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,11 +27,7 @@ public class MyinfoController implements Initializable {
 	//임시
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-
-		
-		//// 내가 등록한 예약 가져오기
-//		int m_num = MemberDao.getMemberDao().mnumcheck(lblloginid); // 회원id -> 회원번호 
-//		ObservableList<Reservation> reservations = ReservationDao.getreservationDao().reservationlist( r_num );
+		// TODO Auto-generated method stub
 		
 	}
 	//임시

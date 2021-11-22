@@ -199,6 +199,25 @@ public class CarDao {
 		return 0;
 	}
 	
+	public String carname(int c_num) {
+		String sql = "select c_name from Car where c_num=?";
+
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, c_num);
+			resultSet = preparedStatement.executeQuery();
+			if (resultSet.next()) {
+				return resultSet.getString(1);
+			} else {
+				return ""; // 결과 없으면
+			}
+
+		} catch (Exception e) {
+
+		}
+		return "";
+	}
+	
 	public ObservableList<Car> carsearch(Car car2) {
 		ObservableList<Car> cars = FXCollections.observableArrayList();
 		

@@ -14,6 +14,10 @@ public class Board {
 	private int c_num;
 	private String b_writer;
 	
+	// 임시 생성필드 
+	private int r_num;
+	private String c_name;
+	
 	// 깡통 (빈 생성자 ) 
 	public Board() {
 		// TODO Auto-generated constructor stub
@@ -61,6 +65,28 @@ public class Board {
 		this.b_view = b_view;
 	}
 	
+	public Board(int r_num, String c_name) {
+		this.r_num = r_num;
+		this.c_name = c_name;
+	}
+	
+	
+	public int getR_num() {
+		return r_num;
+	}
+
+	public void setR_num(int r_num) {
+		this.r_num = r_num;
+	}
+
+	public String getC_name() {
+		return c_name;
+	}
+
+	public void setC_name(String c_name) {
+		this.c_name = c_name;
+	}
+
 	public int getB_num() {
 		return b_num;
 	}

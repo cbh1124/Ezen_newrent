@@ -29,7 +29,7 @@ public class CarinfoController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 			ObservableList<Car> carloads = CarDao.getCarDao().cartableloading();
-			System.out.println("오류 체크");
+			
 			//ImageView[] imageViews = new ImageView[carloads.size()];
 			Button[] buttons = new Button[carloads.size()];
 			int x = 0;
@@ -54,15 +54,15 @@ public class CarinfoController implements Initializable {
 					imageView.setFitHeight(100);
 					
 				buttons[i].setGraphic(imageView);
-				buttons[i].setMaxSize(xy2, i);
+				buttons[i].setMaxSize(170, 100);
 				
 				// 버튼시작 위치 지정 
 				xy = 50 + x*200;
-				xy2 = 30 + y*200;
+				xy2 = 30 + y*150;
 				buttons[i].setLayoutX(xy);
 				buttons[i].setLayoutY(xy2);
 				x++;
-				System.out.println("오류 체크");
+				
 				// 버튼의 개수가 4개 가 되면 다음행으로 넘어감 
 				if( i % 4 == 3  ) { 
 					y++;
@@ -70,10 +70,10 @@ public class CarinfoController implements Initializable {
 					buttons[i].setLayoutX(xy);
 					buttons[i].setLayoutY(xy2);
 				}
-				System.out.println("오류 체크");
+				
 				
 				an.getChildren().add(buttons[i]);
-				System.out.println("오류 체크");
+				
 			}
 
 	}

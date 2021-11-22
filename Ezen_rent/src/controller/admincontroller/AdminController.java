@@ -7,7 +7,9 @@ import java.util.ResourceBundle;
 import controller.boardcontroller.MainpageController;
 import dao.CarDao;
 import dao.MemberDao;
+import dao.ReservationDao;
 import domain.Car;
+import domain.Reservation;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,7 +36,7 @@ public class AdminController implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		cartableload();
-		
+		reservationtableload();
 	}
 	public static AdminController instance;
 	public AdminController() {
@@ -64,7 +66,7 @@ public class AdminController implements Initializable{
     private TableView<Car> carlistboard;
 
     @FXML
-    private TableView<?> reservationboardlist;
+    private TableView<Reservation> reservationboardlist;
 
     @FXML
     void cancel(ActionEvent event) {
@@ -136,7 +138,43 @@ public class AdminController implements Initializable{
     					}
     				} );
 	  }
-    
+    public static Reservation reservation2;
+	public void reservationtableload() {
+		System.out.println(ReservationDao.getreservationDao().reservelist());
+		
+		ObservableList<Reservation> reservations = ReservationDao.getreservationDao().reservelist();
+		
+		System.out.println("출력" );
+		//2. 제품목록을 테이블뷰에 넣어주기 
+		reservationboardlist.setItems(reservations);
+		//3. 테이블뷰에 열 를 하나씩 가져와서 리스트내 객체에 필드와 연결 
+		TableColumn tc = reservationboardlist.getColumns().get(0);
+			tc.setCellValueFactory( new PropertyValueFactory<>("r_num"));
+		tc = reservationboardlist.getColumns().get(1);
+			tc.setCellValueFactory( new PropertyValueFactory<>("r_dayin"));
+		tc = reservationboardlist.getColumns().get(2);
+			tc.setCellValueFactory( new PropertyValueFactory<>("r_dayout"));
+		tc = reservationboardlist.getColumns().get(3);
+			tc.setCellValueFactory( new PropertyValueFactory<>("r_plusday"));
+		tc = reservationboardlist.getColumns().get(4);
+			tc.setCellValueFactory( new PropertyValueFactory<>("r_totday"));
+		tc = reservationboardlist.getColumns().get(5);
+			tc.setCellValueFactory( new PropertyValueFactory<>("r_totprice"));
+		tc = reservationboardlist.getColumns().get(6);
+			tc.setCellValueFactory( new PropertyValueFactory<>("m_num"));
+		tc = reservationboardlist.getColumns().get(7);
+			tc.setCellValueFactory( new PropertyValueFactory<>("c_num"));
+				
+			reservationboardlist.setOnMouseClicked( e -> { 
+				// 2. 클릭 이벤트가 마우스 클릭과 같으면 
+				if( e.getButton().equals( MouseButton.PRIMARY ) ) {
+					// 3.테이블뷰에서 클릭한 모델의 아이템[ 객체 ]
+					reservation2 = reservationboardlist.getSelectionModel().getSelectedItem();
+					System.out.println(car);
+					System.out.println("객체 저장됬어요");
+				}
+			} );
+	}
    
 
 }

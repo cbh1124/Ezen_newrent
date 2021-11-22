@@ -38,20 +38,16 @@ public class MainpageController implements Initializable{
 			btnadmin.setVisible(false);
 		}
 	}
-	
 	public static MainpageController instance;
 	public MainpageController() {
 		instance = this;
 	}
-	
 	public static MainpageController getinstance() {
 		return instance;
 	}
-	
 	public String getloginid() {
 		return lblloginid.getText();
 	}
-	
 	//юс╫ц
     @FXML
     private Button btnadmin;
@@ -123,7 +119,6 @@ public class MainpageController implements Initializable{
     	loadpage("board1_list");
     	System.out.println("board1_list");
     }
-    
 
     @FXML
     void carinfo(ActionEvent event) {
@@ -177,6 +172,4 @@ public class MainpageController implements Initializable{
 			mainpageborderpane.setCenter(parent);
 		} catch (Exception e) {}
     }
-
-
 }

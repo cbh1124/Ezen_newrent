@@ -48,15 +48,14 @@
             </Label>
             <TableView fx:id="reservationboardlist" layoutX="14.0" layoutY="51.0" prefHeight="360.0" prefWidth="497.0">
                <columns>
-                  <TableColumn prefWidth="32.0" text="num" />
-                  <TableColumn prefWidth="71.0" text="name" />
-                  <TableColumn prefWidth="53.0" text="dayin" />
-                  <TableColumn prefWidth="48.0" text="dayout" />
-                  <TableColumn prefWidth="66.0" text="plusday" />
-                  <TableColumn prefWidth="59.0" text="totday" />
-                  <TableColumn minWidth="0.0" prefWidth="70.0" text="totprice" />
-                  <TableColumn prefWidth="48.0" text="car" />
-                  <TableColumn prefWidth="48.0" text="return" />
+                  <TableColumn prefWidth="38.0" text="num" />
+                  <TableColumn prefWidth="75.0" text="dayin" />
+                  <TableColumn prefWidth="77.0" text="dayout" />
+                  <TableColumn prefWidth="48.0" text="plusday" />
+                  <TableColumn prefWidth="60.0" text="totday" />
+                  <TableColumn prefWidth="76.0" text="totprice" />
+                  <TableColumn minWidth="0.0" prefWidth="65.0" text="m_num" />
+                  <TableColumn prefWidth="57.0" text="c_num" />
                </columns>
             </TableView>
             <Label layoutX="14.0" layoutY="14.0" prefHeight="14.0" prefWidth="128.0" text="Reservation list">

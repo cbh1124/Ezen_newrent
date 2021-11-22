@@ -1,9 +1,15 @@
 package controller.boardcontroller;
 
+import dao.BoardDao;
+import dao.MemberDao;
+import domain.Board;
+import domain.Reply;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.Alert.AlertType;
 
 public class ReplywriteController {
 
@@ -47,7 +53,16 @@ public class ReplywriteController {
 
     @FXML
     void write(ActionEvent event) {
-    	
+   	Reply reply = new Reply(txtreplycontents.getText(),board2_listController.board.getB_num(),MemberDao.getMemberDao().getmno(MainpageController.getinstance().getloginid()) );
+	System.out.println("오류");
+   	boolean result = BoardDao.getboardDao().replywrite(reply);
+   	if(result) {
+   	
+   		Alert alert = new Alert(AlertType.INFORMATION);
+   		alert.setHeaderText("댓글 등록");
+   		alert.showAndWait();
+   		MainpageController.getinstance().loadpage("board2_list");
+   	}
     }
 
 }

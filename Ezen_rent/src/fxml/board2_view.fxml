@@ -14,23 +14,23 @@
 
 <AnchorPane minHeight="-Infinity" prefHeight="550.0" prefWidth="1280.0" style="-fx-background-color: #D8E3e7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.boardcontroller.Board2_viewController">
    <children>
-      <Button fx:id="btnboard2" layoutX="30.0" layoutY="300.0" mnemonicParsing="false" onAction="#board2" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #126E82;" text="Q &amp; A">
+      <Button fx:id="btnboard2" layoutX="38.0" layoutY="296.0" mnemonicParsing="false" onAction="#board2" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #126E82;" text="Q &amp; A">
          <effect>
             <InnerShadow />
          </effect>
       </Button>
-      <Button fx:id="btnboard3" layoutX="30.0" layoutY="350.0" mnemonicParsing="false" onAction="#board3" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ffffff;" text="Review">
+      <Button fx:id="btnboard3" layoutX="38.0" layoutY="343.0" mnemonicParsing="false" onAction="#board3" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Review">
          <effect>
             <InnerShadow />
          </effect>
       </Button>
-      <Text layoutX="15.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q &amp; A board" wrappingWidth="155.0">
+      <Text layoutX="38.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q &amp; A board" wrappingWidth="155.0">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <Line endX="90.0" layoutX="90.0" layoutY="25.0" startX="90.0" startY="500.0" />
-      <Button fx:id="btnboard1" layoutX="30.0" layoutY="250.0" mnemonicParsing="false" onAction="#board1" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ffffff;" text="Notice">
+      <Line endX="100.0" layoutX="94.0" layoutY="32.0" startX="100.0" startY="488.5" />
+      <Button fx:id="btnboard1" layoutX="38.0" layoutY="246.0" mnemonicParsing="false" onAction="#board1" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="Notice">
          <effect>
             <InnerShadow />
          </effect>
@@ -53,11 +53,11 @@
       <TableView fx:id="answerlist" layoutX="393.0" layoutY="306.0" prefHeight="180.0" prefWidth="810.0">
          <columns>
             <TableColumn prefWidth="75.0" text="No" />
-            <TableColumn prefWidth="554.0" text="Contents" />
-            <TableColumn minWidth="0.0" prefWidth="180.0" text="Date" />
+            <TableColumn prefWidth="578.0" text="Contents" />
+            <TableColumn minWidth="0.0" prefWidth="156.0" text="Date" />
          </columns>
       </TableView>
-      <Button fx:id="btncancel" layoutX="626.0" layoutY="499.0" mnemonicParsing="false" onAction="#cancel" prefHeight="22.0" prefWidth="344.0" style="-fx-background-color: #000000;" text="BACK" textFill="WHITE">
+      <Button fx:id="btncancel" layoutX="626.0" layoutY="513.0" mnemonicParsing="false" onAction="#cancel" prefHeight="22.0" prefWidth="344.0" style="-fx-background-color: #000000;" text="BACK" textFill="WHITE">
          <font>
             <Font name="Bauhaus 93" size="12.0" />
          </font>
@@ -67,7 +67,7 @@
       <Label fx:id="lblwriter" layoutX="882.0" layoutY="48.0" prefHeight="22.0" prefWidth="49.0" />
       <Label fx:id="lbldate" layoutX="1008.0" layoutY="48.0" prefHeight="22.0" prefWidth="49.0" />
       <Label fx:id="lblview" layoutX="1139.0" layoutY="48.0" prefHeight="22.0" prefWidth="49.0" />
-      <Button fx:id="btnreplywrite" layoutX="1123.0" layoutY="274.0" mnemonicParsing="false" onAction="#replywrite" prefHeight="22.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="Reply write" textFill="WHITE">
+      <Button fx:id="btnreplywrite" layoutX="1036.0" layoutY="274.0" mnemonicParsing="false" onAction="#replywrite" prefHeight="22.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="Reply write" textFill="WHITE">
          <font>
             <Font name="Bauhaus 93" size="12.0" />
          </font>
