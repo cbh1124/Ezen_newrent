@@ -165,6 +165,7 @@
 </details>
 
 ## presentation - 21/11/22 
+- 화면 및 기능 구현
 <details>
 <summary>Click</summary>
 <div markdown="1">
