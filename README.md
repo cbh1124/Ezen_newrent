@@ -228,46 +228,29 @@
   
   <div>
     <p>1.회원가입</p>
-    <img src="https://user-images.githubusercontent.com/88937233/142992823-cffc591c-4515-4087-91df-08540f6873ba.mp4">
-    ![1.회원가입](https://user-images.githubusercontent.com/88937233/142994249-2033f09c-9640-4c9c-963d-fb1f31500e2c.mp4)
+    <img src="https://user-images.githubusercontent.com/61840067/142994853-5e7629b7-8992-4b34-b8e8-eeeac8048fce.gif">
   </div>
   
-    <div>
-    <p>1.회원가입</p>
-    <img src="https://user-images.githubusercontent.com/88937233/142992823-cffc591c-4515-4087-91df-08540f6873ba.mp4">
-    ![1.회원가입](https://user-images.githubusercontent.com/88937233/142994249-2033f09c-9640-4c9c-963d-fb1f31500e2c.mp4)
+   <div>
+    <p>2.아이디찾기</p>
+    <img src="https://user-images.githubusercontent.com/61840067/142996609-910214d3-eb41-449f-8a79-c0d6a16e83a1.gif">
   </div>
   
-    <div>
-    <p>1.회원가입</p>
-    <img src="https://user-images.githubusercontent.com/88937233/142992823-cffc591c-4515-4087-91df-08540f6873ba.mp4">
-    ![1.회원가입](https://user-images.githubusercontent.com/88937233/142994249-2033f09c-9640-4c9c-963d-fb1f31500e2c.mp4)
+     <div>
+    <p>2.아이디찾기</p>
+    <img src="https://user-images.githubusercontent.com/61840067/142996885-83558915-2da2-4659-831c-128596976df1.gif">
   </div>
   
-    <div>
-    <p>1.회원가입</p>
-    <img src="https://user-images.githubusercontent.com/88937233/142992823-cffc591c-4515-4087-91df-08540f6873ba.mp4">
-    ![1.회원가입](https://user-images.githubusercontent.com/88937233/142994249-2033f09c-9640-4c9c-963d-fb1f31500e2c.mp4)
+ 
+  
+     <div>
+    <p>4.예약</p>
+    
   </div>
   
-    <div>
-    <p>1.회원가입</p>
-    <img src="https://user-images.githubusercontent.com/88937233/142992823-cffc591c-4515-4087-91df-08540f6873ba.mp4">
-    ![1.회원가입](https://user-images.githubusercontent.com/88937233/142994249-2033f09c-9640-4c9c-963d-fb1f31500e2c.mp4)
+     <div>
+    <p>2.아이디찾기</p>
+    
   </div>
+  </>
   
-    <div>
-    <p>1.회원가입</p>
-    <img src="https://user-images.githubusercontent.com/88937233/142992823-cffc591c-4515-4087-91df-08540f6873ba.mp4">
-    ![1.회원가입](https://user-images.githubusercontent.com/88937233/142994249-2033f09c-9640-4c9c-963d-fb1f31500e2c.mp4)
-  </div>
-  
-
-
-
-
-
-
-
-
-
