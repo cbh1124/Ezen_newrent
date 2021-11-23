@@ -237,20 +237,13 @@
   </div>
   
      <div>
-    <p>2.아이디찾기</p>
-    <img src="https://user-images.githubusercontent.com/61840067/142996885-83558915-2da2-4659-831c-128596976df1.gif">
+    <p>3.비밀번호 찾기</p>
+    <img src="https://user-images.githubusercontent.com/61840067/142997462-0b09c9a1-bfa3-47e2-8b3e-a96f686aaeab.gif">
   </div>
   
- 
-  
-     <div>
-    <p>4.예약</p>
-    
-  </div>
-  
-     <div>
-    <p>2.아이디찾기</p>
-    
-  </div>
-  </>
+
+
+
+
+
   
