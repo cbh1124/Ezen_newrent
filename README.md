@@ -226,19 +226,28 @@
 <summary>Click</summary>
 <div markdown="1">
   
-  <div>
-    <p>1.회원가입</p>
-    <img src="https://user-images.githubusercontent.com/61840067/142994853-5e7629b7-8992-4b34-b8e8-eeeac8048fce.gif">
-  </div>
+  <p>1.회원가입 <br>
+  <img src="https://user-images.githubusercontent.com/61840067/142994853-5e7629b7-8992-4b34-b8e8-eeeac8048fce.gif" width="500">
+  </p>
   
-   <div>
-    <p>2.아이디찾기</p>
-    <img src="https://user-images.githubusercontent.com/61840067/142996609-910214d3-eb41-449f-8a79-c0d6a16e83a1.gif">
-  </div>
   
-     <div>
-    <p>3.비밀번호 찾기</p>
-    <img src="https://user-images.githubusercontent.com/61840067/142997462-0b09c9a1-bfa3-47e2-8b3e-a96f686aaeab.gif">
+  
+  
+  
+  
+  <p>2.아이디 찾기 <br>
+   <img src="https://user-images.githubusercontent.com/61840067/142996609-910214d3-eb41-449f-8a79-c0d6a16e83a1.gif" width="500">
+  </p>
+ 
+  
+  
+  
+  <p>3.비밀번호 찾기 <br>
+   <img src="https://user-images.githubusercontent.com/61840067/142998687-e38bb035-924d-42c2-a8d5-278b215bc60c.gif" width="500">
+  </p>
+  
+  
+  
   </div>
   
 
