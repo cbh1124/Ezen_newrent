@@ -248,8 +248,41 @@
   
   
   
-  </div>
   
+  <p>4.게시판 <br>
+   <img src="https://user-images.githubusercontent.com/61840067/143055463-00b7b97f-9d0d-4cec-97ec-77b4f115c3cc.gif" width="500">
+  </p>![게시판2](https://user-images.githubusercontent.com/61840067/143057426-0a57e35f-7b76-474c-8046-67f2629648f2.gif)
+
+  
+  
+  
+  <p>5. 어드민 게시판 <br>
+   <img src="https://user-images.githubusercontent.com/61840067/143055914-6005a6ef-21ac-419f-9055-388d2ad46140.gif" width="500">
+  </p>
+  ![어드민 게시판 등록2](https://user-images.githubusercontent.com/61840067/143057865-2aeecb8d-5b24-475f-a43a-0d79a9714a9b.gif)
+
+  
+  
+  <p>6. 어드민 기능(차량등록, 예약확인, 차량리스트) <br>
+   <img src="https://user-images.githubusercontent.com/61840067/143058280-a54354f3-5756-49dc-9621-a4f8c68dc82c.gif" width="500">
+    <img src="https://user-images.githubusercontent.com/61840067/143058431-920426e6-642c-47fb-ab4f-101339548a81.gif" width="500">
+  </p>
+  
+  
+  
+  
+  <p>7. 어드민 기능(차량등록, 예약확인) <br>
+   <img src="https://user-images.githubusercontent.com/61840067/143056513-96da6760-93d4-41d5-9419-4b44161c4687.gif" width="500">
+  </p>
+
+  <p>8. 예약하기 <br>
+   <img src="https://user-images.githubusercontent.com/61840067/143058827-d58e26f6-7173-4f49-a0fb-2f479773ed61.gif" width="500">
+  </p>
+
+  
+</div>
+  
+
 
 
 
