@@ -230,7 +230,36 @@
     <p>1.회원가입</p>
     <img src="https://user-images.githubusercontent.com/88937233/142992823-cffc591c-4515-4087-91df-08540f6873ba.mp4">
     ![1.회원가입](https://user-images.githubusercontent.com/88937233/142994249-2033f09c-9640-4c9c-963d-fb1f31500e2c.mp4)
-    
+  </div>
+  
+    <div>
+    <p>1.회원가입</p>
+    <img src="https://user-images.githubusercontent.com/88937233/142992823-cffc591c-4515-4087-91df-08540f6873ba.mp4">
+    ![1.회원가입](https://user-images.githubusercontent.com/88937233/142994249-2033f09c-9640-4c9c-963d-fb1f31500e2c.mp4)
+  </div>
+  
+    <div>
+    <p>1.회원가입</p>
+    <img src="https://user-images.githubusercontent.com/88937233/142992823-cffc591c-4515-4087-91df-08540f6873ba.mp4">
+    ![1.회원가입](https://user-images.githubusercontent.com/88937233/142994249-2033f09c-9640-4c9c-963d-fb1f31500e2c.mp4)
+  </div>
+  
+    <div>
+    <p>1.회원가입</p>
+    <img src="https://user-images.githubusercontent.com/88937233/142992823-cffc591c-4515-4087-91df-08540f6873ba.mp4">
+    ![1.회원가입](https://user-images.githubusercontent.com/88937233/142994249-2033f09c-9640-4c9c-963d-fb1f31500e2c.mp4)
+  </div>
+  
+    <div>
+    <p>1.회원가입</p>
+    <img src="https://user-images.githubusercontent.com/88937233/142992823-cffc591c-4515-4087-91df-08540f6873ba.mp4">
+    ![1.회원가입](https://user-images.githubusercontent.com/88937233/142994249-2033f09c-9640-4c9c-963d-fb1f31500e2c.mp4)
+  </div>
+  
+    <div>
+    <p>1.회원가입</p>
+    <img src="https://user-images.githubusercontent.com/88937233/142992823-cffc591c-4515-4087-91df-08540f6873ba.mp4">
+    ![1.회원가입](https://user-images.githubusercontent.com/88937233/142994249-2033f09c-9640-4c9c-963d-fb1f31500e2c.mp4)
   </div>
   
 
