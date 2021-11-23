@@ -226,10 +226,12 @@
 <summary>Click</summary>
 <div markdown="1">
   
-  <ul>
-    <li><p>렌트카 회원가입</p> https://drive.google.com/file/d/1onh7Qy12rQTZhcTAdPjXMEFOfnugeA4u/view?usp=sharing </li>
-     <li><p>렌트카 회원가입</p> </li>
-  </ul>
+  <div>
+    <p>1.회원가입</p>
+    <img src="https://user-images.githubusercontent.com/88937233/142992823-cffc591c-4515-4087-91df-08540f6873ba.mp4">
+  </div>
+  
+
 
 
 
