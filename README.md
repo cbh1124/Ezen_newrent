@@ -251,7 +251,7 @@
   
   <p>4.게시판 <br>
    <img src="https://user-images.githubusercontent.com/61840067/143055463-00b7b97f-9d0d-4cec-97ec-77b4f115c3cc.gif" width="500">
-  </p>![게시판2](https://user-images.githubusercontent.com/61840067/143057426-0a57e35f-7b76-474c-8046-67f2629648f2.gif)
+  </p>
 
   
   
@@ -259,7 +259,7 @@
   <p>5. 어드민 게시판 <br>
    <img src="https://user-images.githubusercontent.com/61840067/143055914-6005a6ef-21ac-419f-9055-388d2ad46140.gif" width="500">
   </p>
-  ![어드민 게시판 등록2](https://user-images.githubusercontent.com/61840067/143057865-2aeecb8d-5b24-475f-a43a-0d79a9714a9b.gif)
+  
 
   
   
